@@ -1,0 +1,8 @@
+.side-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 1184px;
+  @include gradient-main(0);
+}

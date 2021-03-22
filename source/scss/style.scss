@@ -1,0 +1,21 @@
+// vendor
+@import "vendor/normalize.scss";
+@import "vendor/swiper-bundle.scss";
+@import "vendor/jquery.mCustomScrollbar.scss";
+@import "vendor/jquery-ui.scss";
+
+// general
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/fonts.scss";
+@import "general/global.scss";
+
+//components
+@import "components/button.scss";
+
+// blocks
+@import "blocks/side-line.scss";
+@import "blocks/main.scss";
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/general-principles.scss";

@@ -1,0 +1,70 @@
+.general-principles {
+  &__title {
+    @include font(32px, 40px, 500);
+    margin: 0 0 48px;
+    color: $dark-grey;
+  }
+
+  &__list {
+    margin: 0 0 41px;
+    padding: 0;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 375px;
+    margin: 0 0 40px;
+  }
+
+  &__item-counter {
+    @include font(24px, 32px, 500);
+    color: $dark-grey;
+  }
+
+  &__item-desc {
+    @include font(15px, 24px);
+    margin: 0;
+    padding-top: 24px;
+    color: $dark-grey;
+  }
+
+  &__blocks-list {
+    margin: 0;
+    padding: 0;
+    max-width: 824px;
+  }
+
+  &__blocks-item {
+    &:last-child a {
+      border-bottom: 1px solid $grey300;
+    }
+  }
+
+  &__blocks-link {
+    @include font(24px, 32px, 500);
+    display: block;
+    padding: 63px 120px 63px 0;
+    color: $dark-grey;
+    border-top: 1px solid $grey300;
+    background-position: right 40px center;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+
+    &--styles {
+      background-image: url("../img/letter-icon.svg");
+    }
+
+    &--components {
+      background-image: url("../img/folder-icon.svg");
+    }
+
+    &--content {
+      background-image: url("../img/strokes-icon.svg");
+    }
+  }
+}

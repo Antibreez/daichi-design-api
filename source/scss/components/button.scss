@@ -1,0 +1,58 @@
+.btn-primary,
+.btn-secondary,
+.btn-small {
+  @include font(18px, 24px, 400);
+
+  display: inline-block;
+  height: auto;
+  padding: 21px 24px 19px 24px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all .2s ease;
+}
+
+.btn-small {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.btn-primary,
+.btn-small {
+  background-color: $blue;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: $deep-blue;
+    color: #fff;
+  }
+
+  &:disabled {
+    background-color: $grey300;
+    color: #fff;
+  }
+}
+
+.btn-secondary {
+  padding: 14px 39px;
+  border: 1px solid $grey200;
+  color: $dark-grey;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    border-color: $blue;
+    color: $blue;
+    background-color: #fff;
+  }
+
+  &:disabled {
+    border-color: $grey300;
+    color: $grey300;
+    background-color: #fff;
+  }
+}

@@ -4,6 +4,11 @@
   box-sizing: inherit;
 }
 
+*::selection {
+  color: $white;
+  background-color: $blue;
+}
+
 html {
   box-sizing: border-box;
   margin: 0;

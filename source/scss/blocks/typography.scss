@@ -1,0 +1,212 @@
+.typography {
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    border-bottom: 1px solid $grey300;
+  }
+
+  &__font-name {
+    @include font(64px, 72px, 500);
+    margin: 40px 0 24px;
+    color: $grey400;
+  }
+
+  &__font-weight-list {
+    margin: 0 0 56px;
+    padding: 0;
+    display: flex;
+  }
+
+  &__font-weight-item {
+    @include font(16px, 24px, 500);
+    color: $grey400;
+
+    &:first-child {
+      font-weight: 400;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__font-download {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include font(15px, 24px);
+    color: $dark-grey;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      background-image: url("../img/download.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__colors-list {
+    margin: 40px 0 40px;
+    padding: 0;
+  }
+
+  &__colors-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__colors-block {
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    border-radius: 50%;
+
+    &--white {
+      border: 1px solid $grey300;
+    }
+  }
+
+  &__titles-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__titles-item {
+    width: 400px;
+    margin-top: 40px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $grey300;
+
+    &:nth-child(2n + 1) {
+      margin-right: auto;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      border-bottom: 0;
+    }
+  }
+
+  &__title-view {
+    margin: 0 0 34px;
+    color: $dark-grey;
+
+    &--h1-plus-desktop {
+      @include font(64px, 72px, 500);
+    }
+
+    &--h1-plus-mobile {
+      @include font(40px, 46px, 500);
+    }
+
+    &--h1-desktop {
+      @include font(40px, 48px, 500);
+    }
+
+    &--h1-mobile {
+      @include font(28px, 34px, 500);
+    }
+
+    &--h2-desktop {
+      @include font(32px, 40px, 500);
+    }
+
+    &--h2-mobile {
+      @include font(24px, 30px, 500);
+    }
+
+    &--h3-desktop {
+      @include font(24px, 32px, 500);
+    }
+
+    &--h3-mobile {
+      @include font(20px, 26px, 500);
+    }
+
+    &--h4-desktop {
+      @include font(18px, 24px, 500);
+    }
+
+    &--h4-mobile {
+      @include font(18px, 24px, 500);
+    }
+  }
+
+  &__title-type {
+    @include font(18px, 24px, 500);
+    margin: auto 0 8px;
+    color: $blue;
+  }
+
+  &__title-chars {
+    @include font(14px, 22px);
+    margin: 0;
+    color: $grey400;
+  }
+
+  &__text-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__text-item {
+    width: 400px;
+    margin-top: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid $grey300;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__text-view {
+    margin: 0 0 34px;
+    color: $dark-grey;
+
+    &--t15 {
+      @include font(15px, 24px);
+    }
+
+    &--t14 {
+      @include font(14px, 22px);
+    }
+
+    &--t12 {
+      @include font(12px, 18px);
+    }
+
+    &--t15-bold {
+      @include font(15px, 24px, 500);
+    }
+
+    &--t14-bold {
+      @include font(14px, 22px, 500);
+    }
+
+    &--t12-bold {
+      @include font(12px, 18px, 500);
+    }
+  }
+}

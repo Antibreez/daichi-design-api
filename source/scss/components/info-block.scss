@@ -1,0 +1,13 @@
+.info-block {
+  &__title {
+    @include font(24px, 32px, 500);
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  &__desc {
+    @include font(15px, 24px);
+    color: $dark-grey;
+    margin: 16px 0 0;
+  }
+}

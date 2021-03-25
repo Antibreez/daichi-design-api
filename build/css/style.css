@@ -4743,11 +4743,13 @@ a.ui-button:active,
 *::-moz-selection {
   color: #fff;
   background-color: #2858FF;
+  display: inline-block;
 }
 
 *::selection {
   color: #fff;
   background-color: #2858FF;
+  display: inline-block;
 }
 
 html {
@@ -5496,4 +5498,101 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
+}
+
+.typography__lists-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  margin-bottom: 40px;
+}
+
+.typography__lists-item {
+  width: 400px;
+}
+
+.typography__lists-item:nth-child(2n + 1) {
+  margin-right: auto;
+}
+
+.typography__list-title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0 0 32px;
+  color: #151515;
+}
+
+.typography ul.typography__list-list {
+  padding: 0;
+  margin: 0;
+}
+
+.typography ul.typography__list-list .typography__list-item {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #151515;
+  position: relative;
+  padding-left: 28px;
+}
+
+.typography ul.typography__list-list .typography__list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.typography ul.typography__list-list .typography__list-item::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #151515;
+}
+
+.typography ol.typography__list-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: my-counter;
+}
+
+.typography ol.typography__list-list .typography__list-item {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #151515;
+  position: relative;
+  padding-left: 28px;
+  counter-increment: my-counter;
+}
+
+.typography ol.typography__list-list .typography__list-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.typography ol.typography__list-list .typography__list-item::before {
+  content: counter(my-counter) ".";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.typography__selection {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #151515;
+  width: 400px;
+  margin-top: 40px;
+}
+
+.typography__selection span {
+  color: #fff;
+  background-color: #2858FF;
+  display: inline-block;
 }

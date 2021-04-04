@@ -1,0 +1,22 @@
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  @include font(15px, 24px);
+  color: $dark-grey;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &__icon {
+    margin-right: 8px;
+    color: $dark-grey;
+    transition: color 0.2s;
+  }
+
+  &:hover .download-link__icon {
+    color: $blue;
+  }
+}

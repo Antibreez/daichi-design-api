@@ -216,6 +216,133 @@
               <p class="grid__breakpoints-total-width">328px</p>
             </div>
           </div>
+
+          <div class="grid__breakpoints-table">
+            <table>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <tr>
+                <th>Брейкпоинт</th>
+                <th>Контентная область</th>
+                <th>Колонки</th>
+                <th>Межколонники</th>
+                <th>Отступы от края</th>
+              </tr>
+              <tr>
+                <td>≤ 1440px</td>
+                <td>1248px</td>
+                <td>12</td>
+                <td>24px</td>
+                <td>≤ 96px</td>
+              </tr>
+              <tr>
+                <td>≤ 1200px</td>
+                <td>1072px</td>
+                <td>12</td>
+                <td>24px</td>
+                <td>64px</td>
+              </tr>
+              <tr>
+                <td>≤ 1024px</td>
+                <td>928px</td>
+                <td>12</td>
+                <td>24px</td>
+                <td>48px</td>
+              </tr>
+              <tr>
+                <td>≤ 768px</td>
+                <td>704px</td>
+                <td>12</td>
+                <td>24px</td>
+                <td>32px</td>
+              </tr>
+              <tr>
+                <td>≤ 375px</td>
+                <td>328px</td>
+                <td>4</td>
+                <td>16px</td>
+                <td>24px</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid__block">
+          <h2 class="info-block__title">Кратно 8px</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Сетка построена из микромодуля 8px. Таким образом размеры элементов и расстояния между ними всегда будут кратны 8: 16, 24, 32, 40, 48 и т.д.
+          </p>
+          <div class="grid__gaps">
+            <div class="grid__gaps-grid">
+              <img src="img/grid.svg" alt="Сетка" width="80" height="80">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">8px</p>
+              <img src="img/bp-gap-m.svg" alt="Отступ">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">16px</p>
+              <img src="img/bp-gap-39.svg" alt="Отступ">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">24px</p>
+              <img src="img/bp-gap-47.svg" alt="Отступ">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">32px</p>
+              <img src="img/bp-gap-55.svg" alt="Отступ">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">40px</p>
+              <img src="img/bp-gap-63.svg" alt="Отступ">
+            </div>
+            <div class="grid__gaps-gap">
+              <p class="grid__gaps-width">48px</p>
+              <img src="img/bp-gap-71.svg" alt="Отступ">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid__block">
+          <h2 class="info-block__title">Текст</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Текстовые блоки также строятся на основе сетки 8px.
+          </p>
+          <div class="grid__text">
+            <p class="grid__text-p">
+              Незаметный и комфортный климат в доме — гармония и уют.
+            </p>
+            <div class="grid__text-height">
+              <img src="img/bp-gap-63-v.svg" alt="Высота">
+              <p class="grid__text-height-value">64px</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid__block">
+          <h2 class="info-block__title">Скругления</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используем скругления для форм, кнопок и других элементов.
+          </p>
+          <div class="grid__filets">
+            <div class="grid__filets-item">
+              <div class="grid__filets-element grid__filets-element--btn">Кнопка</div>
+              <p class="grid__filets-value">32px</p>
+            </div>
+            <div class="grid__filets-item">
+              <div class="grid__filets-element grid__filets-element--form">Форма</div>
+              <p class="grid__filets-value">2px</p>
+            </div>
+            <div class="grid__filets-item">
+              <div class="grid__filets-element grid__filets-element--option">Опция 1</div>
+              <p class="grid__filets-value">2px</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

@@ -70,7 +70,7 @@
 }
 
 // ШРИФТЫ
-@mixin font($size, $height, $weight: 300) {
+@mixin font($size, $height, $weight: 400) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;

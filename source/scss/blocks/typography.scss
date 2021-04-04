@@ -35,27 +35,7 @@
   }
 
   &__font-download {
-    display: inline-flex;
-    align-items: center;
     margin-bottom: 40px;
-    @include font(15px, 24px);
-    color: $dark-grey;
-    text-decoration: none;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &::before {
-      content: "";
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-      background-image: url("../img/download.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
   }
 
   &__colors-list {

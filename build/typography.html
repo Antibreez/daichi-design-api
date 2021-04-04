@@ -11,6 +11,20 @@
 </head>
 
 <body>
+  <div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0">
+<rect width="24" height="24" fill="white"></rect>
+</clipPath>
+</defs><symbol id="icon-download" viewBox="0 0 24 24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.20711 10.7929L7.5 10.0858L6.08579 11.5L6.79289 12.2071L11.2929 16.7071L12 17.4142L12.7071 16.7071L17.2071 12.2071L17.9142 11.5L16.5 10.0858L15.7929 10.7929L13 13.5858L13 3V2L11 2V3L11 13.5858L8.20711 10.7929ZM4 16V15H2V16L2 20C2 21.1046 2.89543 22 4 22L20 22C21.1046 22 22 21.1046 22 20L22 16V15H20V16L20 20L4 20V16Z" fill="currentColor"></path>
+</symbol><symbol id="icon-external_link" viewBox="0 0 24 24">
+<g clip-path="url(#clip0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 18.9999L17 17.9999L17 8.41415L6.70714 18.707L6.00003 19.4141L4.58582 17.9999L5.29292 17.2928L15.5858 6.99995L6.00003 6.99997L5.00003 6.99997L5.00003 4.99997L6.00003 4.99997L18 4.99994L19 4.99994L19 5.99994L19 17.9999L19 18.9999H17Z" fill="currentColor"></path>
+</g>
+
+</symbol></svg>
+  </div>
   <a href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
@@ -127,7 +141,12 @@
               <li class="typography__font-weight-item">Medium</li>
               <li class="typography__font-weight-item">SemiBold</li>
             </ul>
-            <a href="#" class="typography__font-download" download="">Скачать</a>
+            <a href="#" class="typography__font-download  download-link" download="">
+              <svg class="download-link__icon" role="img" width="24" height="24">
+                <use xlink:href="#icon-download"></use>
+              </svg>
+              Скачать
+            </a>
           </div>
         </div>
         <div class="typography__block  info-block">

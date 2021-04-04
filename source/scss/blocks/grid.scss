@@ -129,4 +129,197 @@
   &__breakpoints-total-width {
     margin: 2px 0 0;
   }
+
+  &__breakpoints-table {
+    margin-top: 40px;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    col {
+      &:first-child {
+        width: 19%;
+      }
+
+      &:nth-child(2) {
+        width: 24%;
+      }
+
+      &:nth-child(3) {
+        width: 16%;
+      }
+
+      &:nth-child(4) {
+        width: 21%;
+      }
+
+      &:nth-child(5) {
+        width: 20%;
+      }
+    }
+
+    th {
+      text-align: left;
+      @include font(15px, 24px, 500);
+      color: $dark-grey;
+      padding: 24px 0;
+      border-bottom: 1px solid $grey300;
+    }
+
+    td {
+      @include font(15px, 24px);
+      color: $dark-grey;
+      padding: 24px 0 0;
+    }
+  }
+
+  &__gaps {
+    display: flex;
+    padding: 120px 104px;
+    background-color: $grey200;
+    margin-top: 40px;
+  }
+
+  &__gaps-grid {
+    width: 80px;
+    height: 80px;
+    margin-right: 77px;
+  }
+
+  &__gaps-gap {
+    padding-top: 25px;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__gaps-width {
+    @include font(14px, 22px);
+    color: $dark-grey;
+    margin: 0 0 8px;
+    text-align: center;
+  }
+
+  &__text {
+    display: flex;
+    margin-top: 40px;
+    padding: 128px 100px 128px 248px;
+    background-color: $grey200;
+  }
+
+  &__text-p {
+    @include font(24px, 30px, 500);
+    color: $dark-grey;
+    margin: 0 16px 0 0;
+    max-width: 440px;
+    background-color: $grey300;
+  }
+
+  &__text-height {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text-height-value {
+    @include font(14px, 22px);
+    margin: 0 0 0 11px;
+    color: $dark-grey;
+  }
+
+  &__filets {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    padding: 187px 100px 184px 140px;
+    background-color: $grey200;
+  }
+
+  &__filets-item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+
+  &__filets-element {
+    @include font(16px, 22px, 500);
+    position: relative;
+    margin-top: 9px;
+    color: $grey400;
+    background-color: $grey300;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      display: block;
+      border-top: 2px solid #000;
+      border-right: 2px solid #000;
+    }
+
+    &--btn {
+      padding: 21px 40px;
+      border-radius: 32px;
+      margin-right: 5px;
+
+      &::after {
+        width: 34px;
+        height: 34px;
+        border-top-right-radius: 34px;
+      }
+    }
+
+    &--form {
+      @include font(15px, 22px, 400);
+      width: 240px;
+      padding: 17px 40px 17px 20px;
+      border-radius: 2px;
+      margin-right: 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("../img/drop_down_filled-grey.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        width: 24px;
+        height: 24px;
+        border-top-right-radius: 2px;
+      }
+    }
+
+    &--option {
+      @include font(15px, 24px, 400);
+      padding: 4px 16px;
+      border-radius: 2px;
+      margin-right: 12px;
+
+      &::after {
+        width: 24px;
+        height: 24px;
+        border-top-right-radius: 2px;
+      }
+    }
+  }
+
+  &__filets-value {
+    @include font(14px, 22px);
+    color: $dark-grey;
+    margin: 0;
+  }
 }

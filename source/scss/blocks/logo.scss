@@ -1,0 +1,36 @@
+.logo {
+  &__block {
+    margin-top: 80px;
+  }
+
+  &__manual {
+    padding: 40px;
+    background-color: $grey200;
+  }
+
+  &__logos-wrapper {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 264px;
+
+    &--white {
+      background-color: #fff;
+      border: 1px solid $grey300;
+    }
+
+    &--black {
+      background-color: #000;
+    }
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

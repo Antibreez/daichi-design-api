@@ -3,6 +3,7 @@
 @import "vendor/swiper-bundle.scss";
 @import "vendor/jquery.mCustomScrollbar.scss";
 @import "vendor/jquery-ui.scss";
+@import "vendor/select2.scss";
 
 // general
 @import "general/variables.scss";
@@ -16,6 +17,7 @@
 @import "components/scroll-to-top.scss";
 @import "components/download-link.scss";
 @import "components/external-link.scss";
+@import "components/select-block.scss";
 
 // blocks
 @import "blocks/side-line.scss";
@@ -27,3 +29,4 @@
 @import "blocks/typography.scss";
 @import "blocks/grid.scss";
 @import "blocks/logo.scss";
+@import "blocks/forms.scss";

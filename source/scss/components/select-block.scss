@@ -44,7 +44,7 @@
 }
 
 .select2-container {
-  width: 100% !important;
+  //width: 100% !important;
 }
 
 .select2-container--open .select-dropdown {
@@ -74,8 +74,40 @@
       &.inputed {
         background-color: $grey200;
       }
+
     }
   }
+
+  .select2-results {
+    max-height: 300px;
+  }
+
+  .select2-results__options {
+
+    // &::-webkit-scrollbar-button {
+    //   background: #222;
+    // }
+  }
+}
+
+*,
+html * {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
 }
 
 

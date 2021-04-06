@@ -92,6 +92,13 @@
     $('.js-select-combo').on('select2:open', function () {
       $('.select2-search input').off('input', checkInput);
       $('.select2-search input').on('input', checkInput);
+      console.log(document.querySelector('.select2-results  .select2-results__options').innerHTML); // setTimeout(function() {
+      //   Scrollbar.init(document.querySelector('.select2-results  .select2-results__options'));
+      // }, 300)
+      // Scrollbar.init(results, {
+      //   alwaysShowTracks: true,
+      // });
+      //$('.select-dropdown .select2-results__options').mCustomScrollbar();
     });
     $('.js-select-combo').on('select2:closing', function () {
       $('.select2-search input').removeClass('inputed');

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Сетка</title>
+  <title>Формы</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -131,6 +131,135 @@
 
     <div class="main__content">
       <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Поле ввода</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Стандартный способ ввода текста, чисел и другой относительно короткой информации.
+          </p>
+
+          <h3 class="forms__validation-title">Валидация полей</h3>
+          <p class="info-block__desc">
+            Валидация срабатывает сразу после потери фокуса, если значение в поле заполнено. Валидация на только что открытой пустой форме исключена. Для тех случаев, когда валидация по потере фокуса невозможна, срабатывает валидация при отправке формы.
+          </p>
+
+          <div class="forms__block  forms__block--input">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block">
+                  <label for="input" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="input" placeholder="+7">
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--hover">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" placeholder="+7" disabled="">
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--focus">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" value="+7 905" placeholder="+7" disabled="">
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--filled">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" value="+7 905 123-45-67" placeholder="+7" disabled="">
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input  error" id="" value="+7 111 111-11-11" placeholder="+7">
+                  </div>
+                  <p class="input-block__message">Укажите корректный номер телефона</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" value="+7 905 123-45-67" placeholder="+7" disabled="">
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--filled">
+                  <label for="" class="input-block__label">Телефон</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" value="+7 905 123-45-67" placeholder="+7" disabled="">
+                    <span class="input-icon input-icon--loading"></span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Индикатор загрузки. Показываем, если обработка запроса занимает дольше 0,3 сек.
+              </p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--filled">
+                  <label for="" class="input-block__label">Пароль</label>
+                  <div class="input-wrapper">
+                    <input type="password" class="input" id="" value="1234567">
+                    <button class="input-password-btn"></button>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Пароль (скрыт)</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--filled">
+                  <label for="" class="input-block__label">Пароль</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input" id="" value="1234567">
+                    <button class="input-password-btn  shown"></button>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Пароль (показан)</p>
+            </div>
+          </div>
+        </div>
+
+
         <div class="forms__select-block  select-block">
           <select class="js-select-combo  select  select--combo" name="state">
             <option></option>

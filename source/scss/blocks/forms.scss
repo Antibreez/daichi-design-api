@@ -2,4 +2,60 @@
   &__select-block {
     width: 328px;
   }
+
+  &__validation-title {
+    @include font(18px, 24px, 500);
+    color: $dark-grey;
+    margin: 40px 0 0;
+  }
+
+  &__block {
+    position: relative;
+    margin-top: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65.8%;
+      height: 100%;
+      border: 1px dashed #7B61FF;
+      border-radius: 5px;
+      pointer-events: none;
+    }
+  }
+
+  &__block--input {
+    padding: 93px 0 96px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 37px;
+      }
+    }
+
+    .forms__item-action {
+      padding-left: 142px;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item-action {
+    width: 65.8%;
+    flex-shrink: 0;
+  }
+
+  &__item-desc {
+    @include font(12px, 18px);
+    color: $grey400;
+    margin: 43px 0 0 24px;
+  }
+
+  &__input-block {
+    width: 328px;
+  }
 }

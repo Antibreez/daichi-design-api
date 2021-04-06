@@ -1,6 +1,20 @@
 "use strict";
 
 (function () {
+  $('.input-password-btn').on('click', function () {
+    var $btn = $(this);
+    var $input = $btn.prev();
+    $btn.toggleClass('shown');
+
+    if ($btn.hasClass('shown')) {
+      $input.attr('type', 'text');
+    } else {
+      $input.attr('type', 'password');
+    }
+  });
+})();
+
+(function () {
   var inputs = document.querySelectorAll('.input-phone');
 
   if (!inputs[0]) {

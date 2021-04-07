@@ -29,7 +29,8 @@
       color: $blue;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $blue;
     }
   }

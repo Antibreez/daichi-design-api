@@ -6,7 +6,8 @@
   text-decoration: underline;
   transition: color 0.2s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $blue;
   }
 
@@ -16,7 +17,8 @@
     transition: color 0.2s;
   }
 
-  &:hover .external-link__icon {
+  &:hover .external-link__icon,
+  &:focus .external-link__icon {
     color: $blue;
   }
 }

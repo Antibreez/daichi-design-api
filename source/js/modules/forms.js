@@ -59,6 +59,34 @@
       $('.select2-search input').removeClass('inputed');
     })
 
+
+
+
+
+    $('.js-select-single').select2({
+      placeholder: "Выберите вариант",
+      minimumResultsForSearch: Infinity,
+      dropdownCssClass: ['select-dropdown','select-dropdown--single']
+    })
+
+    var list = $(".js-select-single-open").select2({
+      placeholder: "Выберите вариант",
+      minimumResultsForSearch: Infinity,
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown--single',
+        'select-dropdown--opened'
+      ],
+      closeOnSelect: false
+    }).on("select2:closing", function(e) {
+        e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    list.select2('open');
+
+
   });
 
 

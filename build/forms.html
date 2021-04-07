@@ -138,7 +138,7 @@
           </p>
 
           <h3 class="forms__validation-title">Валидация полей</h3>
-          <p class="info-block__desc">
+          <p class="forms__validation-desc  info-block__desc">
             Валидация срабатывает сразу после потери фокуса, если значение в поле заполнено. Валидация на только что открытой пустой форме исключена. Для тех случаев, когда валидация по потере фокуса невозможна, срабатывает валидация при отправке формы.
           </p>
 
@@ -218,10 +218,10 @@
 
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__input-block input-block input-block--filled">
+                <div class="forms__input-block input-block input-block">
                   <label for="" class="input-block__label">Телефон</label>
                   <div class="input-wrapper">
-                    <input type="text" class="input" id="" value="+7 905 123-45-67" placeholder="+7" disabled="">
+                    <input type="text" class="input" id="" value="+7 905 123-45-67" placeholder="+7">
                     <span class="input-icon input-icon--loading"></span>
                   </div>
                 </div>
@@ -233,7 +233,7 @@
 
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__input-block input-block input-block--filled">
+                <div class="forms__input-block input-block input-block">
                   <label for="" class="input-block__label">Пароль</label>
                   <div class="input-wrapper">
                     <input type="password" class="input" id="" value="1234567">
@@ -246,7 +246,7 @@
 
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__input-block input-block input-block--filled">
+                <div class="forms__input-block input-block input-block">
                   <label for="" class="input-block__label">Пароль</label>
                   <div class="input-wrapper">
                     <input type="text" class="input" id="" value="1234567">
@@ -259,9 +259,223 @@
           </div>
         </div>
 
+        <div class="forms__section">
+          <h2 class="info-block__title">Селект</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используется как выпадающий список для выбора значения в форме из заранее опреденных вариантов.
+          </p>
+
+          <div class="forms__example">
+            <a href="#" class="forms__select-link  external-link">
+              <svg class="external-link__icon" role="img" width="24" height="24">
+                <use xlink:href="#icon-external_link"></use>
+              </svg>
+              <span>Посмотреть пример</span>
+            </a>
+          </div>
+
+          <div class="forms__block  forms__block--select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select  select--hover" name="state" disabled="">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single-open  select  select--focus" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2" selected="">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select  select--error" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                  <p class="input-block__message">Выберите значение из списка</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state" disabled="">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
 
         <div class="forms__select-block  select-block">
-          <select class="js-select-combo  select  select--combo" name="state">
+          <select class="js-select-combo  select" name="state">
             <option></option>
             <option value="Вариант 1">Вариант 1</option>
             <option value="Вариант 2">Вариант 2</option>

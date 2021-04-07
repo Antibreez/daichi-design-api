@@ -6,9 +6,22 @@
     border-radius: 2px;
   }
 
+  .select2-container--disabled .select2-selection {
+    background-color: $grey300;
+  }
+
+  .select2-selection .select2-selection__placeholder {
+    color: $grey400;
+  }
+
+  .select2-container--disabled:hover,
+  .select2-container--disabled:focus-within {
+    border: 1px solid transparent;
+  }
+
   .select2-selection .select2-selection__rendered {
     @include font(15px, 24px);
-    color: $grey400;
+    color: $dark-grey;
     height: 100%;
     line-height: 56px;
     padding-left: 20px;
@@ -41,6 +54,20 @@
 
 .select {
   width: 100%;
+}
+
+.select2 {
+  border-radius: 2px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border: 1px solid $grey300;
+  }
+
+  &:focus-within {
+    border: 1px solid $grey400;
+  }
 }
 
 .select2-container {
@@ -79,15 +106,60 @@
   }
 
   .select2-results {
-    max-height: 300px;
+    max-height: 216px;
   }
 
   .select2-results__options {
-
-    // &::-webkit-scrollbar-button {
-    //   background: #222;
-    // }
+    max-height: 216px;
+    padding: 8px 0;
   }
+
+  .select2-results__option {
+    @include font(15px, 24px);
+    color: $dark-grey;
+    padding: 8px 20px;
+
+    &--highlighted {
+      background-color: $grey200;
+    }
+  }
+
+  .select2-results__option--selected {
+    background-color: #fff;
+    color: $grey400;
+  }
+}
+
+.select2-container--open .select2-dropdown--above {
+  top: -8px;
+}
+
+.select2-container--open .select-dropdown--single {
+  input {
+    display: none;
+  }
+}
+
+.select2-container--open .select-dropdown--opened {
+  &.select2-dropdown--above {
+    transform: translateY(calc(100% + 72px));
+  }
+}
+
+.select--hover:disabled + .select2 {
+  border: 1px solid $grey300;
+
+  .select2-selection {
+    background-color: $grey200;
+  }
+}
+
+.select--focus + .select2 {
+  border: 1px solid $grey400;
+}
+
+.select--error + .select2 {
+  border: 1px solid $fail;
 }
 
 *,
@@ -97,7 +169,7 @@ html * {
   }
 
   &::-webkit-scrollbar-track {
-    background: white;
+    background: transparent;
     border: none;
   }
 

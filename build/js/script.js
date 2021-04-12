@@ -2,7 +2,40 @@
 
 (function () {
   $('.input-date').datepicker({
-    dateFormat: 'dd.mm.yy'
+    dateFormat: 'dd.mm.yy',
+    onClose: function onClose() {}
+  });
+  $('.input-date').inputmask("99.99.9999", {
+    //mask: 'mm/dd/yyyy',
+    placeholder: '',
+    showMaskOnHover: false,
+    showMaskOnFocus: false,
+    jitMasking: true
+  });
+  var date = moment('06.18.1985', 'DD.MM.YYYY', true).isValid(); // console.log(date);
+
+  $('.input-date').on('focus', function (e) {
+    var target = $(e.target);
+    var val = target.val();
+
+    if (val.length === 0) {
+      target.parent().addClass('date-placeholder');
+    }
+  });
+  $('.input-date').on('blur', function (e) {
+    var target = $(e.target);
+    var val = target.val();
+    target.parent().removeClass('date-placeholder');
+  });
+  $('.input-date').on('input', function (e) {
+    var target = $(e.target);
+    var val = target.val();
+
+    if (val.length > 0) {
+      target.parent().removeClass('date-placeholder');
+    } else {
+      target.parent().addClass('date-placeholder');
+    }
   });
 })();
 
@@ -21,16 +54,15 @@
 })();
 
 (function () {
-  var inputs = document.querySelectorAll('.input-phone');
-
-  if (!inputs[0]) {
-    return;
-  }
-
-  var im = new Inputmask("+7(999) 999-99-99");
-  inputs.forEach(function (item) {
-    im.mask(item);
-  });
+  // const inputs = document.querySelectorAll('.input-phone');
+  // if (!inputs[0]) {
+  //   return;
+  // }
+  // const im = new Inputmask("+7(999) 999-99-99");
+  // inputs.forEach(function(item) {
+  //   im.mask(item);
+  // })
+  $('.input-phone').inputmask('+7(999) 999-99-99');
 })();
 
 (function () {

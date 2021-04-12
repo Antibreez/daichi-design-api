@@ -21,6 +21,22 @@
 
 .input-wrapper {
   position: relative;
+
+  &.date-placeholder {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "дд.мм.гггг";
+      padding-left: 20px;
+      padding-top: 16px;
+      height: 100%;
+      color: $grey400;
+      font-size: 15px;
+      line-height: 23px;
+
+    }
+  }
 }
 
 .input {

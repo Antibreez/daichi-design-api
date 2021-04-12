@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -4343,6 +4344,19 @@ html *::-webkit-scrollbar-thumb {
 
 .input-wrapper {
   position: relative;
+}
+
+.input-wrapper.date-placeholder::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "дд.мм.гггг";
+  padding-left: 20px;
+  padding-top: 16px;
+  height: 100%;
+  color: #94A0B1;
+  font-size: 15px;
+  line-height: 23px;
 }
 
 .input {

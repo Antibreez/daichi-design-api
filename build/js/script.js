@@ -1,6 +1,12 @@
 "use strict";
 
 (function () {
+  $('.input-date').datepicker({
+    dateFormat: 'dd.mm.yy'
+  });
+})();
+
+(function () {
   $('.input-password-btn').on('click', function () {
     var $btn = $(this);
     var $input = $btn.prev();

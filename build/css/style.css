@@ -4218,6 +4218,11 @@ a {
   background-color: #F4F4F8;
 }
 
+.select2-container--open .select-dropdown.select2-dropdown--above .select2-search {
+  top: auto;
+  bottom: -66px;
+}
+
 .select2-container--open .select-dropdown .select2-results {
   max-height: 216px;
 }

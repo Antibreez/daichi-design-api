@@ -1,0 +1,107 @@
+.ui-datepicker {
+  width: 328px;
+  padding: 0;
+  box-shadow: 0px 4px 24px rgba(67, 72, 78, 0.2);
+  border: 2px;
+
+  &.ui-widget-content {
+    border: none;
+  }
+
+  .ui-datepicker-prev {
+    top: 50%;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon-arrow.svg");
+    transform: translateY(-50%);
+
+    &:hover {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .ui-datepicker-next {
+    top: 50%;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon-arrow.svg");
+    transform: translateY(-50%) rotate(180deg);
+
+    &:hover {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.ui-datepicker {
+  font-family: $font;
+
+  .ui-datepicker-header {
+    padding: 24px 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .ui-datepicker-title {
+    line-height: unset;
+
+    .select2:nth-last-of-type(1) {
+      margin-left: 25px;
+    }
+  }
+
+  select.ui-datepicker-month {
+    width: 100px;
+    opacity: 0;
+  }
+
+  select.ui-datepicker-year {
+    width: 70px;
+    opacity: 0;
+  }
+
+  .select2 {
+    border: none;
+  }
+
+  .select2-selection {
+    background-color: transparent;
+    border: none;
+    height: auto;
+
+    .select2-selection__rendered {
+      font-size: 15px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $dark-grey;
+      padding-left: 0;
+      padding-right: 28px;
+      text-align: right;
+    }
+
+    .select2-selection__arrow {
+      top: 0;
+      height: 24px;
+      width: 24px;
+    }
+
+    .select2-selection__arrow b {
+      border: none;
+      position: static;
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      background-image: url("../img/arrow-triangle.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}

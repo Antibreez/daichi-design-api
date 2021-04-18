@@ -4515,6 +4515,117 @@ html *::-webkit-scrollbar-thumb {
   background-image: url("../img/eye.svg");
 }
 
+.ui-datepicker {
+  width: 328px;
+  padding: 0;
+  -webkit-box-shadow: 0px 4px 24px rgba(67, 72, 78, 0.2);
+          box-shadow: 0px 4px 24px rgba(67, 72, 78, 0.2);
+  border: 2px;
+}
+
+.ui-datepicker.ui-widget-content {
+  border: none;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  top: 50%;
+  left: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon-arrow.svg");
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.ui-datepicker .ui-datepicker-prev:hover {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  top: 50%;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon-arrow.svg");
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.ui-datepicker .ui-datepicker-next:hover {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ui-datepicker {
+  font-family: "Suisse Intl", "Arial", "Helvetica", "Helvetica CY", "Nimbus Sans";
+}
+
+.ui-datepicker .ui-datepicker-header {
+  padding: 24px 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  line-height: unset;
+}
+
+.ui-datepicker .ui-datepicker-title .select2:nth-last-of-type(1) {
+  margin-left: 25px;
+}
+
+.ui-datepicker select.ui-datepicker-month {
+  width: 100px;
+  opacity: 0;
+}
+
+.ui-datepicker select.ui-datepicker-year {
+  width: 70px;
+  opacity: 0;
+}
+
+.ui-datepicker .select2 {
+  border: none;
+}
+
+.ui-datepicker .select2-selection {
+  background-color: transparent;
+  border: none;
+  height: auto;
+}
+
+.ui-datepicker .select2-selection .select2-selection__rendered {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #151515;
+  padding-left: 0;
+  padding-right: 28px;
+  text-align: right;
+}
+
+.ui-datepicker .select2-selection .select2-selection__arrow {
+  top: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.ui-datepicker .select2-selection .select2-selection__arrow b {
+  border: none;
+  position: static;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background-image: url("../img/arrow-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .side-line {
   position: absolute;
   top: 0;

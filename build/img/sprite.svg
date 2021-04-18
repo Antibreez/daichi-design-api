@@ -2,7 +2,9 @@
 <clipPath id="clip0">
 <rect width="24" height="24" fill="white"/>
 </clipPath>
-</defs><symbol id="icon-download" viewBox="0 0 24 24">
+</defs><symbol id="icon-arrow" viewBox="0 0 24 24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4144 8L14.7073 8.70711L11.4144 12L14.7073 15.2929L15.4144 16L14.0002 17.4142L13.293 16.7071L9.29304 12.7071L8.58594 12L9.29304 11.2929L13.293 7.29289L14.0002 6.58578L15.4144 8Z" fill="#151515"/>
+</symbol><symbol id="icon-download" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.20711 10.7929L7.5 10.0858L6.08579 11.5L6.79289 12.2071L11.2929 16.7071L12 17.4142L12.7071 16.7071L17.2071 12.2071L17.9142 11.5L16.5 10.0858L15.7929 10.7929L13 13.5858L13 3V2L11 2V3L11 13.5858L8.20711 10.7929ZM4 16V15H2V16L2 20C2 21.1046 2.89543 22 4 22L20 22C21.1046 22 22 21.1046 22 20L22 16V15H20V16L20 20L4 20V16Z" fill="currentColor"/>
 </symbol><symbol id="icon-external_link" viewBox="0 0 24 24">
 <g clip-path="url(#clip0)">

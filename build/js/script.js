@@ -1,10 +1,64 @@
 "use strict";
 
+/* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
+
+/* Written by Andrew Stromnov (stromnov@gmail.com). */
+(function (factory) {
+  if (typeof define === "function" && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(["../widgets/datepicker"], factory);
+  } else {
+    // Browser globals
+    factory(jQuery.datepicker);
+  }
+})(function (datepicker) {
+  datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "&#x3C;Пред",
+    nextText: "След&#x3E;",
+    currentText: "Сегодня",
+    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ""
+  };
+  datepicker.setDefaults(datepicker.regional.ru);
+  return datepicker.regional.ru;
+});
+
 (function () {
   $('.input-date').datepicker({
     dateFormat: 'dd.mm.yy',
-    onClose: function onClose() {}
+    regional: 'ru',
+    monthNamesShort: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    changeMonth: true,
+    changeYear: true,
+    yearRange: '1900:+10',
+    beforeShow: function beforeShow() {
+      setTimeout(function () {
+        $('.ui-datepicker-month').select2();
+        $('.ui-datepicker-year').select2();
+      }, 0);
+    },
+    onChangeMonthYear: function onChangeMonthYear() {
+      setTimeout(function () {
+        $('.ui-datepicker-month').select2();
+        $('.ui-datepicker-year').select2();
+      }, 0);
+    } // onSelect: function(dateText, inst, extensionRange) {
+    //   console.log(extensionRange.startDateText);
+    //   inst.input.val(extensionRange.startDateText + ' - ' + extensionRange.endDateText);
+    // },
+
   });
+  $('.input-date').datepicker('refresh');
   $('.input-date').inputmask("99.99.9999", {
     //mask: 'mm/dd/yyyy',
     placeholder: '',
@@ -36,7 +90,21 @@
     } else {
       target.parent().addClass('date-placeholder');
     }
-  });
+  }); // $(document).ready(function() {
+  //   function f1() {
+  //     $('.input-date').datepicker('refresh');
+  //   };
+  //   function f2() {
+  //     console.log($('.ui-datepicker-month')[0]);
+  //     setTimeout(function() {
+  //       $('.ui-datepicker-month').select2();
+  //     }, 5000);
+  //     //$('.ui-datepicker-month').select2();
+  //   };
+  //   var dfd = $.Deferred();
+  //   dfd.done(f1).done(f2);
+  //   dfd.resolve('a');
+  // });
 })();
 
 (function () {

@@ -33,33 +33,113 @@
       //minimumResultsForSearch: Infinity
       placeholder: "Введите или выберите вариант",
       dropdownCssClass: 'select-dropdown',
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      }
       //searchInputPlaceholder: 'My custom placeholder...'
     });
 
     $('.js-select-combo').on('select2:open', function() {
       $('.select2-search input').off('input', checkInput);
       $('.select2-search input').on('input', checkInput);
-
-      console.log(document.querySelector('.select2-results  .select2-results__options').innerHTML);
-
-
-
-      // setTimeout(function() {
-      //   Scrollbar.init(document.querySelector('.select2-results  .select2-results__options'));
-      // }, 300)
-
-      // Scrollbar.init(results, {
-      //   alwaysShowTracks: true,
-      // });
-
-      //$('.select-dropdown .select2-results__options').mCustomScrollbar();
     });
 
     $('.js-select-combo').on('select2:closing', function() {
       $('.select2-search input').removeClass('inputed');
-    })
+    });
 
 
+
+
+
+    $('.js-select-combo-open').select2({
+      //minimumResultsForSearch: Infinity
+      placeholder: "Введите или выберите вариант",
+      dropdownCssClass: ['select-dropdown', 'select-dropdown-multi', 'select-dropdown--opened'],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      },
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+      e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    $('.js-select-combo-open').select2('open');
+    $('.select-dropdown-multi input').on('input', checkInput);
+
+
+
+
+
+    $('.js-select-combo-searching').select2({
+      //minimumResultsForSearch: Infinity
+      placeholder: "Введите или выберите вариант",
+      dropdownCssClass: ['select-dropdown', 'select-dropdown--opened', 'select-dropdown--searching'],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      },
+      ajax: {
+        delay: 500000000,
+        url: 'https://antibreez.github.io/select-data/select-data.json',
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+      e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    var event = new Event('input', {
+      bubbles: true,
+      cancelable: true,
+    });
+
+    $('.js-select-combo-searching').select2('open');
+    setTimeout(function() {
+      $('.select-dropdown--searching input')[0].dispatchEvent(event);
+    }, 500);
+
+
+
+
+    $('.js-select-combo-not-found').select2({
+      //minimumResultsForSearch: Infinity
+      dropdownCssClass: ['select-dropdown', 'select-dropdown--opened', 'select-dropdown--not-found'],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+      e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    $('.js-select-combo-not-found').select2('open');
+    $('.select-dropdown--not-found input').val('фывапа');
+    $('.select-dropdown--not-found input')[0].dispatchEvent(event);
 
 
 

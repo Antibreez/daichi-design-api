@@ -79,6 +79,25 @@
   }
 }
 
+.input__calendar {
+  color: $dark-grey;
+}
+
+.input:disabled + .input-icon .input__calendar {
+  color: $grey400;
+}
+
+.input-block {
+  .input.error {
+    border: 1px solid $fail;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $fail;
+    }
+  }
+}
+
 .input-block__message {
   @include font(12px, 18px);
   color: $fail;
@@ -104,6 +123,10 @@
 .input-block--hover .input {
   border: 1px solid $grey300;
   background-color: $grey200;
+
+  &:disabled + .input-icon .input__calendar {
+    color: $dark-grey;
+  }
 }
 
 .input-block--focus {
@@ -118,6 +141,12 @@
     height: 24px;
     background-color: $dark-grey;
   }
+
+  &.input-block--date {
+    &::after {
+      left: 19px;
+    }
+  }
 }
 
 .input-block--focus .input {
@@ -128,6 +157,11 @@
 .input-block--filled .input {
   border: none;
   background-color: $grey200;
+  color: $dark-grey;
+
+  &:disabled + .input-icon .input__calendar {
+    color: $dark-grey;
+  }
 }
 
 .input-icon {

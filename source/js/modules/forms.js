@@ -19,6 +19,18 @@
   //     return $rendered;
   // };
 
+  $('<div/>', {
+    'class': 'preloader'
+  }).css({
+    'position': 'fixed',
+    'top': '0',
+    'left': '0',
+    'width': '100vw',
+    'height': '100vh',
+    'background-color': '#fff',
+    'z-index': '3000'
+  }).appendTo('html');
+
 
   const checkInput = function(e) {
     if (e.target.value.length > 0) {
@@ -86,7 +98,11 @@
     $('.js-select-combo-searching').select2({
       //minimumResultsForSearch: Infinity
       placeholder: "Введите или выберите вариант",
-      dropdownCssClass: ['select-dropdown', 'select-dropdown--opened', 'select-dropdown--searching'],
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown--opened',
+        'select-dropdown--searching'
+      ],
       "language": {
         "noResults": function(){
             return 'Ничего не найдено';
@@ -169,9 +185,10 @@
 
   });
 
-
-
-
+  setTimeout(function() {
+    window.scrollTo(0,0);
+    $('.preloader').hide();
+  }, 500)
   // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });

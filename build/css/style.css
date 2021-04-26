@@ -4338,6 +4338,11 @@ a {
           animation: rotation 0.7s infinite linear;
 }
 
+.select2-dropdown--above:not(.select-dropdown--opened) .select2-results__option.loading-results::after {
+  top: auto;
+  bottom: -56px;
+}
+
 .js-select-combo-searching + .select2,
 .js-select-combo-not-found + .select2 {
   position: relative;
@@ -4950,6 +4955,7 @@ html *::-webkit-scrollbar-thumb {
   top: 0;
   height: 24px;
   width: 24px;
+  pointer-events: none;
 }
 
 .dropdown + .select2 .select2-selection .select2-selection__arrow b {

@@ -340,6 +340,18 @@
   //     this.$search.attr('placeholder', this.options.get('searchInputPlaceholder'));
   //     return $rendered;
   // };
+  $('<div/>', {
+    'class': 'preloader'
+  }).css({
+    'position': 'fixed',
+    'top': '0',
+    'left': '0',
+    'width': '100vw',
+    'height': '100vh',
+    'background-color': '#fff',
+    'z-index': '3000'
+  }).appendTo('html');
+
   var checkInput = function checkInput(e) {
     if (e.target.value.length > 0) {
       $(e.target).addClass('inputed');
@@ -456,7 +468,11 @@
       list.select2("open");
     });
     list.select2('open');
-  }); // $('#your-select-id').one('select2:open', function(e) {
+  });
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+    $('.preloader').hide();
+  }, 500); // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });
 })();

@@ -168,6 +168,25 @@
     }
   }
 
+  &__block--multi-select {
+    padding: 77px 0 150px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 37px;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-bottom: 260px;
+      }
+
+      &:nth-child(8) {
+        margin-bottom: 93px;
+      }
+    }
+  }
+
   &__item {
     display: flex;
   }

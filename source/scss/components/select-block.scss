@@ -236,7 +236,9 @@
 }
 
 .js-select-combo-searching + .select2,
-.js-select-combo-not-found + .select2 {
+.js-select-combo-not-found + .select2,
+.js-select-multi-searching + .select2,
+.js-select-multi-not-found + .select2 {
   position: relative;
 
   &:after {

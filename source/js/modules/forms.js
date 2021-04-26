@@ -183,7 +183,154 @@
     list.select2('open');
 
 
+
+
+
+
+
+    $('.js-select-multi').select2({
+      //minimumResultsForSearch: Infinity
+      placeholder: "Выберите варианты",
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown-multi'
+      ],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    });
+
+    $('.js-select-multi').on('select2:open', function() {
+      $('.select2-search input').off('input', checkInput);
+      $('.select2-search input').on('input', checkInput);
+    });
+
+    $('.js-select-multi').on('select2:closing', function() {
+      $('.select2-search input').removeClass('inputed');
+    });
+
+
+    $('.js-select-multi-open').select2({
+      //minimumResultsForSearch: Infinity
+      placeholder: "Выберите варианты",
+      maximumSelectionLength: 3,
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown--opened',
+        'select-dropdown-multi'
+      ],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        },
+        maximumSelected: function (e) {
+          return "Макс. количество вариантов - " + e.maximum;
+        },
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+       e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    $('.js-select-multi-open').select2('open');
+
+
+
+
+
+
+
+
+
+    $('.js-select-multi-searching').select2({
+      //minimumResultsForSearch: Infinity
+      placeholder: "Выберите варианты",
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown--opened',
+        'select-dropdown--searching-multi'
+      ],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      },
+      ajax: {
+        delay: 500000000,
+        url: 'https://antibreez.github.io/select-data/select-data.json',
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+      e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    var event = new Event('input', {
+      bubbles: true,
+      cancelable: true,
+    });
+
+    $('.js-select-multi-searching').select2('open');
+    setTimeout(function() {
+      $('.select-dropdown--searching-multi  input')[0].dispatchEvent(event);
+    }, 500);
+
+
+
+
+
+
+
+
+
+    $('.js-select-multi-not-found').select2({
+      //minimumResultsForSearch: Infinity
+      dropdownCssClass: [
+        'select-dropdown',
+        'select-dropdown--opened',
+        'select-dropdown--not-found-multi'
+      ],
+      "language": {
+        "noResults": function(){
+            return 'Ничего не найдено';
+        },
+        searching: function() {
+          return "Загрузка...";
+        }
+      }
+      //searchInputPlaceholder: 'My custom placeholder...'
+    }).on("select2:closing", function(e) {
+      e.preventDefault();
+    }).on("select2:closed", function(e) {
+        list.select2("open");
+    });
+
+    $('.js-select-multi-not-found').select2('open');
+    $('.select-dropdown--not-found-multi input').val('фывапа');
+    $('.select-dropdown--not-found-multi input')[0].dispatchEvent(event);
+
   });
+
+
+
+
+
+
 
   setTimeout(function() {
     window.scrollTo(0,0);

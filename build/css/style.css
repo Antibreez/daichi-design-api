@@ -5182,7 +5182,7 @@ html *::-webkit-scrollbar-thumb {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-.upload__label:hover {
+.upload__label:hover, .upload__label.highlight {
   cursor: pointer;
   background-color: #F4F4F8;
   border-color: #F4F4F8;
@@ -5227,6 +5227,20 @@ html *::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.upload__result.loader::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/loader.svg");
+  background-color: #F4F4F8;
+  -webkit-animation: rotation .7s infinite linear;
+          animation: rotation .7s infinite linear;
+  z-index: 100;
 }
 
 .upload__name {

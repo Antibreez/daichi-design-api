@@ -20,6 +20,8 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4144 8L14.7073 8.70711L11.4144 12L14.7073 15.2929L15.4144 16L14.0002 17.4142L13.293 16.7071L9.29304 12.7071L8.58594 12L9.29304 11.2929L13.293 7.29289L14.0002 6.58578L15.4144 8Z" fill="#151515"></path>
 </symbol><symbol id="icon-calendar" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 3V2H7V3V4H5C3.34315 4 2 5.34315 2 7V11V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V11V7C22 5.34315 20.6569 4 19 4H17V3V2H15V3V4H9V3ZM7 6V7V8H9V7V6H15V7V8H17V7V6H19C19.5523 6 20 6.44772 20 7V10H4V7C4 6.44772 4.44772 6 5 6H7ZM4 12H20V19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19V12Z" fill="currentColor"></path>
+</symbol><symbol id="icon-close_small" viewBox="0 0 24 24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.70726 7.29304L8.00015 6.58594L6.58594 8.00015L7.29304 8.70726L10.5859 12.0002L7.29304 15.293L6.58594 16.0002L8.00015 17.4144L8.70726 16.7073L12.0002 13.4144L15.293 16.7073L16.0002 17.4144L17.4144 16.0002L16.7073 15.293L13.4144 12.0002L16.7073 8.70726L17.4144 8.00015L16.0002 6.58594L15.293 7.29305L12.0002 10.5859L8.70726 7.29304Z" fill="currentColor"></path>
 </symbol><symbol id="icon-download" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.20711 10.7929L7.5 10.0858L6.08579 11.5L6.79289 12.2071L11.2929 16.7071L12 17.4142L12.7071 16.7071L17.2071 12.2071L17.9142 11.5L16.5 10.0858L15.7929 10.7929L13 13.5858L13 3V2L11 2V3L11 13.5858L8.20711 10.7929ZM4 16V15H2V16L2 20C2 21.1046 2.89543 22 4 22L20 22C21.1046 22 22 21.1046 22 20L22 16V15H20V16L20 20L4 20V16Z" fill="currentColor"></path>
 </symbol><symbol id="icon-external_link" viewBox="0 0 24 24">
@@ -1342,8 +1344,42 @@
           </div>
         </div>
 
+        <div class="forms__section">
+          <h2 class="info-block__title">Прикрепить файлы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Компонент с возможностью прикрепить файлы к форме. Используется в двух вариантах: прикрепить только один файл, либо прикрепить несколько файлов.
+          </p>
 
-      </section>
+          <div class="forms__block  forms__block--multi-select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <input id="file" type="file" accept="image/jpeg,image/png,image/gif" name="file" class="upload__input  visually-hidden">
+                  <label for="file" class="upload__label">
+                    <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                    <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                  </label>
+
+                  <div class="upload__result">
+
+                    <p class="upload__name">
+                      Photo.png
+                    </p>
+                    <button type="button" class="upload__close">
+                      <svg class="upload__close-icon" role="img" width="24" height="24">
+                        <use xlink:href="#icon-close_small"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+              <p class="forms__item-desc"></p>
+            </div>
+          </div>
+
+      </div></section>
     </div>
   </main>
 

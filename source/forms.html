@@ -1327,6 +1327,40 @@
           </div>
         </div>
 
+        <div class="forms__section">
+          <h2 class="info-block__title">Прикрепить файлы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Компонент с возможностью прикрепить файлы к форме. Используется в двух вариантах: прикрепить только один файл, либо прикрепить несколько файлов.
+          </p>
+
+          <div class="forms__block  forms__block--multi-select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <input id="file" type="file" accept="image/jpeg,image/png,image/gif" name="file" class="upload__input  visually-hidden">
+                  <label for="file" class="upload__label">
+                    <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                    <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                  </label>
+
+                  <div class="upload__result">
+
+                    <p class="upload__name">
+                      Photo.png
+                    </p>
+                    <button type="button" class="upload__close">
+                      <svg class="upload__close-icon" role="img" width="24" height="24">
+                        <use xlink:href="#icon-close_small"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+              <p class="forms__item-desc"></p>
+            </div>
+          </div>
 
       </section>
     </div>

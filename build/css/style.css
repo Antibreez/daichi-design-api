@@ -5167,6 +5167,104 @@ html *::-webkit-scrollbar-thumb {
   opacity: 0.4;
 }
 
+.upload {
+  width: 328px;
+}
+
+.upload__label {
+  position: relative;
+  display: block;
+  padding: 16px 20px;
+  border: 1px dashed #D1D8E1;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload__label:hover {
+  cursor: pointer;
+  background-color: #F4F4F8;
+  border-color: #F4F4F8;
+}
+
+.upload__label::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/upload.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.upload__title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #151515;
+  margin: 0 0 24px;
+  padding-right: 30px;
+}
+
+.upload__desc {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #94A0B1;
+  margin: 0;
+}
+
+.upload__result {
+  position: relative;
+  padding: 16px 70px 16px 20px;
+  background-color: #F4F4F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upload__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.upload__close {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 0;
+  line-height: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.upload__close:hover, .upload__close:active, .upload__close:focus {
+  background-color: transparent;
+}
+
+.upload__close svg {
+  color: #151515;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.upload__close:hover svg {
+  cursor: pointer;
+  color: #2858FF;
+}
+
 .side-line {
   position: absolute;
   top: 0;

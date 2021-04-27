@@ -1,0 +1,80 @@
+.upload {
+  width: 328px;
+
+  &__label {
+    position: relative;
+    display: block;
+    padding: 16px 20px;
+    border: 1px dashed $grey300;
+    border-radius: 2px;
+    background-color: #fff;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $grey200;
+      border-color: $grey200;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/upload.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    @include font(15px, 24px);
+    color: $dark-grey;
+    margin: 0 0 24px;
+    padding-right: 30px;
+  }
+
+  &__desc {
+    @include font(12px, 18px);
+    color: $grey400;
+    margin: 0;
+  }
+
+  &__result {
+    position: relative;
+    padding: 16px 70px 16px 20px;
+    background-color: $grey200;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  &__close {
+    @include btn-reset;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 0;
+    line-height: 0;
+    transform: translateY(-50%);
+
+    svg {
+      color: $dark-grey;
+      transition: color 0.2s;
+    }
+
+    &:hover svg {
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+}

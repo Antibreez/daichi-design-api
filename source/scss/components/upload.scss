@@ -12,6 +12,10 @@
       background-color 0.2s,
       border-color 0.2s;
 
+    &.hidden {
+      display: none;
+    }
+
     &:hover,
     &.highlight {
       cursor: pointer;
@@ -46,11 +50,15 @@
   }
 
   &__result {
+    display: none;
     position: relative;
     padding: 16px 70px 16px 20px;
     background-color: $grey200;
-    display: flex;
     align-items: center;
+
+    &.show {
+      display: flex;
+    }
 
     &.loader::after {
       content: "";

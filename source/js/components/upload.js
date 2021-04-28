@@ -18,9 +18,35 @@
     e.currentTarget.classList.remove('highlight');
   };
 
+  function getResultBlock(input) {
+    const $idx = $(input).parent().attr('data-input');
+    return $(input).parents('.upload').find("[data-result='" + $idx +"']");
+  };
+
   function fillResult(input) {
-    const $name = $(input).parents('.upload__input-wrap').find('.upload__name');
+    const $result = getResultBlock(input);
+    const $name = $result.find('.upload__name');
     $name.text(input.files[0].name);
+  };
+
+  function showResult(input) {
+    const $result = getResultBlock(input);
+    $result.addClass('show');
+  };
+
+  function hideResult(input) {
+    const $result = getResultBlock(input);
+    $result.removeClass('show');
+  };
+
+  function showLabel(input) {
+    const $label = $(input).parent();
+    $label.removeClass('hidden');
+  };
+
+  function hideLabel(input) {
+    const $label = $(input).parent();
+    $label.addClass('hidden');
   };
 
   function addLoader(input) {
@@ -39,9 +65,12 @@
 
       reader.onloadstart = function (e) {
         //progress.classList.add('show');
+
         addLoader(input);
         fillResult(input);
-      }
+        showResult(input);
+        hideLabel(input);
+      };
 
       reader.onprogress = function (e) {
       }
@@ -54,6 +83,36 @@
         // progress.classList.remove('show');
         // bar.style.width = 0;
         removeLoader(input);
+
+        const $result = getResultBlock(input);
+        const $resultWrap = $result.parent();
+        const $newResult = $result.clone(true, true);
+        $newResult.removeClass('show');
+        $newResult.attr('data-result', '1');
+        $resultWrap.prepend($newResult);
+
+        const $labelWrap = $(input).parent().parent();
+        const $label = $(input).parent();
+        const $newLabel = $label.clone(true, true);
+        $newLabel.removeClass('hidden');
+        $newLabel.attr('data-input', '1');
+        $labelWrap.prepend($newLabel);
+        $newLabel.children('input')[0].addEventListener('change', onFileChange);
+
+
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          $newLabel[0].addEventListener(eventName, preventDefaults, false)
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+          $newLabel[0].addEventListener(eventName, highlight, false)
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          $newLabel[0].addEventListener(eventName, unhighlight, false)
+        });
+        $newLabel[0].addEventListener('drop', handleDrop, false);
       }
 
       reader.readAsDataURL(input.files[0]);
@@ -62,8 +121,11 @@
 
   const onFileChange = (e) => {
     readUrl(e.currentTarget);
+    console.log(e.currentTarget);
+  };
 
-    console.log(e.currentTarget.files);
+  function onFileDrop(input) {
+    readUrl(input);
   };
 
   function handleDrop(e) {
@@ -87,14 +149,21 @@
     }
 
     input.files = files;
-    onFileChange();
+    onFileDrop(input);
 
     //handleFiles(files)
   };
 
-  function addEventListeners(block) {
-    const fileLabel = block.querySelector('.upload__label');
-    const fileInput = block.querySelector('.upload__input');
+  function onFileClear(e) {
+    const $target = e.currentTarget;
+    const $idx = $target.parents()
+  }
+
+  function addEventListeners(block, idx) {
+    const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+    const fileInput = $(fileLabel).find('input')[0];
+    const fileResult = $(block).find("[data-result='" + idx +"']")[0];
+    const fileClearBtn = $(fileResult).find('.upload__close')[0];
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
       fileLabel.addEventListener(eventName, preventDefaults, false)
@@ -112,9 +181,9 @@
     fileInput.addEventListener('change', onFileChange);
   }
 
-  function removeEventListeners(block) {
-    const fileLabel = block.querySelector('.upload__label');
-    const fileInput = block.querySelector('.upload__input');
+  function removeEventListeners(block, idx) {
+    const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+    const fileInput = $(fileLabel).find('input')[0];
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
       fileLabel.removeEventListener(eventName, preventDefaults, false)
@@ -136,11 +205,10 @@
 
 
   uploads.forEach(function(upload) {
-    const block = upload.querySelector('.upload__input-wrap');
 
-    let files = 0;
+    let num = 0;
 
-    addEventListeners(block);
+    addEventListeners(upload, num);
 
     // // Сбрасываем стандартные события при перетаскивании файла
 

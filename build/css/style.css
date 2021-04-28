@@ -5182,6 +5182,10 @@ html *::-webkit-scrollbar-thumb {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
+.upload__label.hidden {
+  display: none;
+}
+
 .upload__label:hover, .upload__label.highlight {
   cursor: pointer;
   background-color: #F4F4F8;
@@ -5218,15 +5222,19 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .upload__result {
+  display: none;
   position: relative;
   padding: 16px 70px 16px 20px;
   background-color: #F4F4F8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.upload__result.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .upload__result.loader::after {

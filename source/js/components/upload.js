@@ -50,12 +50,12 @@
   };
 
   function addLoader(input) {
-    const $result = $(input).parents('.upload__input-wrap').find('.upload__result');
+    const $result = getResultBlock(input);
     $result.addClass('loader');
   };
 
   function removeLoader(input) {
-    const $result = $(input).parents('.upload__input-wrap').find('.upload__result');
+    const $result = getResultBlock(input);
     $result.removeClass('loader');
   };
 
@@ -69,7 +69,6 @@
         addLoader(input);
         fillResult(input);
         showResult(input);
-        hideLabel(input);
       };
 
       reader.onprogress = function (e) {
@@ -83,51 +82,57 @@
         // progress.classList.remove('show');
         // bar.style.width = 0;
         removeLoader(input);
+        hideLabel(input);
 
-        const block = $(input).parents('.upload')[0];
-        const newIdx = $('.upload__input-wrap .upload__label').length;
+        const block = $(input).parents('.upload');
 
-        const $result = getResultBlock(input);
-        const $resultWrap = $result.parent();
-        const $newResult = $result.clone(true, true);
-        $newResult.removeClass('show');
-        //$newResult.attr('data-result', newIdx);
-        $resultWrap.prepend($newResult);
-        $result.parents('.upload__input-results')
-          .find('.upload__result').each(function(id, element) {
-            $(this).attr('data-result', id);
-          });
+        if (block.hasClass('multi')) {
+          const newIdx = $('.upload__input-wrap .upload__label').length;
 
-        const $labelWrap = $(input).parent().parent();
-        const $label = $(input).parent();
-        const $newLabel = $label.clone(true, true);
-        $newLabel.removeClass('hidden');
-        $newLabel.attr('data-input', newIdx);
-        $labelWrap.prepend($newLabel);
-        $label.parents('.upload__input-wrap')
-          .find('.upload__label').each(function(id, element) {
-            $(this).attr('data-input', id);
-            $(this).children('input').attr('name', 'file-' + id);
-          });
+          const $result = getResultBlock(input);
+          const $resultWrap = $result.parent();
+          const $newResult = $result.clone(true, true);
+          $newResult.removeClass('show');
+          //$newResult.attr('data-result', newIdx);
+          $resultWrap.prepend($newResult);
+          $result.parents('.upload__input-results')
+            .find('.upload__result').each(function(id, element) {
+              $(this).attr('data-result', id);
+            });
+
+          const $labelWrap = $(input).parent().parent();
+          const $label = $(input).parent();
+          const $newLabel = $label.clone(true, true);
+          $newLabel.removeClass('hidden');
+          //$newLabel.attr('data-input', newIdx);
+          $labelWrap.prepend($newLabel);
+          $label.parents('.upload__input-wrap')
+            .find('.upload__label').each(function(id, element) {
+              $(this).attr('data-input', id);
+              $(this).children('input').attr('name', 'file-' + id);
+            });
 
 
+          addEventListeners($newLabel, $newResult);
+
+          // $newLabel.children('input')[0].addEventListener('change', onFileChange);
+
+          // ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, preventDefaults, false)
+          // });
+
+          // ['dragenter', 'dragover'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, highlight, false)
+          // });
+
+          // ['dragleave', 'drop'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, unhighlight, false)
+          // });
+          // $newLabel[0].addEventListener('drop', handleDrop, false);
+          // $newResult.children('.upload__close')[0].addEventListener('click', onFileClear);
+        }
 
 
-        $newLabel.children('input')[0].addEventListener('change', onFileChange);
-
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-          $newLabel[0].addEventListener(eventName, preventDefaults, false)
-        });
-
-        ['dragenter', 'dragover'].forEach(eventName => {
-          $newLabel[0].addEventListener(eventName, highlight, false)
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-          $newLabel[0].addEventListener(eventName, unhighlight, false)
-        });
-        $newLabel[0].addEventListener('drop', handleDrop, false);
-        $newResult.children('.upload__close')[0].addEventListener('click', onFileClear);
       }
 
 
@@ -196,66 +201,88 @@
     const $result = $target.parents('.upload__result');
     const $idx = $result.attr('data-result');
     const $label = $result.parents('.upload').find("[data-input='" + $idx +"']");
+    const input = $label.children('input')[0];
 
+    const $block = $target.parents('.upload');
 
-    setIds($result, $idx);
+    if ($block.hasClass('multi')) {
+      setIds($result, $idx);
 
-    $result.remove();
-    $label.remove();
+      $result.remove();
+      $label.remove();
+    } else {
+      input.value = '';
+
+      if(!/safari/i.test(navigator.userAgent)){
+        input.type = '';
+        input.type = 'file';
+      }
+
+      $label.removeClass('hidden');
+      $result.removeClass('show');
+    }
+
 
   }
 
-  function addEventListeners(block, idx) {
-    const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
-    const fileInput = $(fileLabel).find('input')[0];
-    const fileResult = $(block).find("[data-result='" + idx +"']")[0];
-    const fileClearBtn = $(fileResult).find('.upload__close')[0];
+  function addEventListeners($inputLabel, $result) {
+    // const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+    // const fileInput = $(fileLabel).find('input')[0];
+    // const fileResult = $(block).find("[data-result='" + idx +"']")[0];
+    // const fileClearBtn = $(fileResult).find('.upload__close')[0];
+    const input = $inputLabel.children('input')[0];
+    const inputLabel = $inputLabel[0];
+    const fileClearBtn = $result.find('.upload__close')[0];
 
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      fileLabel.addEventListener(eventName, preventDefaults, false)
+      inputLabel.addEventListener(eventName, preventDefaults, false)
     });
 
     ['dragenter', 'dragover'].forEach(eventName => {
-      fileLabel.addEventListener(eventName, highlight, false)
+      inputLabel.addEventListener(eventName, highlight, false)
     });
 
     ['dragleave', 'drop'].forEach(eventName => {
-      fileLabel.addEventListener(eventName, unhighlight, false)
+      inputLabel.addEventListener(eventName, unhighlight, false)
     })
 
-    fileLabel.addEventListener('drop', handleDrop, false);
-    fileInput.addEventListener('change', onFileChange);
+    inputLabel.addEventListener('drop', handleDrop, false);
+    input.addEventListener('change', onFileChange);
     fileClearBtn.addEventListener('click', onFileClear);
   }
 
-  function removeEventListeners(block, idx) {
-    const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
-    const fileInput = $(fileLabel).find('input')[0];
+  // function removeEventListeners(block, idx) {
+  //   const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+  //   const fileInput = $(fileLabel).find('input')[0];
 
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      fileLabel.removeEventListener(eventName, preventDefaults, false)
-    });
+  //   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, preventDefaults, false)
+  //   });
 
-    ['dragenter', 'dragover'].forEach(eventName => {
-      fileLabel.removeEventListener(eventName, highlight, false)
-    });
+  //   ['dragenter', 'dragover'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, highlight, false)
+  //   });
 
-    ['dragleave', 'drop'].forEach(eventName => {
-      fileLabel.removeEventListener(eventName, unhighlight, false)
-    })
+  //   ['dragleave', 'drop'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, unhighlight, false)
+  //   })
 
-    fileLabel.removeEventListener('drop', handleDrop, false);
-    fileInput.removeEventListener('change', onFileChange);
-  }
+  //   fileLabel.removeEventListener('drop', handleDrop, false);
+  //   fileInput.removeEventListener('change', onFileChange);
+  // }
 
 
 
 
   uploads.forEach(function(upload) {
 
-    let num = 0;
+    const $inputLabel = $(upload).find('.upload__label');
+    const $result = $(upload).find('.upload__result');
 
-    addEventListeners(upload, num);
+    if (!$(upload).hasClass('disabled')) {
+      addEventListeners($inputLabel, $result);
+    }
+
 
     // // Сбрасываем стандартные события при перетаскивании файла
 

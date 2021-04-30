@@ -5189,7 +5189,7 @@ html *::-webkit-scrollbar-thumb {
 .upload__label:hover, .upload__label.highlight {
   cursor: pointer;
   background-color: #F4F4F8;
-  border-color: #F4F4F8;
+  border: 1px solid #F4F4F8;
 }
 
 .upload__label::after {
@@ -5222,6 +5222,10 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .upload__result {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #151515;
   display: none;
   position: relative;
   padding: 16px 70px 16px 20px;
@@ -5229,12 +5233,25 @@ html *::-webkit-scrollbar-thumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 8px;
+}
+
+.upload__result:first-child {
+  margin-top: 0;
+}
+
+.upload__result:nth-child(2) {
+  margin-top: 16px;
 }
 
 .upload__result.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.upload__result.loader {
+  color: #94A0B1;
 }
 
 .upload__result.loader::after {
@@ -5285,6 +5302,52 @@ html *::-webkit-scrollbar-thumb {
 .upload__close:hover svg {
   cursor: pointer;
   color: #2858FF;
+}
+
+.upload.disabled .upload__label {
+  background-color: #D1D8E1;
+  border: 1px solid #D1D8E1;
+}
+
+.upload.disabled .upload__label:hover {
+  cursor: default;
+}
+
+.upload.disabled .upload__label * {
+  color: #94A0B1;
+}
+
+.upload.disabled .upload__label::after {
+  opacity: 0.3;
+}
+
+.upload.hover .upload__label,
+.upload.hover .upload__label:hover {
+  background-color: #F4F4F8;
+  border: 1px solid #F4F4F8;
+}
+
+.upload.hover .upload__label .upload__title,
+.upload.hover .upload__label:hover .upload__title {
+  color: #151515;
+}
+
+.upload.hover .upload__label .upload__title *,
+.upload.hover .upload__label:hover .upload__title * {
+  color: #151515;
+}
+
+.upload.hover .upload__label::before,
+.upload.hover .upload__label:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .side-line {
@@ -6460,6 +6523,14 @@ html *::-webkit-scrollbar-thumb {
 
 .forms__block--multi-select .forms__item:nth-child(8) {
   margin-bottom: 93px;
+}
+
+.forms__block--upload {
+  padding: 93px 0 110px;
+}
+
+.forms__block--upload .forms__item:not(:last-child) {
+  margin-bottom: 37px;
 }
 
 .forms__item {

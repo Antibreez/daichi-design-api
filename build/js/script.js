@@ -397,14 +397,14 @@
   ;
 
   function addLoader(input) {
-    var $result = $(input).parents('.upload__input-wrap').find('.upload__result');
+    var $result = getResultBlock(input);
     $result.addClass('loader');
   }
 
   ;
 
   function removeLoader(input) {
-    var $result = $(input).parents('.upload__input-wrap').find('.upload__result');
+    var $result = getResultBlock(input);
     $result.removeClass('loader');
   }
 
@@ -419,7 +419,6 @@
         addLoader(input);
         fillResult(input);
         showResult(input);
-        hideLabel(input);
       };
 
       reader.onprogress = function (e) {};
@@ -431,39 +430,43 @@
         // progress.classList.remove('show');
         // bar.style.width = 0;
         removeLoader(input);
-        var block = $(input).parents('.upload')[0];
-        var newIdx = $('.upload__input-wrap .upload__label').length;
-        var $result = getResultBlock(input);
-        var $resultWrap = $result.parent();
-        var $newResult = $result.clone(true, true);
-        $newResult.removeClass('show'); //$newResult.attr('data-result', newIdx);
+        hideLabel(input);
+        var block = $(input).parents('.upload');
 
-        $resultWrap.prepend($newResult);
-        $result.parents('.upload__input-results').find('.upload__result').each(function (id, element) {
-          $(this).attr('data-result', id);
-        });
-        var $labelWrap = $(input).parent().parent();
-        var $label = $(input).parent();
-        var $newLabel = $label.clone(true, true);
-        $newLabel.removeClass('hidden');
-        $newLabel.attr('data-input', newIdx);
-        $labelWrap.prepend($newLabel);
-        $label.parents('.upload__input-wrap').find('.upload__label').each(function (id, element) {
-          $(this).attr('data-input', id);
-          $(this).children('input').attr('name', 'file-' + id);
-        });
-        $newLabel.children('input')[0].addEventListener('change', onFileChange);
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
-          $newLabel[0].addEventListener(eventName, preventDefaults, false);
-        });
-        ['dragenter', 'dragover'].forEach(function (eventName) {
-          $newLabel[0].addEventListener(eventName, highlight, false);
-        });
-        ['dragleave', 'drop'].forEach(function (eventName) {
-          $newLabel[0].addEventListener(eventName, unhighlight, false);
-        });
-        $newLabel[0].addEventListener('drop', handleDrop, false);
-        $newResult.children('.upload__close')[0].addEventListener('click', onFileClear);
+        if (block.hasClass('multi')) {
+          var newIdx = $('.upload__input-wrap .upload__label').length;
+          var $result = getResultBlock(input);
+          var $resultWrap = $result.parent();
+          var $newResult = $result.clone(true, true);
+          $newResult.removeClass('show'); //$newResult.attr('data-result', newIdx);
+
+          $resultWrap.prepend($newResult);
+          $result.parents('.upload__input-results').find('.upload__result').each(function (id, element) {
+            $(this).attr('data-result', id);
+          });
+          var $labelWrap = $(input).parent().parent();
+          var $label = $(input).parent();
+          var $newLabel = $label.clone(true, true);
+          $newLabel.removeClass('hidden'); //$newLabel.attr('data-input', newIdx);
+
+          $labelWrap.prepend($newLabel);
+          $label.parents('.upload__input-wrap').find('.upload__label').each(function (id, element) {
+            $(this).attr('data-input', id);
+            $(this).children('input').attr('name', 'file-' + id);
+          });
+          addEventListeners($newLabel, $newResult); // $newLabel.children('input')[0].addEventListener('change', onFileChange);
+          // ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, preventDefaults, false)
+          // });
+          // ['dragenter', 'dragover'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, highlight, false)
+          // });
+          // ['dragleave', 'drop'].forEach(eventName => {
+          //   $newLabel[0].addEventListener(eventName, unhighlight, false)
+          // });
+          // $newLabel[0].addEventListener('drop', handleDrop, false);
+          // $newResult.children('.upload__close')[0].addEventListener('click', onFileClear);
+        }
       };
 
       reader.readAsDataURL(input.files[0]);
@@ -532,49 +535,70 @@
     var $result = $target.parents('.upload__result');
     var $idx = $result.attr('data-result');
     var $label = $result.parents('.upload').find("[data-input='" + $idx + "']");
-    setIds($result, $idx);
-    $result.remove();
-    $label.remove();
+    var input = $label.children('input')[0];
+    var $block = $target.parents('.upload');
+
+    if ($block.hasClass('multi')) {
+      setIds($result, $idx);
+      $result.remove();
+      $label.remove();
+    } else {
+      input.value = '';
+
+      if (!/safari/i.test(navigator.userAgent)) {
+        input.type = '';
+        input.type = 'file';
+      }
+
+      $label.removeClass('hidden');
+      $result.removeClass('show');
+    }
   }
 
-  function addEventListeners(block, idx) {
-    var fileLabel = $(block).find("[data-input='" + idx + "']")[0];
-    var fileInput = $(fileLabel).find('input')[0];
-    var fileResult = $(block).find("[data-result='" + idx + "']")[0];
-    var fileClearBtn = $(fileResult).find('.upload__close')[0];
+  function addEventListeners($inputLabel, $result) {
+    // const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+    // const fileInput = $(fileLabel).find('input')[0];
+    // const fileResult = $(block).find("[data-result='" + idx +"']")[0];
+    // const fileClearBtn = $(fileResult).find('.upload__close')[0];
+    var input = $inputLabel.children('input')[0];
+    var inputLabel = $inputLabel[0];
+    var fileClearBtn = $result.find('.upload__close')[0];
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
-      fileLabel.addEventListener(eventName, preventDefaults, false);
+      inputLabel.addEventListener(eventName, preventDefaults, false);
     });
     ['dragenter', 'dragover'].forEach(function (eventName) {
-      fileLabel.addEventListener(eventName, highlight, false);
+      inputLabel.addEventListener(eventName, highlight, false);
     });
     ['dragleave', 'drop'].forEach(function (eventName) {
-      fileLabel.addEventListener(eventName, unhighlight, false);
+      inputLabel.addEventListener(eventName, unhighlight, false);
     });
-    fileLabel.addEventListener('drop', handleDrop, false);
-    fileInput.addEventListener('change', onFileChange);
+    inputLabel.addEventListener('drop', handleDrop, false);
+    input.addEventListener('change', onFileChange);
     fileClearBtn.addEventListener('click', onFileClear);
-  }
+  } // function removeEventListeners(block, idx) {
+  //   const fileLabel = $(block).find("[data-input='" + idx +"']")[0];
+  //   const fileInput = $(fileLabel).find('input')[0];
+  //   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, preventDefaults, false)
+  //   });
+  //   ['dragenter', 'dragover'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, highlight, false)
+  //   });
+  //   ['dragleave', 'drop'].forEach(eventName => {
+  //     fileLabel.removeEventListener(eventName, unhighlight, false)
+  //   })
+  //   fileLabel.removeEventListener('drop', handleDrop, false);
+  //   fileInput.removeEventListener('change', onFileChange);
+  // }
 
-  function removeEventListeners(block, idx) {
-    var fileLabel = $(block).find("[data-input='" + idx + "']")[0];
-    var fileInput = $(fileLabel).find('input')[0];
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(function (eventName) {
-      fileLabel.removeEventListener(eventName, preventDefaults, false);
-    });
-    ['dragenter', 'dragover'].forEach(function (eventName) {
-      fileLabel.removeEventListener(eventName, highlight, false);
-    });
-    ['dragleave', 'drop'].forEach(function (eventName) {
-      fileLabel.removeEventListener(eventName, unhighlight, false);
-    });
-    fileLabel.removeEventListener('drop', handleDrop, false);
-    fileInput.removeEventListener('change', onFileChange);
-  }
 
   uploads.forEach(function (upload) {
-    var num = 0;
-    addEventListeners(upload, num); // // Сбрасываем стандартные события при перетаскивании файла
+    var $inputLabel = $(upload).find('.upload__label');
+    var $result = $(upload).find('.upload__result');
+
+    if (!$(upload).hasClass('disabled')) {
+      addEventListeners($inputLabel, $result);
+    } // // Сбрасываем стандартные события при перетаскивании файла
     // ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     //   fileLabel.addEventListener(eventName, preventDefaults, false)
     // });
@@ -588,6 +612,7 @@
     // //
     // fileLabel.addEventListener('drop', handleDrop, false);
     // fileInput.addEventListener('change', onFileChange);
+
   });
 })();
 

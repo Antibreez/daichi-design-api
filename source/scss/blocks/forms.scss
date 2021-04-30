@@ -187,6 +187,16 @@
     }
   }
 
+  &__block--upload {
+    padding: 93px 0 110px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 37px;
+      }
+    }
+  }
+
   &__item {
     display: flex;
   }

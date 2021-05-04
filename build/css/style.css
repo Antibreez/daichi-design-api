@@ -6711,3 +6711,104 @@ html *::-webkit-scrollbar-thumb {
 .forms__dropdown select {
   width: 100%;
 }
+
+.icons__block:not(:last-child) {
+  margin-bottom: 80px;
+}
+
+.icons__download {
+  width: auto;
+  max-width: none;
+}
+
+.icons__dimensions-desc {
+  max-width: 636px;
+}
+
+.icons__dimensions-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.icons__dimensions-part:first-child {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.icons__dimensions-part:first-child .icons__dimensions-item-block {
+  padding: 90px 20px 96px;
+}
+
+.icons__dimensions-part:first-child .icons__dimensions-item:first-child {
+  margin-right: 74px;
+}
+
+.icons__dimensions-part:nth-child(2) {
+  width: calc((100% - 24px) / 2);
+}
+
+.icons__dimensions-part:nth-child(2) .icons__dimensions-item-block {
+  padding: 110px 20px 107px;
+}
+
+.icons__dimensions-part:nth-child(2) .icons__dimensions-item {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.icons__dimensions-part:nth-child(3) {
+  width: calc((100% - 24px) / 2);
+}
+
+.icons__dimensions-part:nth-child(3) .icons__dimensions-item-block {
+  padding: 80px 20px;
+}
+
+.icons__dimensions-item-block {
+  margin-top: 24px;
+  background-color: #F4F4F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons__dimensions-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icons__dimensions-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #151515;
+  margin: 0 0 8px;
+}
+
+.icons__dimensions-img {
+  margin-top: auto;
+}

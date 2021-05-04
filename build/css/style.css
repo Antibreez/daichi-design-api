@@ -4443,7 +4443,8 @@ html *::-webkit-scrollbar-thumb {
   line-height: 23px;
 }
 
-.input {
+.input,
+.textarea {
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -4458,51 +4459,65 @@ html *::-webkit-scrollbar-thumb {
   transition: border-color 0.2s;
 }
 
-.input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
   color: #94A0B1;
   opacity: 1;
 }
 
-.input::-moz-placeholder {
+.input::-moz-placeholder, .textarea::-moz-placeholder {
   color: #94A0B1;
   opacity: 1;
 }
 
-.input:-ms-input-placeholder {
+.input:-ms-input-placeholder, .textarea:-ms-input-placeholder {
   color: #94A0B1;
   opacity: 1;
 }
 
-.input::-ms-input-placeholder {
+.input::-ms-input-placeholder, .textarea::-ms-input-placeholder {
   color: #94A0B1;
   opacity: 1;
 }
 
-.input::placeholder {
+.input::placeholder,
+.textarea::placeholder {
   color: #94A0B1;
   opacity: 1;
 }
 
-.input.error {
+.input.error,
+.textarea.error {
   border-color: #F25248;
 }
 
-.input.error:hover, .input.error:focus {
+.input.error:hover, .input.error:focus,
+.textarea.error:hover,
+.textarea.error:focus {
   border-color: #F25248;
 }
 
-.input:hover {
+.input:hover,
+.textarea:hover {
   border-color: #D1D8E1;
 }
 
-.input:focus {
+.input:focus,
+.textarea:focus {
   border-color: #94A0B1;
 }
 
-.input:disabled {
+.input:disabled,
+.textarea:disabled {
   border-color: transparent;
   background-color: #D1D8E1;
   color: #94A0B1;
+}
+
+.textarea {
+  height: 106px;
+  padding: 16px 20px;
+  resize: none;
+  text-align: left;
 }
 
 .input__calendar {
@@ -4529,11 +4544,13 @@ html *::-webkit-scrollbar-thumb {
   margin: 8px 0 0;
 }
 
-.input-block--hover {
+.input-block--hover,
+.input-textarea--hover {
   position: relative;
 }
 
-.input-block--hover::after {
+.input-block--hover::after,
+.input-textarea--hover::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -4545,20 +4562,31 @@ html *::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
 }
 
-.input-block--hover .input {
+.input-textarea--hover::after {
+  top: 58px;
+  bottom: auto;
+  left: auto;
+  right: 64px;
+}
+
+.input-block--hover .input,
+.input-textarea--hover .textarea {
   border: 1px solid #D1D8E1;
   background-color: #F4F4F8;
 }
 
-.input-block--hover .input:disabled + .input-icon .input__calendar {
+.input-block--hover .input:disabled + .input-icon .input__calendar,
+.input-textarea--hover .textarea:disabled + .input-icon .input__calendar {
   color: #151515;
 }
 
-.input-block--focus {
+.input-block--focus,
+.input-textarea--focus {
   position: relative;
 }
 
-.input-block--focus::after {
+.input-block--focus::after,
+.input-textarea--focus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -4568,13 +4596,21 @@ html *::-webkit-scrollbar-thumb {
   background-color: #151515;
 }
 
-.input-block--focus.input-block--date::after {
+.input-block--focus.input-block--date::after,
+.input-textarea--focus.input-block--date::after {
   left: 19px;
 }
 
-.input-block--focus .input {
+.input-textarea--focus::after {
+  top: 45px;
+  left: 77px;
+}
+
+.input-block--focus .input,
+.input-textarea--focus .textarea {
   border: 1px solid #94A0B1;
   background-color: #F4F4F8;
+  color: #151515;
 }
 
 .input-block--filled .input {
@@ -5186,6 +5222,10 @@ html *::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.upload__label.hidden + .input-block__message {
+  display: none;
+}
+
 .upload__label:hover, .upload__label.highlight {
   cursor: pointer;
   background-color: #F4F4F8;
@@ -5348,6 +5388,18 @@ html *::-webkit-scrollbar-thumb {
   background-image: url(../img/pointer.svg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.upload.mobile .upload__title span {
+  display: none;
+}
+
+.upload.error .upload__label {
+  border-color: #F25248;
+}
+
+.upload.error .upload__label:hover {
+  border: 1px dashed #F25248;
 }
 
 .side-line {
@@ -6475,6 +6527,14 @@ html *::-webkit-scrollbar-thumb {
 
 .forms__block--select .forms__item:nth-child(3) {
   margin-bottom: 260px;
+}
+
+.forms__block--textarea {
+  padding: 93px 0 96px;
+}
+
+.forms__block--textarea .forms__item:not(:last-child) {
+  margin-bottom: 37px;
 }
 
 .forms__block--dropdown {

@@ -39,7 +39,8 @@
   }
 }
 
-.input {
+.input,
+.textarea {
   @include font(15px, 24px);
   color: $dark-grey;
   width: 100%;
@@ -79,6 +80,13 @@
   }
 }
 
+.textarea {
+  height: 106px;
+  padding: 16px 20px;
+  resize: none;
+  text-align: left;
+}
+
 .input__calendar {
   color: $dark-grey;
 }
@@ -104,7 +112,8 @@
   margin: 8px 0 0;
 }
 
-.input-block--hover {
+.input-block--hover,
+.input-textarea--hover {
   position: relative;
 
   &::after {
@@ -120,7 +129,17 @@
   }
 }
 
-.input-block--hover .input {
+.input-textarea--hover {
+  &::after {
+    top: 58px;
+    bottom: auto;
+    left: auto;
+    right: 64px;
+  }
+}
+
+.input-block--hover .input,
+.input-textarea--hover .textarea {
   border: 1px solid $grey300;
   background-color: $grey200;
 
@@ -129,7 +148,8 @@
   }
 }
 
-.input-block--focus {
+.input-block--focus,
+.input-textarea--focus {
   position: relative;
 
   &::after {
@@ -149,9 +169,18 @@
   }
 }
 
-.input-block--focus .input {
+.input-textarea--focus {
+  &::after {
+    top: 45px;
+    left: 77px;
+  }
+}
+
+.input-block--focus .input,
+.input-textarea--focus .textarea {
   border: 1px solid $grey400;
   background-color: $grey200;
+  color: $dark-grey;
 }
 
 .input-block--filled .input {

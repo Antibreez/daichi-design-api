@@ -1327,6 +1327,95 @@
           </div>
         </div>
 
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Прикрепить файлы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Компонент с возможностью прикрепить файлы к форме. Используется в двух вариантах: прикрепить только один файл, либо прикрепить несколько файлов.
+          </p>
+
+          <div class="forms__block  forms__block--textarea">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка"></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block  input-textarea--hover">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block  input-textarea--focus">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled>Исполь</textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка">Используйте многострочное поле для ввода длинных строк и больших текстов.</textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea  error" id="" placeholder="Подсказка"></textarea>
+                  </div>
+                  <p class="input-block__message">Введите текст сообщения</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+          </div>
+        </div>
+
         <div class="forms__section">
           <h2 class="info-block__title">Прикрепить файлы</h2>
           <p class="info-block__desc  grid__columns-desc">
@@ -1403,6 +1492,106 @@
             <div class="forms__item">
               <div class="forms__item-action">
 
+                <div class="upload mobile">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Для мобильных устройств</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload error">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <p class="input-block__message">Прикрепите файл</p>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload  multi  disabled">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden" disabled>
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
                 <div class="upload multi">
                   <p class="input-block__label">
                     Прикрепить документ
@@ -1436,13 +1625,84 @@
             <div class="forms__item">
               <div class="forms__item-action">
 
-                <div class="upload  multi  disabled">
+                <div class="upload">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label  hidden" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result  show  loader" data-result="0">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Загрузка варианта с одним файлом</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label  hidden" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result  show" data-result="0">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Один файл загружен</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload multi">
                   <p class="input-block__label">
                     Прикрепить документ
                   </p>
                   <div class="upload__input-wrap">
                     <label class="upload__label" data-input="0">
-                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden" disabled>
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="1">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
                       <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
                       <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
                     </label>
@@ -1459,11 +1719,99 @@
                         </svg>
                       </button>
                     </div>
+                    <div class="upload__result  show  loader" data-result="1">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
               </div>
-              <p class="forms__item-desc">По умолчанию</p>
+              <p class="forms__item-desc">Загрузка варианта с несколькими файлами</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload multi">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="1">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-1" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="2">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-2" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="3">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-3" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="1">
+                      <p class="upload__name">
+                        File.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="2">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="3">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Несколько файлов загружено</p>
             </div>
           </div>
 

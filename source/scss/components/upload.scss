@@ -14,6 +14,10 @@
 
     &.hidden {
       display: none;
+
+      & + .input-block__message {
+        display: none;
+      }
     }
 
     &:hover,
@@ -159,6 +163,22 @@
       background-image: url(../img/pointer.svg);
       background-size: contain;
       background-repeat: no-repeat;
+    }
+  }
+}
+
+.upload.mobile {
+  .upload__title span {
+    display: none;
+  }
+}
+
+.upload.error {
+  .upload__label {
+    border-color: $fail;
+
+    &:hover {
+      border: 1px dashed $fail;
     }
   }
 }

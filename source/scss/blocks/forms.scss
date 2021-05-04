@@ -132,6 +132,16 @@
     }
   }
 
+  &__block--textarea {
+    padding: 93px 0 96px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 37px;
+      }
+    }
+  }
+
   &__block--dropdown {
     padding: 80px 0 20px;
 

@@ -207,6 +207,20 @@
     }
   }
 
+  &__block--checkbox {
+    padding: 64px 0;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .forms__item-desc {
+      margin-top: 0;
+    }
+  }
+
   &__item {
     display: flex;
   }

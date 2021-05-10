@@ -129,7 +129,9 @@
 
     $('.js-select-combo-searching').select2('open');
     setTimeout(function() {
-      $('.select-dropdown--searching input')[0].dispatchEvent(event);
+      if ($('.select-dropdown--searching input')[0]) {
+        $('.select-dropdown--searching input')[0].dispatchEvent(event);
+      }
     }, 500);
 
 
@@ -155,7 +157,10 @@
 
     $('.js-select-combo-not-found').select2('open');
     $('.select-dropdown--not-found input').val('фывапа');
-    $('.select-dropdown--not-found input')[0].dispatchEvent(event);
+
+    if ($('.select-dropdown--not-found input')[0]) {
+      $('.select-dropdown--not-found input')[0].dispatchEvent(event);
+    }
 
 
 
@@ -287,7 +292,9 @@
 
     $('.js-select-multi-searching').select2('open');
     setTimeout(function() {
-      $('.select-dropdown--searching-multi  input')[0].dispatchEvent(event);
+      if ($('.select-dropdown--searching-multi  input')[0]) {
+        $('.select-dropdown--searching-multi  input')[0].dispatchEvent(event);
+      }
     }, 500);
 
 
@@ -322,7 +329,9 @@
 
     $('.js-select-multi-not-found').select2('open');
     $('.select-dropdown--not-found-multi input').val('фывапа');
-    $('.select-dropdown--not-found-multi input')[0].dispatchEvent(event);
+
+    $('.select-dropdown--not-found-multi input')[0]
+      && $('.select-dropdown--not-found-multi input')[0].dispatchEvent(event);
 
   });
 

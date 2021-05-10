@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Чекбоксы, радиокнопки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
+  <header class="header  header--black">
+    <div class="header__container  wrapper">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+      </a>
+      <h1 class="header__title">
+        Чекбоксы, радиокнопки
+      </h1>
+    </div>
+  </header>
+
+  <main class="main wrapper" id="main">
+
+    <nav class="main__main-nav  main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          Стили
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Цвета</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Типографика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Сетка</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Компоненты
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Логотип</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Формы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Кнопки и ссылки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__link  main-nav__link--active">Чекбоксы, радиокнопки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Табы, переключатели</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Слайдеры</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Аккордеон</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Таблицы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Пагинация</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Теги</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Подсказки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Лоадер</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Модальные окна</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки интерфейса</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки продуктов</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Контент
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Общие правила</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Редполитика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Оборудование</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Программы Даичи</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Рекламные материалы</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main__content">
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Чекбокс</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используются для управления параметром с двумя состояниями.
+          </p>
+
+          <div class="forms__block  forms__block--checkbox">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="checkbox" class="checkbox__input visually-hidden">
+                    <span class="checkbox__area">
+                      <svg class="checkbox__check" role="img" width="11" height="8">
+                        <use xlink:href="#icon-check"></use>
+                      </svg>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Поле ввода с датой</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Поле помогает вводить дату с клавиатуры или выбирать ее с помощью мыши. Поле с датой отличается от обычного поля ввода наличием иконки, маски ввода и блока календаря.
+          </p>
+
+          <div class="forms__block  forms__block--date">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-calendar" data-id="1">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input input-date" placeholder="">
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block  input-block--hover">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input input-date" placeholder="дд.мм.гггг" disabled>
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block input-block--date  input-block--focus">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input input-date-opened" placeholder="дд.мм.гггг" disabled>
+                    <div class="input-date-trigger"></div>
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block  input-block--filled">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input input-date" placeholder="дд.мм.гггг" value="12.08.2020" disabled>
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block  input-block--filled">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input error input-date" placeholder="дд.мм.гггг" value="12.08.2020" disabled>
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="input-block__message">Укажите дату в формате дд.мм.гггг</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block input-block">
+                  <label class="input-block__label">Дата</label>
+                  <div class="input-wrapper">
+                    <input type="text" class="input input-date" placeholder="дд.мм.гггг" disabled>
+                    <span class="input-icon  input-icon--calendar">
+                      <svg class="input__calendar" role="img" width="24" height="24">
+                        <use xlink:href="#icon-calendar"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Поле ввода с датой</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            В заголовке показываем название текущего месяца и года. При этом значения в календаре соответствуют значениям в поле. Например, поменяли месяц с клавиатуры — изменился месяц и в календаре.
+          </p>
+          <div class="forms__block  forms__block--date-states">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block">
+                  <div class="input-date-trigger-single"></div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбранная дата в календаре</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__input-block">
+                  <div class="input-date-trigger-range"></div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбранный период в календаре</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__calendar-dropdown-wrapper">
+                  <div class="forms__calendar-dropdown-month">
+                    <select name="calendar-dropdown-month" id="calendar-dropdown-month">
+                      <option value="Январь">Январь</option>
+                      <option value="Февраль">Февраль</option>
+                      <option value="Март">Март</option>
+                      <option value="Апрель">Апрель</option>
+                      <option value="Май">Май</option>
+                      <option value="Июнь">Июнь</option>
+                      <option value="Июль">Июль</option>
+                      <option value="Август">Август</option>
+                      <option value="Сентябрь">Сентябрь</option>
+                      <option value="Октябрь">Октябрь</option>
+                      <option value="Ноябрь">Ноябрь</option>
+                      <option value="Декабрь">Декабрь</option>
+                    </select>
+                  </div>
+                  <div class="forms__calendar-dropdown-year">
+                    <select name="calendar-dropdown-year" id="calendar-dropdown-year">
+                      <option value="2010">2010</option>
+                      <option value="2011">2011</option>
+                      <option value="2012">2012</option>
+                      <option value="2013">2013</option>
+                      <option value="2014">2014</option>
+                      <option value="2015">2015</option>
+                      <option value="2016">2016</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc"></p>
+            </div>
+          </div>
+
+          <div class="forms__block forms__block--date-cells">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell  forms__date-cell--hover">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell  forms__date-cell--picked">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано, начало/конец периода</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell  forms__date-cell--range">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбранный период</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell  forms__date-cell--current">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Текущий день</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__date-cell-block">
+                  <p class="forms__date-cell  forms__date-cell--disabled">24</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заблокировано</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Селект</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используется как выпадающий список для выбора значения в форме из заранее опреденных вариантов.
+          </p>
+
+          <div class="forms__example">
+            <a href="#" class="forms__select-link  external-link">
+              <svg class="external-link__icon" role="img" width="24" height="24">
+                <use xlink:href="#icon-external_link"></use>
+              </svg>
+              <span>Посмотреть пример</span>
+            </a>
+          </div>
+
+          <div class="forms__block  forms__block--select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select  select--hover" name="state" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single-open  select  select--focus" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2" selected>Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select  select--error" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                  <p class="input-block__message">Выберите значение из списка</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">Выбор одного варианта</p>
+                  <select class="js-select-single  select" name="state" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Дропдаун</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Упрощенный вариант селекта. Используется для отображения списка заранее опрделенных опций и выбора одной из них.
+          </p>
+
+          <div class="forms__block  forms__block--dropdown">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__dropdown-block">
+                  <div class="forms__dropdown">
+                    <select name="dropdown" class="dropdown" id="dropdown">
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                      <option value="Вариант 11">Вариант 11</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__dropdown-block">
+                  <div class="forms__dropdown">
+                    <select name="dropdown" class="dropdown dropdown--hovered" tabindex="-1" disabled>
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                      <option value="Вариант 11">Вариант 11</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__dropdown-block">
+                  <div class="forms__dropdown">
+                    <select name="dropdown" class="dropdown dropdown-opened" tabindex="-1">
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                      <option value="Вариант 11">Вариант 11</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Открыто</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__dropdown-block">
+                  <div class="forms__dropdown">
+                    <select name="dropdown" class="dropdown" tabindex="-1" disabled>
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                      <option value="Вариант 11">Вариант 11</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__dropdown-block">
+                  <div class="forms__dropdown">
+                    <select name="dropdown" class="dropdown dropdown--focus" tabindex="-1" disabled>
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                      <option value="Вариант 11">Вариант 11</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Фокус. Раскрывающийся список получает фокус только при переходе табом — появляется синяя рамка. При клике фокусная рамка не появляется. При нажатии клавиши Enter раскрывается список.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Комбо бокс</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Поле ввода с возможностью выбора значения из списка. Используется вместо простого селекта, если значений в списке больше 20.
+          </p>
+
+          <div class="forms__block  forms__block--combo-select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  select  select--hover" name="state" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo-open  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2" selected>Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  select  select--error" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                  <p class="input-block__message">Выберите значение из списка</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  select" name="state" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo-searching  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Индикатор загрузки. Показываем, если обработка запроса занимает дольше 0,3 сек.
+              </p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  js-select-combo-not-found  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Нет совпадений</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Мультиселект</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Выпадающий список с возможностью выбора или ввода нескольких заранее опреденных вариантов.
+          </p>
+
+          <div class="forms__block  forms__block--multi-select">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi  select" name="state" multiple="multiple">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi  select  select--hover" name="state" multiple="multiple" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi-open  select  select--focus" name="state" multiple="multiple">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi-open  select  select--focus" name="state" multiple="multiple">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3" selected>Вариант 3</option>
+                    <option value="Вариант 4" selected>Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус заполнено</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi  select" name="state" multiple="multiple">
+                    <option></option>
+                    <option value="Вариант 1" selected>Вариант 1</option>
+                    <option value="Вариант 2" selected>Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi  select  select--error" name="state" multiple="multiple">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                    <option value="Вариант 2">Вариант 2</option>
+                    <option value="Вариант 3">Вариант 3</option>
+                    <option value="Вариант 4">Вариант 4</option>
+                    <option value="Вариант 5">Вариант 5</option>
+                    <option value="Вариант 6">Вариант 6</option>
+                    <option value="Вариант 7">Вариант 7</option>
+                    <option value="Вариант 8">Вариант 8</option>
+                    <option value="Вариант 9">Вариант 9</option>
+                    <option value="Вариант 10">Вариант 10</option>
+                    <option value="Вариант 11">Вариант 11</option>
+                    <option value="Вариант 12">Вариант 12</option>
+                    <option value="Вариант 13">Вариант 13</option>
+                    <option value="Вариант 14">Вариант 14</option>
+                    <option value="Вариант 15">Вариант 15</option>
+                    <option value="Вариант 16">Вариант 16</option>
+                    <option value="Вариант 17">Вариант 17</option>
+                    <option value="Вариант 18">Вариант 18</option>
+                    <option value="Вариант 19">Вариант 19</option>
+                    <option value="Вариант 20">Вариант 20</option>
+                  </select>
+                  <p class="input-block__message">Выберите значение из списка</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор вариантов
+                  </p>
+                  <select class="js-select-multi  select" name="state" multiple="multiple" disabled>
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-multi-searching  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Индикатор загрузки. Показываем, если обработка запроса занимает дольше 0,3 сек.
+              </p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__select-block  select-block">
+                  <p class="input-block__label">
+                    Выбор одного варианта
+                  </p>
+                  <select class="js-select-combo  js-select-multi-not-found  select" name="state">
+                    <option></option>
+                    <option value="Вариант 1">Вариант 1</option>
+                  </select>
+                </div>
+              </div>
+              <p class="forms__item-desc">Нет совпадений</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Многострочное текстовое поле</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используется для ввода длинных строк и больших текстов. При достижении 15 строк поле перестает расти и появляется полоса прокрутки.
+          </p>
+
+          <div class="forms__block  forms__block--textarea">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка"></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию с подсказкой</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block  input-textarea--hover">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block  input-textarea--focus">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled>Исполь</textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Фокус</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка">Используйте многострочное поле для ввода длинных строк и больших текстов.</textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заполнено</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea  error" id="" placeholder="Подсказка"></textarea>
+                  </div>
+                  <p class="input-block__message">Введите текст сообщения</p>
+                </div>
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="forms__input-block input-block">
+                  <label for="" class="input-block__label">Сообщение</label>
+                  <div class="input-wrapper">
+                    <textarea class="textarea" id="" placeholder="Подсказка" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Прикрепить файлы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Компонент с возможностью прикрепить файлы к форме. Используется в двух вариантах: прикрепить только один файл, либо прикрепить несколько файлов.
+          </p>
+
+          <div class="forms__block  forms__block--upload">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload  multi  disabled  hover">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden" disabled>
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload mobile">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Для мобильных устройств</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload error">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <p class="input-block__message">Прикрепите файл</p>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload  multi  disabled">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden" disabled>
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload multi">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label  hidden" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result  show  loader" data-result="0">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Загрузка варианта с одним файлом</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label  hidden" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result  show" data-result="0">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Один файл загружен</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload multi">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="1">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show  loader" data-result="1">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Загрузка варианта с несколькими файлами</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="upload multi">
+                  <p class="input-block__label">
+                    Прикрепить документ
+                  </p>
+                  <div class="upload__input-wrap">
+                    <label class="upload__label" data-input="0">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-0" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="1">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-1" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="2">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-2" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                    <label class="upload__label  hidden" data-input="3">
+                      <input type="file" accept="image/jpeg,image/png,image/gif" name="file-3" class="upload__input  visually-hidden">
+                      <p class="upload__title">Выберите файл<br> <span>или перетащите его сюда</span></p>
+                      <p class="upload__desc">Файлы .jpg,.png. Макс. размер 5 Мб</p>
+                    </label>
+                  </div>
+
+                  <div class="upload__input-results">
+                    <div class="upload__result" data-result="0">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="1">
+                      <p class="upload__name">
+                        File.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="2">
+                      <p class="upload__name">
+                        Document.jpg
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="upload__result  show" data-result="3">
+                      <p class="upload__name">
+                        Photo.png
+                      </p>
+                      <button type="button" class="upload__close">
+                        <svg class="upload__close-icon" role="img" width="24" height="24">
+                          <use xlink:href="#icon-close_small"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <p class="forms__item-desc">Несколько файлов загружено</p>
+            </div>
+          </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

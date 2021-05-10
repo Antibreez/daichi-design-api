@@ -126,7 +126,7 @@
           <div class="forms__example  icons__download">
             <a href="#" class="forms__select-link  external-link">
               <svg class="external-link__icon" role="img" width="24" height="24">
-                <use xlink:href="#icon-external_link"></use>
+                <use xlink:href="#icon-download"></use>
               </svg>
               <span>Скачать иконки</span>
             </a>
@@ -135,7 +135,7 @@
         <div class="icons__block">
           <h2 class="info-block__title">Размеры</h2>
           <div class="icons__dimensions-wrapper">
-            <div class="icons__dimensions-part">
+            <div class="icons__dimensions-part  icons__dimensions-part--size  w-100">
               <p class="info-block__desc  icons__dimensions-desc">
                 Чтобы поддерживать визуальное единство, используем один размер иконок — 24px. Толщина линий — 2px.
               </p>
@@ -150,7 +150,7 @@
                 </div>
               </div>
             </div>
-            <div class="icons__dimensions-part">
+            <div class="icons__dimensions-part  icons__dimensions-part--border  w-50">
               <p class="info-block__desc  icons__dimensions-desc">
                 Используем прямые линии и скругления 1-2px
               </p>
@@ -161,7 +161,7 @@
                 </div>
               </div>
             </div>
-            <div class="icons__dimensions-part">
+            <div class="icons__dimensions-part  icons__dimensions-part--area  w-50">
               <p class="info-block__desc  icons__dimensions-desc">
                 Область нажатия для иконок — 48px или больше
               </p>
@@ -175,40 +175,629 @@
         </div>
         <div class="icons__block">
           <h2 class="info-block__title">Цвета</h2>
-          <div class="typography__content">
-            <ul class="typography__colors-list">
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #151515;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Основной цвет текста</p>
-                  <p class="colors__code">#151515</p>
-                </div>
+          <ul class="typography__colors-list">
+            <li class="typography__colors-item">
+              <div class="typography__colors-block" style="background-color: #151515;"></div>
+              <div class="typography__colors-chars">
+                <p class="colors__name">Основной цвет иконок</p>
+                <p class="colors__code">#151515</p>
+              </div>
+            </li>
+            <li class="typography__colors-item">
+              <div class="typography__colors-block" style="background-color: #94A0B1;"></div>
+              <div class="typography__colors-chars">
+                <p class="colors__name">Дополнительный цвет иконок</p>
+                <p class="colors__code">#94A0B1</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="icons__block">
+          <h2 class="info-block__title">Навигация</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long.svg" alt="" class="icons__icons-arrow">
               </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #94A0B1;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет дополнительного текста</p>
-                  <p class="colors__code">#94A0B1</p>
-                </div>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--right">
               </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block  typography__colors-block--white" style="background-color: #FFFFFF;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет текста на темном фоне</p>
-                  <p class="colors__code">#FFFFFF</p>
-                </div>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--top">
               </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #2858FF;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет ссылок при наведении</p>
-                  <p class="colors__code">#2858FF</p>
-                </div>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--down">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-big.svg" alt="" class="icons__icons-arrow">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-big.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--right">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-big.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--top">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-big.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--down">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-search.svg" alt="">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long-small.svg" alt="" class="icons__icons-arrow">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long-small.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--right">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long-small.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--top">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow-long-small.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--down">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow.svg" alt="" class="icons__icons-arrow">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--right">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--top">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/icon-arrow.svg" alt="" class="icons__icons-arrow  icons__icons-arrow--down">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-refresh.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/arrow-triangle.svg" alt="" class="icons__icons-arrow-triangle  icons__icons-arrow-triangle--left">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/arrow-triangle.svg" alt="" class="icons__icons-arrow-triangle  icons__icons-arrow-triangle--right">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/arrow-triangle.svg" alt="" class="icons__icons-arrow-triangle  icons__icons-arrow-triangle--top">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/arrow-triangle.svg" alt="" class="icons__icons-arrow-triangle">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-more.svg" alt="">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-more_vertical.svg" alt="">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-categories.svg" alt="">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-menu-big.svg" alt="">
+              </li>
+
+
+              <li class="icons__icons-item">
+                <img src="img/icon-person.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-close.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-close_small.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/close_small.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-external_link.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-undo.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-redo.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-logout.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-login.svg" alt="">
+              </li>
+
+              <li class="icons__icons-item">
+                <img src="img/icon-gear.svg" alt="">
               </li>
             </ul>
           </div>
-          </li>
         </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Действия</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/cart.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/basket.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/favorite.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/favorite_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/star.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/star_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/star_half_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/bookmark.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/bookmark_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/list.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/grid-icon.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/delete.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/filter.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/settings.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/sort.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/sort_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/sort_descending.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/sort_ascending.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/pause.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/play.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/stop.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/volume_max.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/volume.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/mute.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/lock.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/unlock.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/notification.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/print.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/photo.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/tip.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/info.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/min.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/max.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/horiz_arrows.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/zoom_in.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/zoom_out.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/like.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/dislike.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/comment_blank.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/comment_dots.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/copy.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/plus_big.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/plus.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/minus_big.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/minus.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/phone.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/mail.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Файлы</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/doc_blank.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/doc_add.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/doc_text.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/doc_check.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/upload.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/download.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/image.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/video.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/3d.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/jpg_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/png_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/gif_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/svg_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/pdf_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt-1.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt-2.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt-3.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt-4.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ppt_alt-5.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/pdf.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Формы</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list  icons__icons-list--forms">
+              <li class="icons__icons-item">
+                <img src="img/icon-calendar.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/eye.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/eye_off-black.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/edit_1.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/edit_2.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/attach.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/link.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Статус</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/check.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/check_round_outline.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/check_round_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/error.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/warning.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/warning_filled.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/warning_alt.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/warning_filled-1.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/repeat.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Карты</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list  icons__icons-list--maps">
+              <li class="icons__icons-item">
+                <img src="img/compass.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/position.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/map.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/location.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/navigator.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Соцсети</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/share.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/youtube.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/twitter.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/vkontakte.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/facebook.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/odnoklassniki.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/whatsup.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/telegram.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/instagram.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/viber.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/google.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/yandex.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/skype.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/linkedin.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Платежные системы</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list  icons__icons-list--payments">
+              <li class="icons__icons-item">
+                <img src="img/visa.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/mastercard.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/apple_pay.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/google_pay.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/mir.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="icons__block">
+          <h2 class="info-block__title">Разное</h2>
+          <div class="icons__icons-block">
+            <ul class="icons__icons-list">
+              <li class="icons__icons-item">
+                <img src="img/card.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/wallet.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/cash.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/rubl.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/home.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/bank.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/store.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/storage.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/clock.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/delivery.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/gift.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/ticket.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/discount.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/certificate.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/box.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/calculator.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/flag.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/world.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/percent.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/percent_small.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/desktop.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/laptop.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/tablet.svg" alt="">
+              </li>
+              <li class="icons__icons-item">
+                <img src="img/mobile.svg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
       </section>
     </div>
   </main>

@@ -1,8 +1,27 @@
 "use strict";
 
+(function () {
+  var mouseup = false;
+  $('.checkbox').mouseup(function (e) {
+    mouseup = true;
+    $(this).find('.checkbox__input').removeClass('focused');
+  });
+  $('.checkbox__input').focus(function (e) {
+    if (!mouseup) {
+      $(this).addClass('focused');
+    }
+
+    mouseup = false;
+  });
+  $('.checkbox__input').blur(function (e) {
+    $(this).removeClass('focused');
+  });
+})();
 /* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
 
 /* Written by Andrew Stromnov (stromnov@gmail.com). */
+
+
 (function (factory) {
   if (typeof define === "function" && define.amd) {
     // AMD. Register as an anonymous module.

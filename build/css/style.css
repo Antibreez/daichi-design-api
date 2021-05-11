@@ -5402,6 +5402,39 @@ html *::-webkit-scrollbar-thumb {
   border: 1px dashed #F25248;
 }
 
+.checkbox {
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.checkbox__area {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #F4F4F8;
+  border-radius: 4px;
+}
+
+.checkbox__outline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid transparent;
+}
+
+.checkbox__input:checked ~ .checkbox__area {
+  background-color: #151515;
+  background-image: url("../img/check-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox__input.focused ~ .checkbox__area .checkbox__outline {
+  outline: 2px solid red;
+}
+
 .side-line {
   position: absolute;
   top: 0;

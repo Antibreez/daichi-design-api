@@ -3950,6 +3950,8 @@ button {
 
 .btn {
   display: inline-block;
+  padding: 0;
+  border-radius: 32px;
 }
 
 .btn__content {
@@ -3962,6 +3964,13 @@ button {
   border-radius: 32px;
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
+}
+
+.btn__success-text {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn--m .btn__content {
@@ -3997,15 +4006,123 @@ button {
   background-color: #113EE0;
 }
 
-.btn:focus > .btn__content {
-  outline: 2px solid #2858FF;
-  outline-offset: 2px;
+.btn:focus > .btn__content::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 36px;
 }
 
 /* Removing default outline only after we've added our custom one */
 .btn:focus,
 .btn__content:focus {
   outline: none;
+}
+
+.btn-primary:disabled > .btn__content {
+  background-color: #D1D8E1;
+  color: #94A0B1;
+}
+
+.btn-primary:disabled > .btn__content:hover {
+  cursor: default;
+}
+
+.btn-primary.hovered:disabled > .btn__content,
+.btn-primary.active:disabled > .btn__content {
+  color: #fff;
+  position: relative;
+}
+
+.btn-primary.hovered:disabled > .btn__content::after,
+.btn-primary.active:disabled > .btn__content::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-primary.hovered:disabled > .btn__content {
+  background-color: #2858FF;
+}
+
+.btn-primary.active:disabled > .btn__content {
+  background-color: #113EE0;
+}
+
+.btn-primary.loading .btn__content {
+  position: relative;
+  background-color: #151515;
+}
+
+.btn-primary.loading .btn__content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: rotation .7s infinite linear;
+          animation: rotation .7s infinite linear;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/loader-white.svg");
+  margin-left: -10px;
+}
+
+.btn-primary.loading .btn__content > span:first-child {
+  opacity: 0;
+}
+
+.btn-primary.loading:hover .btn__content,
+.btn-primary.loading:active .btn__content {
+  background-color: #151515;
+}
+
+.btn-primary.success .btn__content {
+  position: relative;
+  background-color: #1ED77E;
+  color: #fff;
+}
+
+.btn-primary.success .btn__content span:first-child {
+  display: none;
+}
+
+.btn-primary.success .btn__content .btn__success-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-primary.success .btn__content .btn__success-text span {
+  margin-left: 10px;
+}
+
+.btn-primary.success .btn__content .btn__success-text img {
+  margin-left: -8px;
+}
+
+.btn-primary.success:hover .btn__content,
+.btn-primary.success:active .btn__content {
+  background-color: #1ED77E;
+}
+
+.btn--s.btn-primary.success .btn__success-text span {
+  margin-left: 6px;
+}
+
+.btn--s.btn-primary.success .btn__success-text img {
+  width: 16px;
+  height: 16px;
+  margin-left: -2px;
 }
 
 .info-block__title {
@@ -6748,6 +6865,18 @@ html *::-webkit-scrollbar-thumb {
   margin-top: 0;
 }
 
+.forms__block--button {
+  padding: 64px 0 44px;
+}
+
+.forms__block--button .forms__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.forms__block--button .forms__item-desc {
+  margin-top: 20px;
+}
+
 .forms__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6879,6 +7008,43 @@ html *::-webkit-scrollbar-thumb {
 
 .forms__checkbox-item-group:not(:last-child) {
   margin-bottom: 40px;
+}
+
+.forms__button-item {
+  font-size: 0;
+  line-height: 0;
+  padding: 0 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 1340px) {
+  .forms__button-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.forms__btn {
+  margin-bottom: 16px;
+}
+
+.forms__btn:not(:last-child) {
+  margin-right: 16px;
 }
 
 .icons__block:not(:last-child) {

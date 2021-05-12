@@ -221,6 +221,20 @@
     }
   }
 
+  &__block--button {
+    padding: 64px 0 44px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .forms__item-desc {
+      margin-top: 20px;
+    }
+  }
+
   &__item {
     display: flex;
   }
@@ -338,6 +352,29 @@
   &__checkbox-item-group {
     &:not(:last-child) {
       margin-bottom: 40px;
+    }
+  }
+
+  &__button-item {
+    font-size: 0;
+    line-height: 0;
+    padding: 0 63px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media(max-width: 1340px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 16px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
     }
   }
 }

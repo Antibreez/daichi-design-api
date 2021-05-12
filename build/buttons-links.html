@@ -184,28 +184,171 @@
             Используются для управления параметром с двумя состояниями.
           </p>
 
-          <div class="forms__block  forms__block--checkbox">
+          <div class="forms__block  forms__block--button">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__button-item">
+                <div class="forms__button-item  forms__button-item--example">
                   <button class="forms__btn  btn  btn-primary">
                     <span class="btn__content" tabindex="-1">
                       <span>Кнопка 1</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
                     </span>
                   </button>
                   <button class="forms__btn  btn  btn--m  btn-primary">
                     <span class="btn__content" tabindex="-1">
                       <span>Кнопка 2</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
                     </span>
                   </button>
                   <button class="forms__btn  btn  btn--s  btn-primary">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary  hovered" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary  hovered" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary  hovered" disabled="">
                     <span class="btn__content" tabindex="-1">
                       <span>Кнопка 3</span>
                     </span>
                   </button>
                 </div>
               </div>
-              <p class="forms__item-desc">Выбрано</p>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary  active" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary  active" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary  active" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">При нажатии</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary  loading" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary  loading" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary  loading" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Индикатор загрузки. Когда текст кнопки заменяется на&nbsp;лоадер, кнопка блокируется. Ширина кнопки при этом не&nbsp;должна меняться.
+              </p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary  success" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary  success" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary  success" disabled="">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                      <span class="btn__success-text">
+                        <img src="img/check-white-big.svg" alt="">
+                        <span>Кнопка</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Успешное выполнение действия. Показываем в&nbsp;течение 2&nbsp;секунд. Допускается использование кнопки только с&nbsp;иконкой без текста.
+              </p>
             </div>
 
           </div>

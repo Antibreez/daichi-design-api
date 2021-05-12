@@ -11,6 +11,8 @@ button {
   //all: initial;
   //margin: 1em;
   display: inline-block;
+  padding: 0;
+  border-radius: 32px;
 }
 
 .btn__content {
@@ -20,6 +22,11 @@ button {
   display: inline-block;
   border-radius: 32px;
   transition: background-color 0.2s, color 0.2s;
+}
+
+.btn__success-text {
+  display: none;
+  align-items: center;
 }
 
 .btn--m .btn__content {
@@ -55,8 +62,16 @@ button {
 }
 
 .btn:focus > .btn__content  {
-    outline: 2px solid $blue;
-    outline-offset: 2px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border: 2px solid $blue;
+    border-radius: 36px;
+  }
 }
 
 /* Removing default outline only after we've added our custom one */
@@ -64,3 +79,112 @@ button {
 .btn__content:focus {
     outline: none;
 }
+
+
+
+.btn-primary:disabled > .btn__content {
+  background-color: $grey300;
+  color: $grey400;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.btn-primary.hovered:disabled > .btn__content,
+.btn-primary.active:disabled > .btn__content {
+  color: #fff;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/pointer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.btn-primary.hovered:disabled > .btn__content {
+  background-color: $blue;
+}
+
+.btn-primary.active:disabled > .btn__content {
+  background-color: $deep-blue;
+}
+
+.btn-primary.loading {
+  .btn__content {
+    position: relative;
+    background-color: $dark-grey;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: rotation .7s infinite linear;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/loader-white.svg");
+      margin-left: -10px;
+    }
+
+    & > span:first-child {
+      opacity: 0;
+    }
+  }
+
+  &:hover .btn__content,
+  &:active .btn__content {
+    background-color: $dark-grey;
+  }
+}
+
+.btn-primary.success {
+  .btn__content {
+    position: relative;
+    background-color: $success;
+    color: #fff;
+
+    span:first-child {
+      display: none;
+    }
+
+    .btn__success-text {
+      display: flex;
+
+      span {
+        margin-left: 10px;
+      }
+
+      img {
+        margin-left: -8px;
+      }
+    }
+  }
+
+  &:hover .btn__content,
+  &:active .btn__content {
+    background-color: $success;
+  }
+}
+
+.btn--s.btn-primary.success {
+  .btn__success-text {
+    span {
+      margin-left: 6px;
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-left: -2px;
+    }
+  }
+}
+

@@ -1,6 +1,23 @@
 "use strict";
 
 (function () {
+  var $btn = $('.forms__button-item--example .forms__btn');
+  $btn.on('click', function () {
+    var $btn = $(this);
+    $btn.addClass('loading');
+    $btn.attr('disabled', 'true');
+    setTimeout(function () {
+      $btn.removeClass('loading');
+      $btn.addClass('success');
+    }, 2000);
+    setTimeout(function () {
+      $btn.removeClass('success');
+      $btn.removeAttr('disabled');
+    }, 4000);
+  });
+})();
+
+(function () {
   var mouseup = false;
   $('.checkbox').mouseup(function (e) {
     mouseup = true;

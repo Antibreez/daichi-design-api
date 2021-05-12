@@ -3939,67 +3939,73 @@ a {
   outline: none;
 }
 
-.btn-primary,
-.btn-secondary,
-.btn-small {
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: inherit;
+}
+
+.btn {
+  display: inline-block;
+}
+
+.btn__content {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: 500;
+  padding: 20px 40px;
+  cursor: pointer;
   display: inline-block;
-  height: auto;
-  padding: 21px 24px 19px 24px;
-  margin: 0;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  border-radius: 32px;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.btn-small {
-  padding-top: 9px;
-  padding-bottom: 9px;
+.btn--m .btn__content {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 16px 32px;
 }
 
-.btn-primary,
-.btn-small {
+.btn--s .btn__content {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  padding: 9px 20px;
+}
+
+.btn-primary .btn__content {
+  background-color: #151515;
+  color: #fff;
+}
+
+/* Fixing the Safari bug for `<button>`s overflow */
+.btn__content {
+  position: relative;
+}
+
+/* All the states on the inner element */
+.btn-primary:hover > .btn__content {
   background-color: #2858FF;
-  color: #fff;
 }
 
-.btn-primary:hover, .btn-primary:focus,
-.btn-small:hover,
-.btn-small:focus {
+.btn-primary:active > .btn__content {
   background-color: #113EE0;
-  color: #fff;
 }
 
-.btn-primary:disabled,
-.btn-small:disabled {
-  background-color: #D1D8E1;
-  color: #fff;
+.btn:focus > .btn__content {
+  outline: 2px solid #2858FF;
+  outline-offset: 2px;
 }
 
-.btn-secondary {
-  padding: 14px 39px;
-  border: 1px solid #F4F4F8;
-  color: #151515;
-  background-color: #fff;
-}
-
-.btn-secondary:hover, .btn-secondary:focus {
-  border-color: #2858FF;
-  color: #2858FF;
-  background-color: #fff;
-}
-
-.btn-secondary:disabled {
-  border-color: #D1D8E1;
-  color: #D1D8E1;
-  background-color: #fff;
+/* Removing default outline only after we've added our custom one */
+.btn:focus,
+.btn__content:focus {
+  outline: none;
 }
 
 .info-block__title {

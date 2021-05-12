@@ -1,58 +1,66 @@
-.btn-primary,
-.btn-secondary,
-.btn-small {
-  @include font(18px, 24px, 400);
-
-  display: inline-block;
-  height: auto;
-  padding: 21px 24px 19px 24px;
-  margin: 0;
-  text-decoration: none;
-  text-align: center;
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
   border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: all .2s ease;
+  outline: none;
+  font-size: inherit;
 }
 
-.btn-small {
-  padding-top: 9px;
-  padding-bottom: 9px;
+.btn {
+  //all: initial;
+  //margin: 1em;
+  display: inline-block;
 }
 
-.btn-primary,
-.btn-small {
-  background-color: $blue;
-  color: #fff;
+.btn__content {
+  @include font(18px, 24px, 500);
+  padding: 20px 40px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 32px;
+  transition: background-color 0.2s, color 0.2s;
+}
 
-  &:hover,
-  &:focus {
+.btn--m .btn__content {
+  @include font(15px, 24px, 500);
+  padding: 16px 32px;
+}
+
+.btn--s .btn__content {
+  @include font(14px, 22px, 500);
+  padding: 9px 20px;
+}
+
+.btn-primary {
+  .btn__content {
+    background-color: $dark-grey;
+    color: #fff;
+  }
+}
+
+
+/* Fixing the Safari bug for `<button>`s overflow */
+.btn__content {
+    position: relative;
+}
+
+/* All the states on the inner element */
+.btn-primary:hover > .btn__content  {
+    background-color: $blue;
+}
+
+.btn-primary:active > .btn__content  {
     background-color: $deep-blue;
-    color: #fff;
-  }
-
-  &:disabled {
-    background-color: $grey300;
-    color: #fff;
-  }
 }
 
-.btn-secondary {
-  padding: 14px 39px;
-  border: 1px solid $grey200;
-  color: $dark-grey;
-  background-color: #fff;
+.btn:focus > .btn__content  {
+    outline: 2px solid $blue;
+    outline-offset: 2px;
+}
 
-  &:hover,
-  &:focus {
-    border-color: $blue;
-    color: $blue;
-    background-color: #fff;
-  }
-
-  &:disabled {
-    border-color: $grey300;
-    color: $grey300;
-    background-color: #fff;
-  }
+/* Removing default outline only after we've added our custom one */
+.btn:focus,
+.btn__content:focus {
+    outline: none;
 }

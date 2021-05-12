@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Чекбоксы, радиокнопки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
+  <header class="header  header--black">
+    <div class="header__container  wrapper">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+      </a>
+      <h1 class="header__title">
+        Чекбоксы, радиокнопки
+      </h1>
+    </div>
+  </header>
+
+  <main class="main wrapper" id="main">
+
+    <nav class="main__main-nav  main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          Стили
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Цвета</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Типографика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Сетка</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Компоненты
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Логотип</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Формы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__link  main-nav__link--active">Кнопки и ссылки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Чекбоксы, радиокнопки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Табы, переключатели</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Слайдеры</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Аккордеон</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Таблицы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Пагинация</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Теги</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Подсказки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Лоадер</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Модальные окна</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки интерфейса</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки продуктов</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Контент
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Общие правила</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Редполитика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Оборудование</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Программы Даичи</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Рекламные материалы</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main__content">
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Чекбокс</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используются для управления параметром с двумя состояниями.
+          </p>
+
+          <div class="forms__block  forms__block--checkbox">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__button-item">
+                  <button class="forms__btn  btn  btn-primary">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 1</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--m  btn-primary">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 2</span>
+                    </span>
+                  </button>
+                  <button class="forms__btn  btn  btn--s  btn-primary">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Кнопка 3</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Радиокнопка</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используются для выбора одного значения из нескольких.
+          </p>
+
+          <div class="forms__block  forms__block--checkbox">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden" checked>
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Radio on
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Radio off
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled checked>
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled>
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Radio disabled on
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled>
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled>
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Radio disabled on
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <label class="checkbox">
+                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text"></span>
+                  </label>
+                  <label class="checkbox">
+                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Radio off error
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p class="forms__item-desc">Ошибка</p>
+            </div>
+
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__checkbox-item">
+                  <div class="forms__checkbox-item-group">
+                    <label class="checkbox">
+                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled checked>
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text"></span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled>
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text">
+                        Radio on focus
+                      </span>
+                    </label>
+                  </div>
+                  <div class="forms__checkbox-item-group">
+                    <label class="checkbox">
+                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled>
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text"></span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled>
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text">
+                        Radio off focus
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Фокус. При переходе к группе радиокнопок клавишей Tab, выбранное значение получает фокус&nbsp;— появляется синяя рамка. При клике мышью рамка не&nbsp;появляется.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

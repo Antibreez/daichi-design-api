@@ -304,6 +304,12 @@
 })();
 
 (function () {
+  $('.link[tabindex="-1"]').on('click', function (e) {
+    e.preventDefault();
+  });
+})();
+
+(function () {
   // const inputs = document.querySelectorAll('.input-phone');
   // if (!inputs[0]) {
   //   return;

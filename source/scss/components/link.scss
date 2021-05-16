@@ -1,0 +1,155 @@
+.link {
+  display: inline-block;
+  color: $dark-grey;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  .link__content {
+    display: inline-block;
+  }
+
+  .link__text {
+    display: inline-block;
+    @include font(15px, 24px);
+    vertical-align: top;
+  }
+
+  .link__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    color: $dark-grey;
+    transition: color 0.2s;
+  }
+
+  .link__success-text {
+    display: none;
+    @include font(15px, 24px);
+    color: $success;
+
+    img {
+      margin-right: 4px;
+    }
+
+    span {
+      vertical-align: top;
+    }
+  }
+
+  &:hover {
+    color: $blue;
+
+    .link__icon {
+      color: $blue;
+    }
+  }
+}
+
+.link[tabindex="-1"] {
+  color: $grey400;
+
+  &:hover {
+    cursor: default;
+  }
+
+  .link__icon {
+    color: $grey400;
+  }
+}
+
+.link:focus > .link__content {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border: 1px solid $blue;
+    border-radius: 2px;
+  }
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link.hovered {
+  color: $blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/pointer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .link__icon {
+    color: $blue;
+  }
+}
+
+.link.loading {
+  position: relative;
+  color: $dark-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    animation: rotation .7s infinite linear;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/loader.svg");
+    margin-left: -10px;
+  }
+
+  .link__icon {
+    opacity: 0;
+  }
+}
+
+.link.success {
+  .link__icon {
+    display: none;
+  }
+
+  .link__text {
+    display: none;
+  }
+
+  .link__success-text {
+    display: inline-block;
+  }
+}
+
+.link.focused {
+  .link__content {
+    position: relative;
+    color: $dark-grey;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      border: 1px solid $blue;
+      border-radius: 2px;
+    }
+  }
+
+  .link__icon {
+    color: $dark-grey;
+  }
+}

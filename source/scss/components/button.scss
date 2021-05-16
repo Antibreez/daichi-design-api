@@ -21,7 +21,15 @@ button {
   cursor: pointer;
   display: inline-block;
   border-radius: 32px;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.btn__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .btn__content-text {
@@ -47,7 +55,265 @@ button {
   }
 }
 
+.btn-secondary .btn__content-text {
+  svg {
+    color: $dark-grey;
+  }
+}
+
+.btn-icon {
+  .btn__content {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .btn__icon {
+    color: $dark-grey;
+    transition: color 0.2s;
+  }
+
+  &:not(:disabled):hover {
+    .btn__icon {
+      color: $blue;
+    }
+  }
+
+  &:disabled:hover {
+    .btn__content {
+      cursor: default;
+    }
+  }
+
+  &:disabled:not(.hovered):not(.loading):not(.focused) {
+    .btn__icon {
+      color: $grey400;
+    }
+  }
+
+  &.hovered {
+    .btn__icon {
+      color: $blue;
+    }
+  }
+
+  &.loading {
+    .btn__icon {
+      opacity: 0;
+    }
+
+    .btn__content {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: rotation .7s infinite linear;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/loader.svg");
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.btn-primary-icon {
+  .btn__content {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: $dark-grey;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+
+  .btn__icon {
+    color: #fff;
+  }
+
+  &:not(:disabled):hover {
+    .btn__content {
+      transform: scale(1.14);
+    }
+  }
+
+  &:disabled:hover {
+    .btn__content {
+      cursor: default;
+    }
+  }
+
+  &:disabled:not(.hovered):not(.loading):not(.focused) {
+    .btn__content {
+      background-color: $grey300;
+    }
+
+    .btn__icon {
+      color: $grey400;
+    }
+  }
+
+  &.hovered {
+    .btn__content {
+      transform: scale(1.14);
+    }
+  }
+
+  &.loading {
+    .btn__icon {
+      opacity: 0;
+    }
+
+    .btn__content {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: rotation .7s infinite linear;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/loader-white.svg");
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.btn-secondary-icon {
+  .btn__content {
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: $grey200;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+
+  .btn__icon {
+    color: $dark-grey;
+  }
+
+  &:not(:disabled):hover {
+    .btn__content {
+      transform: scale(1.14);
+    }
+  }
+
+  &:disabled:hover {
+    .btn__content {
+      cursor: default;
+    }
+  }
+
+  &:disabled:not(.hovered):not(.loading):not(.focused) {
+    .btn__content {
+      background-color: $grey300;
+    }
+
+    .btn__icon {
+      color: $grey400;
+    }
+  }
+
+  &.hovered {
+    .btn__content {
+      transform: scale(1.14);
+    }
+  }
+
+  &.loading {
+    .btn__icon {
+      opacity: 0;
+    }
+
+    .btn__content {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        animation: rotation .7s infinite linear;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/loader.svg");
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.btn-icon,
+.btn-primary-icon,
+.btn-secondary-icon {
+  &.hovered {
+    .btn__content {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/pointer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.btn-icon,
+.btn-primary-icon,
+.btn-secondary-icon {
+  &.focused {
+    .btn__content {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 2px solid $blue;
+        border-radius: 36px;
+      }
+    }
+  }
+}
+
 .btn-primary:disabled .btn__content-text {
+  svg {
+    color: $grey400;
+  }
+}
+
+.btn-secondary:disabled .btn__content-text {
   svg {
     color: $grey400;
   }
@@ -75,6 +341,27 @@ button {
   }
 }
 
+.btn-secondary {
+  .btn__content {
+    padding: 18px 38px;
+    background-color: #fff;
+    color: $dark-grey;
+    border: 2px solid $grey300;
+  }
+
+  &.btn--m {
+    .btn__content {
+      padding: 14px 30px;
+    }
+  }
+
+  &.btn--s {
+    .btn__content {
+      padding: 7px 18px;
+    }
+  }
+}
+
 
 /* Fixing the Safari bug for `<button>`s overflow */
 .btn__content {
@@ -86,8 +373,16 @@ button {
     background-color: $blue;
 }
 
+.btn-secondary:hover > .btn__content  {
+  border-color: $blue;
+}
+
 .btn-primary:active > .btn__content  {
     background-color: $deep-blue;
+}
+
+.btn-secondary:active > .btn__content  {
+    border-color: $deep-blue;
 }
 
 .btn:focus > .btn__content  {
@@ -98,6 +393,19 @@ button {
     left: -4px;
     width: calc(100% + 8px);
     height: calc(100% + 8px);
+    border: 2px solid $blue;
+    border-radius: 36px;
+  }
+}
+
+.btn-secondary:focus > .btn__content  {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
     border: 2px solid $blue;
     border-radius: 36px;
   }
@@ -114,6 +422,16 @@ button {
 .btn-primary:disabled > .btn__content {
   background-color: $grey300;
   color: $grey400;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.btn-secondary:disabled > .btn__content {
+  color: $grey400;
+  border-color: $grey200;
+  background-color: #fff;
 
   &:hover {
     cursor: default;
@@ -144,6 +462,24 @@ button {
   }
 }
 
+.btn-secondary.hovered:disabled > .btn__content,
+.btn-secondary.active:disabled > .btn__content {
+  color: $dark-grey;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/pointer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 .btn-primary.focused:disabled > .btn__content {
   color: #fff;
   background-color: $dark-grey;
@@ -160,12 +496,36 @@ button {
   }
 }
 
+.btn-secondary.focused:disabled > .btn__content {
+  color: $dark-grey;
+  border-color: $grey300;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border: 2px solid $blue;
+    border-radius: 36px;
+  }
+}
+
 .btn-primary.hovered:disabled > .btn__content {
   background-color: $blue;
 }
 
 .btn-primary.active:disabled > .btn__content {
   background-color: $deep-blue;
+}
+
+.btn-secondary.hovered:disabled > .btn__content {
+  border-color: $blue;
+}
+
+.btn-secondary.active:disabled > .btn__content {
+  border-color: $deep-blue;
 }
 
 .btn-primary.loading {
@@ -193,6 +553,34 @@ button {
   &:hover .btn__content,
   &:active .btn__content {
     background-color: $dark-grey;
+  }
+}
+
+.btn-secondary.loading {
+  .btn__content {
+    position: relative;
+    border-color: $grey300;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      animation: rotation .7s infinite linear;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/loader.svg");
+      margin-left: -10px;
+    }
+
+    & > span:first-child {
+      opacity: 0;
+    }
+  }
+
+  &:hover .btn__content,
+  &:active .btn__content {
+    border-color: $grey300;
   }
 }
 
@@ -225,7 +613,37 @@ button {
   }
 }
 
-.btn--s.btn-primary.success {
+.btn-secondary.success {
+  .btn__content {
+    position: relative;
+    border-color: $success;
+    color: $success;
+
+    span:first-child {
+      display: none;
+    }
+
+    .btn__success-text {
+      display: flex;
+
+      span {
+        margin-left: 10px;
+      }
+
+      img {
+        margin-left: -8px;
+      }
+    }
+  }
+
+  &:hover .btn__content,
+  &:active .btn__content {
+    border-color: $success;
+  }
+}
+
+.btn--s.btn-primary.success,
+.btn--s.btn-secondary.success {
   .btn__success-text {
     span {
       margin-left: 6px;

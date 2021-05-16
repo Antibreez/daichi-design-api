@@ -3966,6 +3966,33 @@ button {
   transition: background-color 0.2s, color 0.2s;
 }
 
+.btn__content-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn__content-text svg {
+  margin-right: 10px;
+  margin-left: -8px;
+}
+
+.btn--s .btn__content-text svg {
+  margin-right: 6px;
+  margin-left: -2px;
+}
+
+.btn-primary .btn__content-text svg {
+  color: #fff;
+}
+
+.btn-primary:disabled .btn__content-text svg {
+  color: #94A0B1;
+}
+
 .btn__success-text {
   display: none;
   -webkit-box-align: center;
@@ -4049,6 +4076,27 @@ button {
   background-image: url(../img/pointer.svg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.btn-primary.hovered:disabled > .btn__content .btn__content-text svg,
+.btn-primary.active:disabled > .btn__content .btn__content-text svg {
+  color: #fff;
+}
+
+.btn-primary.focused:disabled > .btn__content {
+  color: #fff;
+  background-color: #151515;
+}
+
+.btn-primary.focused:disabled > .btn__content::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 36px;
 }
 
 .btn-primary.hovered:disabled > .btn__content {
@@ -7013,7 +7061,7 @@ html *::-webkit-scrollbar-thumb {
 .forms__button-item {
   font-size: 0;
   line-height: 0;
-  padding: 0 63px;
+  padding: 0 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7037,6 +7085,10 @@ html *::-webkit-scrollbar-thumb {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+}
+
+.forms__button-group:not(:last-child) {
+  margin-bottom: 64px;
 }
 
 .forms__btn {

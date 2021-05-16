@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Чекбоксы, радиокнопки</title>
+  <title>Кнопки и ссылки</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -46,6 +46,8 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 20L13 20V22L14 22H20C21.1046 22 22 21.1046 22 20L22 4C22 2.89543 21.1046 2 20 2L14 2L13 2V4H14L20 4L20 20H14ZM9.79289 15.7929L9.08579 16.5L10.5 17.9142L11.2071 17.2071L15.7071 12.7071L16.4142 12L15.7071 11.2929L11.2071 6.79289L10.5 6.08579L9.08579 7.5L9.79289 8.20711L12.5858 11L3 11H2L2 13H3L12.5858 13L9.79289 15.7929Z" fill="#151515"></path>
 </symbol><symbol id="icon-logout" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 20L13 20V22L14 22H20C21.1046 22 22 21.1046 22 20L22 4C22 2.89543 21.1046 2 20 2L14 2L13 2V4H14L20 4L20 20H14ZM8.20711 8.20711L8.91421 7.5L7.5 6.08579L6.79289 6.79289L2.29289 11.2929L1.58579 12L2.29289 12.7071L6.79289 17.2071L7.5 17.9142L8.91421 16.5L8.20711 15.7929L5.41421 13L15 13H16V11H15L5.41421 11L8.20711 8.20711Z" fill="#151515"></path>
+</symbol><symbol id="icon-mail" viewBox="0 0 24 24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.00015 3C2.3433 3 1.00015 4.34315 1.00015 6L1.00015 6.98166C0.999949 6.99327 0.99995 7.00486 1.00015 7.01645L1.00015 18C1.00015 19.6569 2.3433 21 4.00015 21H20.0002C21.657 21 23.0002 19.6569 23.0002 18L23.0002 7.01642C23.0004 7.00485 23.0004 6.99327 23.0002 6.98168V6C23.0002 4.34315 21.657 3 20.0002 3L4.00015 3ZM21.0002 6.43381V6C21.0002 5.44772 20.5524 5 20.0002 5L4.00015 5C3.44787 5 3.00015 5.44772 3.00015 6V6.43381L12.0002 11.8338L21.0002 6.43381ZM3.00015 8.76619L3.00015 18C3.00015 18.5523 3.44787 19 4.00015 19H20.0002C20.5524 19 21.0002 18.5523 21.0002 18L21.0002 8.76619L12.5146 13.8575C12.198 14.0475 11.8023 14.0475 11.4857 13.8575L3.00015 8.76619Z" fill="currentColor"></path>
 </symbol><symbol id="icon-menu-big" viewBox="0 0 40 40">
 <path d="M3 14H37" stroke="#151515" stroke-width="2" stroke-linecap="square"></path>
 <path d="M3 20H37" stroke="#151515" stroke-width="2" stroke-linecap="square"></path>
@@ -80,7 +82,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Чекбоксы, радиокнопки
+        Кнопки и ссылки
       </h1>
     </div>
   </header>
@@ -179,353 +181,394 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Чекбокс</h2>
+          <h2 class="info-block__title">Кнопка</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Используются для управления параметром с двумя состояниями.
+            Кнопка запускает действие, в отдельных случаях используется для перехода на другую страницу. Мы используем два вида кнопок: главные и&nbsp;второстепенные. Главные кнопки предназначены для основного действия на экране (купить, отправить, перейти и&nbsp;т.д.), а&nbsp;второстепенные для дополнительных действий (показать еще, открыть, назад и&nbsp;т.д.).
           </p>
 
-          <div class="forms__block  forms__block--button">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item  forms__button-item--example">
-                  <button class="forms__btn  btn  btn-primary">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">По умолчанию</p>
-            </div>
+          <h3 class="forms__validation-title">Размер и расположение</h3>
+          <p class="forms__validation-desc  info-block__desc">
+            Используем 3 размера кнопок: большие (large), средние (middle) и&nbsp;маленькие (small).
+            <br><br>
+            Ширина кнопки задается размером текста внутри нее и стандартными отступами. Исключение: мобильные устройста, где кнопка растягивается на&nbsp;всю ширину экрана.
+          </p>
 
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item">
-                  <button class="forms__btn  btn  btn-primary  hovered" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary  hovered" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary  hovered" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">При наведении</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item">
-                  <button class="forms__btn  btn  btn-primary  active" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary  active" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary  active" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">При нажатии</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item">
-                  <button class="forms__btn  btn  btn-primary" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">Неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item">
-                  <button class="forms__btn  btn  btn-primary  loading" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary  loading" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary  loading" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Индикатор загрузки. Когда текст кнопки заменяется на&nbsp;лоадер, кнопка блокируется. Ширина кнопки при этом не&nbsp;должна меняться.
-              </p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__button-item">
-                  <button class="forms__btn  btn  btn-primary  success" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 1</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--m  btn-primary  success" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 2</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                  <button class="forms__btn  btn  btn--s  btn-primary  success" disabled="">
-                    <span class="btn__content" tabindex="-1">
-                      <span>Кнопка 3</span>
-                      <span class="btn__success-text">
-                        <img src="img/check-white-big.svg" alt="">
-                        <span>Кнопка</span>
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Успешное выполнение действия. Показываем в&nbsp;течение 2&nbsp;секунд. Допускается использование кнопки только с&nbsp;иконкой без текста.
-              </p>
-            </div>
-
-          </div>
+          <h3 class="forms__validation-title">Иконка</h3>
+          <p class="forms__validation-desc  info-block__desc">
+            Название кнопки можно дополнять иконкой слева. Иконка в&nbsp;кнопке помогает выделить кнопку и&nbsp;обозначить самое важное действие, поэтому такую кнопку стоит использовать лишь в&nbsp;особых случаях.
+          </p>
         </div>
 
-
         <div class="forms__section">
-          <h2 class="info-block__title">Радиокнопка</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Используются для выбора одного значения из нескольких.
-          </p>
-
-          <div class="forms__block  forms__block--checkbox">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Выбрано</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio off
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">По умолчанию</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled="" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Выбрано неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio off error
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Ошибка</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled="" checked="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
+          <h2 class="info-block__title">Главная кнопка</h2>
+          <div class="forms__block  forms__block--button">
+            <div class="forms__button-group">
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item  forms__button-item--example">
+                    <button class="forms__btn  btn  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
                       </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
                       </span>
-                      <span class="checkbox__text">
-                        Radio on focus
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
                       </span>
-                    </label>
-                  </div>
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Radio off focus
-                      </span>
-                    </label>
+                    </button>
                   </div>
                 </div>
+                <p class="forms__item-desc">По умолчанию</p>
               </div>
-              <p class="forms__item-desc">
-                Фокус. При переходе к группе радиокнопок клавишей Tab, выбранное значение получает фокус&nbsp;— появляется синяя рамка. При клике мышью рамка не&nbsp;появляется.
-              </p>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">При наведении</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">При нажатии</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">Неактивно</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  loading" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  loading" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  loading" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">
+                  Индикатор загрузки. Когда текст кнопки заменяется на&nbsp;лоадер, кнопка блокируется. Ширина кнопки при этом не&nbsp;должна меняться.
+                </p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  success" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 1</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  success" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 2</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  success" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Кнопка 3</span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">
+                  Успешное выполнение действия. Показываем в&nbsp;течение 2&nbsp;секунд. Допускается использование кнопки только с&nbsp;иконкой без текста.
+                </p>
+              </div>
+            </div>
+
+            <div class="forms__button-group">
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item  forms__button-item--example">
+                    <button class="forms__btn  btn  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 1
+                        </span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 2
+                        </span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="16" height="16">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 3
+                        </span>
+                        <span class="btn__success-text">
+                          <img src="img/check-white-big.svg" alt="">
+                          <span>Кнопка</span>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">По умолчанию</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 1
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 2
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  hovered" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="16" height="16">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 3
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">При наведении</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 1
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 2
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  active" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="16" height="16">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 3
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">При нажатии</p>
+              </div>
+
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 1
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="24" height="24">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 2
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+                          <svg role="img" width="16" height="16">
+                            <use xlink:href="#icon-mail"></use>
+                          </svg>
+                          Кнопка 3
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">Неактивно</p>
+              </div>
+
+            </div>
+
+            <div class="forms__button-group">
+              <div class="forms__item">
+                <div class="forms__item-action">
+                  <div class="forms__button-item">
+                    <button class="forms__btn  btn  btn-primary  focused" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+
+                          Кнопка 1
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--m  btn-primary  focused" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+
+                          Кнопка 2
+                        </span>
+                      </span>
+                    </button>
+                    <button class="forms__btn  btn  btn--s  btn-primary  focused" disabled="">
+                      <span class="btn__content" tabindex="-1">
+                        <span class="btn__content-text">
+
+                          Кнопка 3
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <p class="forms__item-desc">Фокус на кнопке визуально отображается только при работе с&nbsp;клавиатурой, если перенести на неё фокус кнопкой Tab, то появляется синяя рамка. Если кнопка в&nbsp;фокусе, то&nbsp;при нажатии клавиши Enter она нажимается и&nbsp;выполняет действие.</p>
+              </div>
             </div>
 
           </div>

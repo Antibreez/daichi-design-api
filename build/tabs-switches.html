@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Сетка</title>
+  <title>Табы и переключатели</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -103,7 +103,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Логотип
+        Табы и переключатели
       </h1>
     </div>
   </header>
@@ -130,7 +130,7 @@
           Компоненты
           <ul class="main-nav__sublist">
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Логотип</a>
+              <a href="#" class="main-nav__link">Логотип</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Формы</a>
@@ -142,7 +142,7 @@
               <a href="#" class="main-nav__link">Чекбоксы, радиокнопки</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Табы, переключатели</a>
+              <a class="main-nav__link  main-nav__link--active">Табы, переключатели</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Слайдеры</a>
@@ -200,56 +200,463 @@
     </nav>
 
     <div class="main__content">
-      <section class="logo">
-        <div class="logo__manual">
-          <a href="https://drive.google.com/file/d/1NW1b2wVkvUQSZIKJUfVSeyms0pConXVB/view?usp=sharing" class="logo__manual-link external-link">
-            <svg class="external-link__icon" role="img" width="24" height="24">
-              <use xlink:href="#icon-external_link"></use>
-            </svg>
-            <span>Руководство по использованию логотипа</span>
-          </a>
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Табы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Табы группируют контент и помогают в навигации. У табов помимо названия может присутствовать счетчик для содержимого.
+          </p>
+
+          <div class="forms__block  forms__block--tabs">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button  active  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Новые
+                            <span class="tabs__counter">16</span>
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  hovered   disabled">
+                         <div class="tabs__content" tabindex="-1">
+                          В процессе
+                            <span class="tabs__counter">8</span>
+                         </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  disabled">
+                         <div class="tabs__content" tabindex="-1">
+                          Завершено
+                            <span class="tabs__counter">32</span>
+                         </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="forms__block  forms__block--tabs">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button  active  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Описание
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  hovered   disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Характеристики
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Отзывы
+                            <span class="tabs__counter">24</span>
+                          </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="forms__block  forms__block--tabs-active">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button">
+                         <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                            <span class="tabs__counter">16</span>
+                         </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button  active  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  active disabled">
+                         <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                            <span class="tabs__counter">16</span>
+                         </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button  hovered  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  hovered disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                            <span class="tabs__counter">16</span>
+                          </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__tabs-item">
+                  <div class="tabs">
+                    <ul class="tabs__list">
+                      <li class="tabs__item">
+                        <button class="tabs__button  focused  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                          </div>
+                        </button>
+                      </li>
+                      <li class="tabs__item">
+                        <button class="tabs__button  focused  disabled">
+                          <div class="tabs__content" tabindex="-1">
+                            Таб с контентом
+                            <span class="tabs__counter">16</span>
+                          </div>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Фокус. Клавишей Tab первый таб получает фокус и появляется синяя рамка. Стрелками ←&nbsp;→ можно перемещать фокус между табами. Если нажать клавишу Enter&nbsp;— произойдет переход.
+              </p>
+            </div>
+
+          </div>
         </div>
 
-        <div class="logo__block">
-          <h2 class="info-block__title">Основная версия</h2>
-          <p class="info-block__desc">
-            <a href="#" class="logo__font-download  download-link" download="">
-              <svg class="download-link__icon" role="img" width="24" height="24">
-                <use xlink:href="#icon-download"></use>
-              </svg>
-              Скачать
-            </a>
+        <div class="forms__section">
+          <h2 class="info-block__title">Переключатель (Switcher)</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используется как замена группе радиокнопок.
           </p>
-          <div class="logo__logos-wrapper">
-            <div class="logo__logo  logo__logo--white">
-              <img src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+
+          <div class="forms__block  forms__block--switcher-example">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="size" class="switcher__input visually-hidden" checked="">
+                          <span class="switcher__block">20м</span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="size" class="switcher__input visually-hidden">
+                          <span class="switcher__block  hovered">25м</span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="size" class="switcher__input visually-hidden">
+                          <span class="switcher__block">30м</span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="size" class="switcher__input visually-hidden">
+                          <span class="switcher__block">50м</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="logo__logo  logo__logo--black">
-              <img src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+          </div>
+
+          <div class="forms__block  forms__block--switcher">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="1" class="switcher__input  default visually-hidden" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="1" class="switcher__input default visually-hidden" checked="" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="1" class="switcher__input  default visually-hidden" disabled="">
+                          <span class="switcher__block  hovered">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="1" class="switcher__input visually-hidden" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Неактивно</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label">
+                          <input type="radio" name="1" class="switcher__input visually-hidden  error" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Ошибка</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label  always-focused">
+                          <input type="radio" name="1" class="switcher__input default visually-hidden" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="forms__switcher-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher__label  always-focused">
+                          <input type="radio" name="1" class="switcher__input default visually-hidden" checked="" disabled="">
+                          <span class="switcher__block">Опция 1</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Фокус. Клавишей Tab пункт получает фокус и появляется синяя рамка. Стрелками ←&nbsp;→ можно перемещать фокус между пунктами. Если нажать клавишу Enter&nbsp;— произойдет выбор.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="logo__block">
-          <h2 class="info-block__title">Сокращенная версия</h2>
-          <p class="info-block__desc">
-            <a href="#" class="logo__font-download  download-link" download="">
-              <svg class="download-link__icon" role="img" width="24" height="24">
-                <use xlink:href="#icon-download"></use>
-              </svg>
-              Скачать
-            </a>
+        <div class="forms__section">
+          <h2 class="info-block__title">Переключатель c текстом</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Работает как и стандартный переключатель, но содержит текстовый блок. Есть несколько вариантов: стандартный с&nbsp;текстом, текст с&nbsp;иконками, только иконки.
           </p>
-          <div class="logo__logos-wrapper">
-            <div class="logo__logo  logo__logo--white">
-              <img src="img/daichi-logo-black-short.svg" alt="Daichi" width="64" height="64">
+
+          <div class="forms__block  forms__block--switcher-text-example">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-text-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="delivery" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">Курьером</span>
+                            <span class="switcher-text__desc">от 800 ₽</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="delivery" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">Доставка в ПВЗ</span>
+                            <span class="switcher-text__desc">250 ₽</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="delivery" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">Самовывоз</span>
+                            <span class="switcher-text__desc">Бесплатно</span>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="logo__logo  logo__logo--black">
-              <img src="img/daichi-logo-white-short.svg" alt="Daichi" width="64" height="64">
+          </div>
+
+          <div class="forms__block  forms__block--switcher-text-example">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__switcher-text-icon-item">
+                  <div class="switcher">
+                    <ul class="switcher__list">
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="payment" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">
+                              Картой
+                              <svg>
+                                <use xlink:href="#icon-card"></use>
+                              </svg>
+                            </span>
+                            <span class="switcher-text__desc">Онлайн</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="payment" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">
+                              Наличными
+                              <svg>
+                                <use xlink:href="#icon-wallet"></use>
+                              </svg>
+                            </span>
+                            <span class="switcher-text__desc">При получении</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li class="switcher__item">
+                        <label class="switcher-text__label">
+                          <input type="radio" name="payment" class="switcher-text__input visually-hidden">
+                          <span class="switcher-text__block">
+                            <span class="switcher-text__name">
+                              В кредит
+                              <svg>
+                                <use xlink:href="#icon-percent"></use>
+                              </svg>
+                            </span>
+                            <span class="switcher-text__desc">После проверки</span>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </section>
+
     </div>
   </main>
 

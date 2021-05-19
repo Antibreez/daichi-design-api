@@ -117,6 +117,23 @@
       cursor: pointer;
       border-color: $dark-grey;
     }
+
+    &.hovered {
+      border-color: $dark-grey;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/pointer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &__name {
@@ -146,6 +163,24 @@
     .switcher-text__name svg {
       color: #fff;
     }
+  }
+
+  &__input:disabled ~ .switcher-text__block {
+    background-color: $grey300;
+    border-color: $grey300;
+    color: $grey400;
+
+    svg {
+      color: $grey400;
+    }
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &__input.error ~ .switcher-text__block {
+    border-color: $fail;
   }
 
   &__input:checked ~ .switcher-icon__block {

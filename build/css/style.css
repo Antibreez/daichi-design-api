@@ -6485,6 +6485,23 @@ html *::-webkit-scrollbar-thumb {
   border-color: #151515;
 }
 
+.switcher-text__block.hovered {
+  border-color: #151515;
+  position: relative;
+}
+
+.switcher-text__block.hovered::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .switcher-text__name {
   font-size: 18px;
   line-height: 24px;
@@ -6516,6 +6533,24 @@ html *::-webkit-scrollbar-thumb {
 
 .switcher-text__input:checked ~ .switcher-text__block .switcher-text__name svg {
   color: #fff;
+}
+
+.switcher-text__input:disabled ~ .switcher-text__block {
+  background-color: #D1D8E1;
+  border-color: #D1D8E1;
+  color: #94A0B1;
+}
+
+.switcher-text__input:disabled ~ .switcher-text__block svg {
+  color: #94A0B1;
+}
+
+.switcher-text__input:disabled ~ .switcher-text__block:hover {
+  cursor: default;
+}
+
+.switcher-text__input.error ~ .switcher-text__block {
+  border-color: #F25248;
 }
 
 .switcher-text__input:checked ~ .switcher-icon__block {
@@ -6569,6 +6604,92 @@ html *::-webkit-scrollbar-thumb {
   width: 24px;
   height: 24px;
   color: #151515;
+}
+
+.toggle {
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.toggle.focused, .toggle.always-focused {
+  position: relative;
+}
+
+.toggle.focused::before, .toggle.always-focused::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 20px;
+}
+
+.toggle__content {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+  width: 56px;
+  height: 32px;
+  background-color: #D1D8E1;
+  border-radius: 28px;
+  padding: 3px;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.toggle__content:hover {
+  cursor: pointer;
+}
+
+.toggle__pin {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__content {
+  background-color: #151515;
+}
+
+.toggle__input:checked ~ .toggle__content .toggle__pin {
+  left: 27px;
+}
+
+.toggle__input:disabled ~ .toggle__content {
+  background-color: #D1D8E1;
+}
+
+.toggle__input:disabled ~ .toggle__content:hover {
+  cursor: default;
+}
+
+.toggle__input:disabled ~ .toggle__content .toggle__pin {
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.toggle__input:disabled:checked ~ .toggle__content {
+  background-color: #94A0B1;
+}
+
+.toggle__input:disabled:checked ~ .toggle__content:hover {
+  cursor: default;
+}
+
+.toggle__input:disabled:checked ~ .toggle__content .toggle__pin {
+  background-color: #fff;
+  opacity: 0.5;
 }
 
 .side-line {
@@ -7862,6 +7983,34 @@ html *::-webkit-scrollbar-thumb {
   padding: 56px 0;
 }
 
+.forms__block--switcher-group-example {
+  padding: 64px 0;
+}
+
+.forms__block--switcher-group-example .switcher__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.forms__block--switcher-group-example .forms__item-desc {
+  margin-top: 5px;
+}
+
+.forms__block--switcher-group-example .forms__item:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+.forms__block--toggle {
+  padding: 64px 0;
+}
+
+.forms__block--toggle .forms__item-desc {
+  margin-top: 10px;
+}
+
+.forms__block--toggle .forms__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .forms__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8087,6 +8236,10 @@ html *::-webkit-scrollbar-thumb {
   padding: 0 66px;
 }
 
+.forms__switcher-text-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .forms__switcher-text-icon-item {
   padding: 0 40px;
 }
@@ -8101,6 +8254,14 @@ html *::-webkit-scrollbar-thumb {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.forms__toggle-item {
+  padding: 0 64px;
+}
+
+.forms__toggle-item:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 .icons__block:not(:last-child) {

@@ -311,6 +311,10 @@
     padding: 96px 0;
   }
 
+  &__block--switcher-icon-example {
+    padding: 56px 0;
+  }
+
   &__item {
     display: flex;
   }
@@ -510,6 +514,12 @@
   &__switcher-text-icon-item {
     padding: 0 40px;
 
+    .switcher__list {
+      justify-content: center;
+    }
+  }
+
+  &__switcher-icon-item {
     .switcher__list {
       justify-content: center;
     }

@@ -399,6 +399,10 @@
   $('.switcher-text__input').blur(function (e) {
     $(this).parent().removeClass('focused');
   });
+  $('.switcher-icon__label').mouseup(function (e) {
+    mouseup = true;
+    $(this).removeClass('focused');
+  });
 })();
 
 (function () {

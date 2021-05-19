@@ -6518,6 +6518,59 @@ html *::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.switcher-text__input:checked ~ .switcher-icon__block {
+  background-color: #151515;
+}
+
+.switcher-text__input:checked ~ .switcher-icon__block svg {
+  color: #fff;
+}
+
+.switcher-icon .switcher__item {
+  margin-right: 0;
+}
+
+.switcher-icon .switcher__item:not(:last-child) .switcher-icon__block {
+  border-right: none;
+}
+
+.switcher-icon__label {
+  display: inline-block;
+}
+
+.switcher-icon__label.focused, .switcher-icon__label.always-focused {
+  position: relative;
+}
+
+.switcher-icon__label.focused::before, .switcher-icon__label.always-focused::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 2px;
+}
+
+.switcher-icon__block {
+  display: inline-block;
+  padding: 14px;
+  border: 2px solid #151515;
+  font-size: 0;
+  line-height: 0;
+}
+
+.switcher-icon__block:hover {
+  cursor: pointer;
+}
+
+.switcher-icon__block svg {
+  width: 24px;
+  height: 24px;
+  color: #151515;
+}
+
 .side-line {
   position: absolute;
   top: 0;
@@ -7805,6 +7858,10 @@ html *::-webkit-scrollbar-thumb {
   padding: 96px 0;
 }
 
+.forms__block--switcher-icon-example {
+  padding: 56px 0;
+}
+
 .forms__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8035,6 +8092,12 @@ html *::-webkit-scrollbar-thumb {
 }
 
 .forms__switcher-text-icon-item .switcher__list {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.forms__switcher-icon-item .switcher__list {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

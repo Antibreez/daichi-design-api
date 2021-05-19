@@ -147,4 +147,61 @@
       color: #fff;
     }
   }
+
+  &__input:checked ~ .switcher-icon__block {
+    background-color: $dark-grey;
+     svg {
+      color: #fff;
+    }
+  }
+}
+
+.switcher-icon {
+  .switcher__item {
+    margin-right: 0;
+
+    &:not(:last-child) {
+      .switcher-icon__block {
+        border-right: none;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+
+    &.focused,
+    &.always-focused {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 2px solid $blue;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__block {
+    display: inline-block;
+    padding: 14px;
+    border: 2px solid $dark-grey;
+    font-size: 0;
+    line-height: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $dark-grey;
+    }
+  }
 }

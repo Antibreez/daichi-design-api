@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Пагинация</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
+  <header class="header  header--black">
+    <div class="header__container  wrapper">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+      </a>
+      <h1 class="header__title">
+        Пагинация
+      </h1>
+    </div>
+  </header>
+
+  <main class="main wrapper" id="main">
+
+    <nav class="main__main-nav  main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          Стили
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Цвета</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Типографика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Сетка</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Компоненты
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Логотип</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Формы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Кнопки и ссылки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Чекбоксы, радиокнопки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Табы, переключатели</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Слайдеры</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Аккордеон</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Таблицы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__link  main-nav__link--active">Пагинация</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Теги</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Подсказки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Лоадер</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Модальные окна</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки интерфейса</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки продуктов</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Контент
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Общие правила</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Редполитика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Оборудование</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Программы Даичи</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Рекламные материалы</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main__content">
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Пагинация</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Постраничная навигация используется для представления большого количества однородной информации. Для удобства перехода по страницам используем пагинацию в связке с кнопкой «Показать еще».
+          </p>
+
+          <div class="forms__example  forms__example--pagination">
+            <a href="https://market.yandex.ru/catalog--konditsionery/54976/list?hid=90578&track=pieces&cpa=0&onstock=1&local-offers-first=0" class="external-link">
+              <svg class="external-link__icon" role="img" width="24" height="24">
+                <use xlink:href="#icon-external_link"></use>
+              </svg>
+              <span>Пример 1</span>
+            </a>
+            <br>
+            <a href="https://drive.google.com/file/d/1PzvZ44T_wGIZpK27vJONk7OXuo3IukMW/view?usp=sharing" class="external-link">
+              <svg class="external-link__icon" role="img" width="24" height="24">
+                <use xlink:href="#icon-external_link"></use>
+              </svg>
+              <span>Пример 2</span>
+            </a>
+          </div>
+
+          <div class="forms__block  forms__block--pagination">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-item">
+                  <button class="btn  btn-secondary">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Показать еще</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="forms__pagination-item">
+                  <div class="pagination">
+                    <button class="pagination__prev" aria-label="Предыдущая страница" disabled>
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="pagination__numbers">
+                      <button class="pagination__btn  active">
+                        <span class="pagination__btn-content" tabindex="-1">1</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">2</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">3</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">16</span>
+                      </button>
+                    </div>
+                    <button class="pagination__next" aria-label="Следующая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="forms__block  forms__block--pagination">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-item">
+                  <button class="btn  btn-secondary loading">
+                    <span class="btn__content" tabindex="-1">
+                      <span>Показать еще</span>
+                    </span>
+                  </button>
+                </div>
+                <div class="forms__pagination-item">
+                  <div class="pagination">
+                    <button class="pagination__prev" aria-label="Предыдущая страница" disabled>
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="pagination__numbers">
+                      <button class="pagination__btn  active">
+                        <span class="pagination__btn-content" tabindex="-1">1</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">2</span>
+                      </button>
+                      <button class="pagination__btn  hovered">
+                        <span class="pagination__btn-content" tabindex="-1">3</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">16</span>
+                      </button>
+                    </div>
+                    <button class="pagination__next  hovered" aria-label="Следующая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Состояние элементов при наведении и загрузка контента следующей страницы при нажатии на кнопку.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="forms__block  forms__block--pagination">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-item">
+                  <div class="pagination">
+                    <button class="pagination__prev" aria-label="Предыдущая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="pagination__numbers">
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">1</span>
+                      </button>
+                      <button class="pagination__btn  active">
+                        <span class="pagination__btn-content" tabindex="-1">2</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">3</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">4</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">5</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">32</span>
+                      </button>
+                    </div>
+                    <button class="pagination__next" aria-label="Следующая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="forms__pagination-item">
+                  <div class="pagination">
+                    <button class="pagination__prev" aria-label="Предыдущая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="pagination__numbers">
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">1</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">10</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">11</span>
+                      </button>
+                      <button class="pagination__btn  active">
+                        <span class="pagination__btn-content" tabindex="-1">12</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">13</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">14</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">32</span>
+                      </button>
+                    </div>
+                    <button class="pagination__next" aria-label="Следующая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="forms__pagination-item">
+                  <div class="pagination">
+                    <button class="pagination__prev" aria-label="Предыдущая страница">
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="pagination__numbers">
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">1</span>
+                      </button>
+                      <button class="pagination__btn  pagination__btn--dots">
+                        <sapn class="pagination__btn-content" tabindex="-1">...</sapn>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">28</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">29</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">30</span>
+                      </button>
+                      <button class="pagination__btn">
+                        <span class="pagination__btn-content" tabindex="-1">31</span>
+                      </button>
+                      <button class="pagination__btn  active">
+                        <span class="pagination__btn-content" tabindex="-1">32</span>
+                      </button>
+                    </div>
+                    <button class="pagination__next" aria-label="Следующая страница" disabled>
+                      <span class="pagination__arrow-content" tabindex="-1">
+                        <svg>
+                          <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="forms__block  forms__block--pagination-states">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-states-item">
+                  <button class="pagination__btn">
+                    <span class="pagination__btn-content" tabindex="-1">1</span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">По умолчанию</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-states-item">
+                  <button class="pagination__btn  active">
+                    <span class="pagination__btn-content" tabindex="-1">1</span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">Выбрано</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-states-item">
+                  <button class="pagination__btn  hovered">
+                    <span class="pagination__btn-content" tabindex="-1">1</span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">При наведении</p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__pagination-states-item">
+                  <button class="pagination__btn  active  focused">
+                    <span class="pagination__btn-content" tabindex="-1">1</span>
+                  </button>
+                </div>
+                <div class="forms__pagination-states-item">
+                  <button class="pagination__btn  focused">
+                    <span class="pagination__btn-content" tabindex="-1">1</span>
+                  </button>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Фокус. Клавишей Tab первая страница получает фокус и&nbsp;появляется синяя рамка. Стрелками ←&nbsp;→ можно перемещать фокус между страницами. Если нажать клавишу Enter&nbsp;— произойдет переход.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

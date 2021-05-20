@@ -27,6 +27,14 @@
     max-width: 612px;
   }
 
+  &__example--pagination {
+    max-width: 612px;
+
+    a:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
   &__block {
     position: relative;
     margin-top: 40px;
@@ -349,6 +357,28 @@
     }
   }
 
+  &__block--pagination {
+    padding: 80px 0;
+
+    .forms__item-desc {
+      margin-top: 10px;
+    }
+  }
+
+  &__block--pagination-states {
+    padding: 64px 0;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .forms__item-desc {
+      margin-top: 10px;
+    }
+  }
+
   &__item {
     display: flex;
   }
@@ -568,6 +598,23 @@
 
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+  }
+
+  &__pagination-item {
+    padding: 0 20px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__pagination-states-item {
+    padding: 0 64px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
 }

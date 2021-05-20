@@ -1,0 +1,156 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__prev,
+  &__next {
+    padding: 0;
+
+    &:disabled {
+      svg {
+        color: $grey400;
+        opacity: 0.7;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:not(:disabled):hover {
+      cursor: pointer;
+
+      svg {
+        color: $blue;
+      }
+    }
+
+    &:focus > .pagination__arrow-content {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 2px solid $blue;
+        border-radius: 36px;
+      }
+    }
+  }
+
+  &__prev {
+    margin-right: 16px;
+  }
+
+  &__next {
+    margin-left: 16px;
+    transform: rotate(180deg);
+  }
+
+  &__arrow-content {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__numbers {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &:focus > .pagination__btn-content,
+    &.focused > .pagination__btn-content  {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 2px solid $blue;
+        border-radius: 36px;
+      }
+    }
+  }
+
+  &__btn-content {
+    display: inline-block;
+    @include font(14px, 22px);
+    color: $dark-grey;
+    padding: 9px 17px;
+    border-radius: 20px;
+    transition: color 0.2s;
+  }
+
+  &__btn.active  .pagination__btn-content {
+    color: #fff;
+    background-color: $dark-grey;
+  }
+
+  &__btn:not(.active):hover  .pagination__btn-content {
+    color: $blue;
+    cursor: pointer;
+  }
+
+  &__btn.hovered {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/pointer.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .pagination__btn-content {
+      color: $blue;
+    }
+  }
+
+  &__prev.hovered,
+  &__next.hovered {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/pointer.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+    }
+
+    svg {
+      color: $blue;
+    }
+  }
+}

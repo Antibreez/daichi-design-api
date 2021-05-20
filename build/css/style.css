@@ -6692,6 +6692,177 @@ html *::-webkit-scrollbar-thumb {
   opacity: 0.5;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.pagination__prev, .pagination__next {
+  padding: 0;
+}
+
+.pagination__prev:disabled svg, .pagination__next:disabled svg {
+  color: #94A0B1;
+  opacity: 0.7;
+}
+
+.pagination__prev svg, .pagination__next svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pagination__prev:not(:disabled):hover, .pagination__next:not(:disabled):hover {
+  cursor: pointer;
+}
+
+.pagination__prev:not(:disabled):hover svg, .pagination__next:not(:disabled):hover svg {
+  color: #2858FF;
+}
+
+.pagination__prev:focus > .pagination__arrow-content, .pagination__next:focus > .pagination__arrow-content {
+  position: relative;
+}
+
+.pagination__prev:focus > .pagination__arrow-content::before, .pagination__next:focus > .pagination__arrow-content::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 36px;
+}
+
+.pagination__prev {
+  margin-right: 16px;
+}
+
+.pagination__next {
+  margin-left: 16px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pagination__arrow-content {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.pagination__numbers {
+  font-size: 0;
+  line-height: 0;
+}
+
+.pagination__btn {
+  display: inline-block;
+  padding: 0;
+}
+
+.pagination__btn:not(:last-child) {
+  margin-right: 4px;
+}
+
+.pagination__btn:focus > .pagination__btn-content,
+.pagination__btn.focused > .pagination__btn-content {
+  position: relative;
+}
+
+.pagination__btn:focus > .pagination__btn-content::before,
+.pagination__btn.focused > .pagination__btn-content::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #2858FF;
+  border-radius: 36px;
+}
+
+.pagination__btn-content {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #151515;
+  padding: 9px 17px;
+  border-radius: 20px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.pagination__btn.active .pagination__btn-content {
+  color: #fff;
+  background-color: #151515;
+}
+
+.pagination__btn:not(.active):hover .pagination__btn-content {
+  color: #2858FF;
+  cursor: pointer;
+}
+
+.pagination__btn.hovered {
+  position: relative;
+}
+
+.pagination__btn.hovered::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pagination__btn.hovered .pagination__btn-content {
+  color: #2858FF;
+}
+
+.pagination__prev.hovered, .pagination__next.hovered {
+  position: relative;
+}
+
+.pagination__prev.hovered::before, .pagination__next.hovered::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pagination__prev.hovered svg, .pagination__next.hovered svg {
+  color: #2858FF;
+}
+
 .side-line {
   position: absolute;
   top: 0;
@@ -7745,6 +7916,14 @@ html *::-webkit-scrollbar-thumb {
   max-width: 612px;
 }
 
+.forms__example--pagination {
+  max-width: 612px;
+}
+
+.forms__example--pagination a:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
 .forms__block {
   position: relative;
   margin-top: 40px;
@@ -8011,6 +8190,26 @@ html *::-webkit-scrollbar-thumb {
   margin-bottom: 40px;
 }
 
+.forms__block--pagination {
+  padding: 80px 0;
+}
+
+.forms__block--pagination .forms__item-desc {
+  margin-top: 10px;
+}
+
+.forms__block--pagination-states {
+  padding: 64px 0;
+}
+
+.forms__block--pagination-states .forms__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.forms__block--pagination-states .forms__item-desc {
+  margin-top: 10px;
+}
+
 .forms__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8262,6 +8461,23 @@ html *::-webkit-scrollbar-thumb {
 
 .forms__toggle-item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.forms__pagination-item {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.forms__pagination-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.forms__pagination-states-item {
+  padding: 0 64px;
+}
+
+.forms__pagination-states-item:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .icons__block:not(:last-child) {

@@ -1,4 +1,5 @@
 .link {
+  @include font(0, 0);
   display: inline-block;
   color: $dark-grey;
   text-decoration: none;

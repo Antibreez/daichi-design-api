@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Чекбоксы, радиокнопки</title>
+  <title>Подсказки</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -127,7 +127,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Чекбоксы, радиокнопки
+        Подсказки
       </h1>
     </div>
   </header>
@@ -163,7 +163,7 @@
               <a href="#" class="main-nav__link">Кнопки и ссылки</a>
             </li>
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Чекбоксы, радиокнопки</a>
+              <a href="#" class="main-nav__link">Чекбоксы, радиокнопки</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Табы, переключатели</a>
@@ -184,7 +184,7 @@
               <a href="#" class="main-nav__link">Теги</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Подсказки</a>
+              <a class="main-nav__link  main-nav__link--active">Подсказки</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Лоадер</a>
@@ -226,359 +226,130 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Чекбокс</h2>
+          <h2 class="info-block__title">Тултип</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Используются для управления параметром с двумя состояниями.
+            Тултип — это подсказка, появляющаяся при наведении на элемент.
           </p>
 
-          <div class="forms__block  forms__block--checkbox">
+          <div class="forms__block  forms__block--tooltip-item-positions">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
+                <div class="tooltip-positions">
+                  <span class="tooltip-positions__tip">
+                    <svg class="tooltip-positions__tip-icon">
+                      <use xlink:href="#icon-tip"></use>
+                    </svg>
+                    <span class="tooltip-positions__tooltip  show  tooltip top-left">Текст подсказки</span>
+                  </span>
+                  <span class="tooltip-positions__tip">
+                    <svg class="tooltip-positions__tip-icon">
+                      <use xlink:href="#icon-tip"></use>
+                    </svg>
+                    <span class="tooltip-positions__tooltip  tooltip top-center">Текст подсказки</span>
+                  </span>
+                  <span class="tooltip-positions__tip">
+                    <svg class="tooltip-positions__tip-icon">
+                      <use xlink:href="#icon-tip"></use>
+                    </svg>
+                    <span class="tooltip-positions__tooltip  show  tooltip top-right">Текст подсказки</span>
+                  </span>
+                  <span></span>
+                  <span class="tooltip-positions__tip">
+                    <svg class="tooltip-positions__tip-icon">
+                      <use xlink:href="#icon-tip"></use>
+                    </svg>
+                    <span class="tooltip-positions__tooltip  show  tooltip right-top">
+                      Используется на элементах, которые требуют небольшого короткого пояснения.
                     </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Checkbox on
-                    </span>
-                  </label>
+                  </span>
                 </div>
               </div>
-              <p class="forms__item-desc">Выбрано</p>
             </div>
+          </div>
 
+          <div class="forms__block  forms__block--tooltip-item-types">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Checkbox off
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">По умолчанию</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" disabled="" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" disabled="" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Checkbox disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Выбрано неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Checkbox disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Checkbox off error
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Ошибка</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="checkbox" class="checkbox__input show-focuse visually-hidden" disabled="" checked="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="checkbox" class="checkbox__input show-focuse visually-hidden" disabled="" checked="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Checkbox on focus
-                      </span>
-                    </label>
-                  </div>
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="checkbox" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="checkbox" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Checkbox off focus
-                      </span>
-                    </label>
-                  </div>
+                <div class="tooltip-types">
+                  <span class="tooltip-types__tooltip  show  tooltip tooltip-permanent bottom-center">
+                    Текст — максимально короткий.
+                    Не может содержать инструкцию.
+                  </span>
+                  <span class="tooltip-types__tooltip  show  tooltip tooltip-permanent top-center">
+                    Текст — максимально короткий.
+                    Не может содержать инструкцию.
+                  </span>
+                  <span class="tooltip-types__tooltip  show  tooltip tooltip-permanent right-center">
+                    Текст — максимально короткий.
+                    Не может содержать инструкцию.
+                  </span>
+                  <span class="tooltip-types__tooltip  show  tooltip tooltip-permanent left-center">
+                    Текст — максимально короткий.
+                    Не может содержать инструкцию.
+                  </span>
                 </div>
               </div>
               <p class="forms__item-desc">
-                Фокус. При переходе к чекбоксу клавишей Tab, выбранное значение получает фокус&nbsp;— появляется синяя рамка. При клике мышью рамка не&nbsp;появляется.
+                Тултип появляется при наведении курсора на элемент, с&nbsp;задержкой в&nbsp;120 миллисекунд
               </p>
             </div>
-
           </div>
         </div>
 
-
         <div class="forms__section">
-          <h2 class="info-block__title">Радиокнопка</h2>
+          <h2 class="info-block__title">Хинт</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Используются для выбора одного значения из нескольких.
+            Используется для отображения загрузки данных на страницах и&nbsp;крупных блоках.
           </p>
 
-          <div class="forms__block  forms__block--checkbox">
+          <div class="forms__block  forms__block--loaders-types">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-1" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Выбрано</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-2" class="checkbox__input visually-hidden">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio off
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">По умолчанию</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled="" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-3" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Выбрано неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-4" class="checkbox__input visually-hidden" disabled="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio disabled on
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Неактивно</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <label class="checkbox">
-                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text"></span>
-                  </label>
-                  <label class="checkbox">
-                    <input type="radio" name="radio-5" class="checkbox__input visually-hidden error">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Radio off error
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <p class="forms__item-desc">Ошибка</p>
-            </div>
-
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__checkbox-item">
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled="" checked="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
+                <div class="forms__loader-item  loader">
+                  <div class="loader__download">
+                    <a href="https://drive.google.com/drive/folders/1-K8zGjF8BChtci0ez7P5wScIaHAUhKtS?usp=sharing" class="loader__download-link  link" type="download">
+                      <span class="link__content" tabindex="-1">
+                        <svg class="link__icon">
+                          <use xlink:href="#icon-download"></use>
+                        </svg>
+                        <span class="link__text">Ссылка</span>
+                        <span class="link__success-text">
+                          <img src="img/check-green-big.svg" alt="">
+                          <span>Выполнено</span>
+                        </span>
                       </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="radio" name="radio-6" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Radio on focus
-                      </span>
-                    </label>
+                    </a>
                   </div>
-                  <div class="forms__checkbox-item-group">
-                    <label class="checkbox">
-                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text"></span>
-                    </label>
-                    <label class="checkbox">
-                      <input type="radio" name="radio-7" class="checkbox__input show-focuse visually-hidden" disabled="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Radio off focus
-                      </span>
-                    </label>
+                  <div class="loader__types">
+                    <div class="loader__big  loader__big--blue">
+                      <span></span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <p class="forms__item-desc">
-                Фокус. При переходе к группе радиокнопок клавишей Tab, выбранное значение получает фокус&nbsp;— появляется синяя рамка. При клике мышью рамка не&nbsp;появляется.
-              </p>
             </div>
+          </div>
 
+          <div class="forms__block  forms__block--loaders-colors">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__loader-item  loader">
+                  <div class="loader__big-colors">
+                    <div class="loader__big  loader__big--black">
+                      <span></span>
+                    </div>
+                    <div class="loader__big  loader__big--blue">
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
       </section>
+
     </div>
   </main>
 

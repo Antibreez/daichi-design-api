@@ -1,0 +1,162 @@
+.tooltip-positions {
+  padding: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__tip {
+    position: relative;
+    display: inline-block;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      color: $grey400;
+    }
+
+    &:last-child {
+      margin-top: 54px;
+      margin-left: 84px;
+    }
+  }
+
+  span:nth-child(4) {
+    width: 100%;
+  }
+}
+
+.tooltip-types {
+  padding: 0 35px;
+
+  &__tooltip {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.tooltip {
+  @include font(12px, 18px);
+  display: block;
+  width: max-content;
+  max-width: 232px;
+  padding: 16px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease 0.12s;
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 9px;
+    background-image: url("../img/tiptail.svg");
+  }
+
+  &.top-left {
+    bottom: calc(100% + 20px);
+    left: -20px;
+
+    &::after {
+      bottom: -9px;
+      left: 25px;
+    }
+  }
+
+  &.top-center {
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      bottom: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.top-right {
+    bottom: calc(100% + 20px);
+    right: -20px;
+
+    &::after {
+      bottom: -9px;
+      right: 25px;
+    }
+  }
+
+  &.right-top {
+    top: -12px;
+    left: calc(100% + 20px);
+
+    &::after {
+      transform-origin: top left;
+      transform: rotate(90deg);
+      top: 16px;
+      left: 0;
+    }
+  }
+
+  &.right-center {
+    top: 50%;
+    left: calc(100% + 20px);
+    transform: translateY(-50%);
+
+    &::after {
+      transform-origin: top left;
+      transform: rotate(90deg);
+      top: calc(50% - 7px);
+      left: 0;
+    }
+  }
+
+  &.bottom-center {
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+    }
+  }
+
+  &.left-center {
+    top: 50%;
+    right: calc(100% + 20px);
+    transform: translateY(-50%);
+
+    &::after {
+      transform-origin: top right;
+      transform: rotate(-90deg);
+      top: calc(50% - 7px);
+      right: 0;
+    }
+  }
+}
+
+.tooltip-positions__tip:hover {
+  .tooltip {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.tooltip-permanent {
+  position: relative;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  transform: none !important;
+}

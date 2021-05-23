@@ -1,0 +1,221 @@
+.tags {
+  &__block {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+  }
+
+  &__text {
+    @include font(15px, 24px);
+    color: $grey400;
+  }
+
+  &__tag {
+    @include font(12px, 18px);
+    display: inline-block;
+    color: $dark-grey;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: $grey300;
+    min-width: 24px;
+  }
+
+  &__text + .tags__tag {
+    margin-left: 8px;
+  }
+
+  &__icon {
+    display: inline-block;
+    @include font(0, 0);
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__icon-tag {
+    @include font(12px, 18px);
+    display: inline-block;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: $dark-grey;
+    min-width: 24px;
+
+    position: absolute;
+    top: -8px;
+    left: 14px;
+  }
+
+  &__item--active {
+    .tags__text {
+      color: $dark-grey;
+    }
+
+    .tags__tag {
+      color: #fff;
+      background-color: $dark-grey;
+    }
+  }
+
+  &__item--new,
+  &__item--green {
+    .tags__tag {
+      color: #fff;
+      background-color: $success;
+    }
+  }
+
+  &__item--special-price,
+  &__item--red {
+    .tags__tag {
+      color: #fff;
+      background-color: $fail;
+    }
+  }
+
+  &__item--date,
+  &__item--blue {
+    .tags__tag {
+      color: #fff;
+      background-color: $blue;
+    }
+  }
+
+  &__item--orange {
+    .tags__tag {
+      color: #fff;
+      background-color: $warning;
+    }
+  }
+
+  &__list-group {
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+
+    .tags__item {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+
+
+
+.tags-big {
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__block {
+    @include font(14px, 22px);
+    color: $dark-grey;
+    display: inline-block;
+    padding: 9px 18px;
+    background-color: $grey200;
+    border-radius: 20px;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+
+    &:not(.active):hover {
+      background-color: $grey300;
+      cursor: pointer;
+    }
+
+    &.hovered {
+      background-color: $grey300;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/pointer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+
+    &.focused,
+    &.always-focused {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border: 2px solid $blue;
+        border-radius: 80px;
+      }
+    }
+  }
+
+  &__close {
+    padding: 0;
+    margin-right: -5px;
+    transform: translate(0, -1px);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  &__input:checked ~ .tags-big__block {
+    background-color: $dark-grey;
+    color: #fff;
+
+    svg {
+      color: #fff;
+    }
+  }
+
+  &__input:disabled:not(.default) ~ .tags-big__block {
+    background-color: $grey300;
+    color: $grey400;
+    cursor: default;
+
+    svg {
+      color: $grey400;
+    }
+  }
+
+  &__input.error:disabled ~ .tags-big__block {
+    background-color: $grey200;
+    color: $grey400;
+    padding: 3px 15px;
+    border: 1px solid $fail;
+  }
+}

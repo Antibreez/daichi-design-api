@@ -425,6 +425,18 @@
     }
   }
 
+  &__block--hint-item-positions {
+    padding: 137px 0;
+  }
+
+  &__block--hint-item-types {
+    padding: 35px 0;
+
+    .forms__item-desc {
+      margin-top: 0;
+    }
+  }
+
 
 
 

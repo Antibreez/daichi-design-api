@@ -3,6 +3,7 @@
 @import "vendor/swiper-bundle.scss";
 @import "vendor/jquery-ui.scss";
 @import "vendor/select2.scss";
+@import "vendor/ion.rangeSlider.scss";
 
 // general
 @import "general/variables.scss";
@@ -32,6 +33,7 @@
 @import "components/tags.scss";
 @import "components/loader.scss";
 @import "components/tooltip.scss";
+@import "components/hint.scss";
 
 // blocks
 @import "blocks/side-line.scss";

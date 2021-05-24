@@ -90,6 +90,19 @@
 })();
 
 (function () {
+  $('.hint-positions__tip-icon').on('click', function () {
+    $(this).next().addClass('show');
+  });
+  $('.hint__close').on('click', function () {
+    var hint = $(this).parent();
+
+    if (!hint.hasClass('hint-permanent')) {
+      hint.removeClass('show');
+    }
+  });
+})();
+
+(function () {
   var selectOpt = {
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'calendar-dropdown'
@@ -319,6 +332,22 @@
   //   im.mask(item);
   // })
   $('.input-phone').inputmask('+7(999) 999-99-99');
+})();
+
+(function () {
+  $(".js-range-slider").ionRangeSlider({
+    type: "single",
+    min: 0,
+    max: 1000,
+    from: 200,
+    to: 500,
+    grid: false,
+    extra_classes: 'single-slider',
+    //hide_from_to: true,
+    onChange: function onChange(data) {
+      console.log(data.from);
+    }
+  });
 })();
 
 (function () {

@@ -197,48 +197,94 @@
             Используется для отображения загрузки данных на страницах и&nbsp;крупных блоках.
           </p>
 
-          <div class="forms__block  forms__block--loaders-types">
+          <div class="forms__block  forms__block--hint-item-positions">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__download">
-                    <a href="https://drive.google.com/drive/folders/1-K8zGjF8BChtci0ez7P5wScIaHAUhKtS?usp=sharing" class="loader__download-link  link" type="download">
-                      <span class="link__content" tabindex="-1">
-                        <svg class="link__icon">
-                          <use xlink:href="#icon-download"></use>
-                        </svg>
-                        <span class="link__text">Ссылка</span>
-                        <span class="link__success-text">
-                          <img src="img/check-green-big.svg" alt="">
-                          <span>Выполнено</span>
-                        </span>
+                <div class="hint-positions">
+                  <span class="hint-positions__tip">
+                    <span class="hint-positions__tip-text">Пример</span>
+                    <span class="hint-positions__tip-target">
+                      <svg class="hint-positions__tip-icon">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                      <span class="hint-positions__hint  show  hint top-left">
+                        Текст
+                        <button class="hint__close" aria-label="Закрыть"></button>
                       </span>
-                    </a>
-                  </div>
-                  <div class="loader__types">
-                    <div class="loader__big  loader__big--blue">
-                      <span></span>
-                    </div>
-                  </div>
+                    </span>
+                  </span>
+                  <span class="hint-positions__tip">
+                    <span class="hint-positions__tip-text">Пример</span>
+                    <span class="hint-positions__tip-target">
+                      <svg class="hint-positions__tip-icon">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                      <span class="hint-positions__hint  show  hint top-center">
+                        Текст
+                        <button class="hint__close" aria-label="Закрыть"></button>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="hint-positions__tip">
+                    <span class="hint-positions__tip-text">Пример</span>
+                    <span class="hint-positions__tip-target">
+                      <svg class="hint-positions__tip-icon">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                      <span class="hint-positions__hint  show  hint top-right">
+                        Текст
+                        <button class="hint__close" aria-label="Закрыть"></button>
+                      </span>
+                    </span>
+                  </span>
+                  <span></span>
+                  <span class="hint-positions__tip">
+                    <span class="hint-positions__tip-text">Пример</span>
+                    <span class="hint-positions__tip-target">
+                      <svg class="hint-positions__tip-icon">
+                        <use xlink:href="#icon-info"></use>
+                      </svg>
+                      <span class="hint-positions__hint  show  hint right-top">
+                        Если необходимо разъяснить детали, информацию или помочь с заполнением полей.<br>
+                        <a class="hint__link" href="#">Подробнее</a>
+                        <button class="hint__close" aria-label="Закрыть"></button>
+                      </span>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="forms__block  forms__block--loaders-colors">
+          <div class="forms__block  forms__block--hint-item-types">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__big-colors">
-                    <div class="loader__big  loader__big--black">
-                      <span></span>
-                    </div>
-                    <div class="loader__big  loader__big--blue">
-                      <span></span>
-                    </div>
-                  </div>
+                <div class="hint-types">
+                  <span class="hint-types__hint  show  hint hint-permanent bottom-center">
+                    Подсказка может содержать текст, иконки и
+                    <a class="hint__link" href="#">ссылки</a>
+                    <button class="hint__close" aria-label="Закрыть"></button>
+                  </span>
+                  <span class="hint-types__hint  show  hint hint-permanent top-center">
+                    Подсказка может содержать текст, иконки и
+                    <a class="hint__link" href="#">ссылки</a>
+                    <button class="hint__close" aria-label="Закрыть"></button>
+                  </span>
+                  <span class="hint-types__hint  show  hint hint-permanent right-top">
+                    Подсказка может содержать текст, иконки и
+                    <a class="hint__link" href="#">ссылки</a>
+                    <button class="hint__close" aria-label="Закрыть"></button>
+                  </span>
+                  <span class="hint-types__hint  show  hint hint-permanent left-top">
+                    Подсказка может содержать текст, иконки и
+                    <a class="hint__link" href="#">ссылки</a>
+                    <button class="hint__close" aria-label="Закрыть"></button>
+                  </span>
                 </div>
               </div>
+              <p class="forms__item-desc">
+                Если пояснение содержит много информации, то полезнее разместить его в&nbsp;виде статьи на отдельную страницу, а&nbsp;в&nbsp;хинт добавить ссылку.
+              </p>
             </div>
           </div>
         </div>

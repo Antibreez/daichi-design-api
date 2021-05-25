@@ -437,6 +437,26 @@
     }
   }
 
+  &__block--range {
+    padding: 90px 0 96px;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 90px;
+      }
+    }
+  }
+
+  &__block--range-states {
+    padding: 48px 0;
+
+    .forms__item {
+      &:not(:last-child) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
 
 
 

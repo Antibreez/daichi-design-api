@@ -121,16 +121,111 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Тултип</h2>
+          <h2 class="info-block__title">Слайдер</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Тултип — это подсказка, появляющаяся при наведении на элемент.
+            Устанавливает определенное значение или диапазон значений. Может работать вместе с полем ввода.
           </p>
 
-          <div class="forms__block  forms__block--tooltip-item-positions">
+          <div class="forms__block  forms__block--range">
             <div class="forms__item">
               <div class="forms__item-action">
 
-                <input type="text" class="js-range-slider" name="my_range" value="" />
+                <div class="range">
+                  <input type="text" class="js-range-single-slider  visually-hidden" name="my_range" value=""
+                    data-min="0"
+                    data-max="560"
+                    data-from="280"
+                    data-step="1"
+                  />
+                </div>
+
+              </div>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="range  range--period">
+                  <div class="range__input-block">
+                    <input type="text" class="js-range-double-slider  visually-hidden" name="my_range_2" value=""
+                      data-min="0"
+                      data-max="560"
+                      data-from="111"
+                      data-to="444"
+                      data-step="1"
+                    />
+                  </div>
+                  <div class="range__value  range__value--from"></div>
+                  <div class="range__value  range__value--to"></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="forms__block  forms__block--range-states">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+               <div class="range__state-block">
+                  <div class="range">
+                    <input type="text" class="js-range-single-slider-default  visually-hidden" name="my_range" value=""
+                      data-min="0"
+                      data-max="560"
+                      data-from="280"
+                      data-step="1"
+                      data-hide-from-top="true"
+                    />
+                  </div>
+                  <div class="range  range--disabled">
+                    <input type="text" class="js-range-single-slider-hovered  visually-hidden" name="my_range" value=""
+                      data-min="0"
+                      data-max="560"
+                      data-from="280"
+                      data-step="1"
+                      data-hide-from-top="true"
+                    />
+                  </div>
+                  <div class="range  range--disabled">
+                    <input type="text" class="js-range-single-slider-focused  visually-hidden" name="my_range" value=""
+                      data-min="0"
+                      data-max="560"
+                      data-from="280"
+                      data-step="1"
+                      data-hide-from-top="true"
+                    />
+                  </div>
+               </div>
+
+              </div>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="range__state-block">
+                  <div class="range  range--period">
+                    <div class="range__input-block">
+                      <input type="text" class="js-range-double-slider  visually-hidden" name="my_range_2" value=""
+                        data-min="0"
+                        data-max="560"
+                        data-from="111"
+                        data-to="444"
+                        data-step="1"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="range  range--period  range--disabled">
+                    <div class="range__input-block">
+                      <input type="text" class="js-range-double-slider-hovered  visually-hidden" name="my_range_2" value=""
+                        data-min="0"
+                        data-max="560"
+                        data-from="111"
+                        data-to="444"
+                        data-step="1"
+                      />
+                    </div>
+                  </div>
+                </div>
 
               </div>
             </div>

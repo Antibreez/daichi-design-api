@@ -335,18 +335,95 @@
 })();
 
 (function () {
-  $(".js-range-slider").ionRangeSlider({
+  $(".js-range-single-slider").ionRangeSlider({
     type: "single",
-    min: 0,
-    max: 1000,
-    from: 200,
-    to: 500,
     grid: false,
+    hide_min_max: true,
+    extra_classes: 'single-slider'
+  });
+  $(".js-range-single-slider-default").ionRangeSlider({
+    type: "single",
+    grid: false,
+    hide_min_max: true,
+    hide_from_to: true,
+    extra_classes: 'single-slider'
+  });
+  $(".js-range-single-slider-hovered").ionRangeSlider({
+    type: "single",
+    grid: false,
+    hide_min_max: true,
+    hide_from_to: true,
     extra_classes: 'single-slider',
-    //hide_from_to: true,
-    onChange: function onChange(data) {
-      console.log(data.from);
+    onStart: function onStart(data) {
+      data.slider.find('.irs-handle').addClass('hovered');
     }
+  });
+  $(".js-range-single-slider-focused").ionRangeSlider({
+    type: "single",
+    grid: false,
+    hide_min_max: true,
+    hide_from_to: true,
+    extra_classes: 'single-slider',
+    onStart: function onStart(data) {
+      data.slider.find('.irs-handle').addClass('focused');
+    }
+  });
+  $(".js-range-double-slider").ionRangeSlider({
+    type: "double",
+    grid: false,
+    hide_min_max: true,
+    hide_from_to: true,
+    extra_classes: 'double-slider',
+    onStart: function onStart(data) {
+      var inputBlock = data.slider.parent();
+      var from = inputBlock.siblings('.range__value--from');
+      var to = inputBlock.siblings('.range__value--to');
+      from.text(data.from);
+      to.text(data.to);
+    },
+    onChange: function onChange(data) {
+      var inputBlock = data.slider.parent();
+      var from = inputBlock.siblings('.range__value--from');
+      var to = inputBlock.siblings('.range__value--to');
+      from.text(data.from);
+      to.text(data.to);
+    }
+  });
+  $(".js-range-double-slider-hovered").ionRangeSlider({
+    type: "double",
+    grid: false,
+    hide_min_max: true,
+    hide_from_to: true,
+    extra_classes: 'double-slider',
+    onStart: function onStart(data) {
+      data.slider.find('.irs-handle.to').addClass('hovered');
+    }
+  });
+  var mouseup = false;
+  $('.irs-line').on('mouseup', function () {
+    mouseup = true;
+    $(this).parent().siblings('.irs-handle').removeClass('focused');
+  });
+  $('.irs-line').on('mousedown', function () {
+    $(this).parent().siblings('.irs-handle').removeClass('focused');
+  });
+  $('.irs-handle').on('mouseup', function () {
+    mouseup = true;
+    $(this).removeClass('focused');
+  });
+  $('.irs-handle').on('mousedown', function () {
+    mouseup = true;
+    $(this).removeClass('focused');
+  });
+  $('.irs-line').on('focus', function () {
+    if (!mouseup) {
+      $(this).parent().siblings('.irs-handle').addClass('focused');
+    }
+
+    mouseup = false;
+  });
+  $('.irs-line').on('blur', function () {
+    $(this).parent().siblings('.irs-handle').removeClass('focused');
   });
 })();
 

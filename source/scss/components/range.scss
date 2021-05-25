@@ -1,0 +1,150 @@
+.range {
+  width: 328px;
+}
+
+.range__state-block {
+  padding: 0 32px;
+
+  .range {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.range--period {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.range--disabled {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    z-index: 1000;
+  }
+}
+
+.range__input-block {
+  width: 100%;
+}
+
+.range__value {
+  @include font(15px, 23px);
+  color: $dark-grey;
+  min-height: 56px;
+  min-width: 88px;
+  margin-top: 28px;
+  padding: 17px 20px 16px;
+  background-color: $grey200;
+  border-radius: 2px;
+
+  &--to {
+    margin-left: auto;
+  }
+}
+
+.single-slider,
+.double-slider {
+  height: 16px;
+
+  .irs-line {
+    top: 7px;
+    height: 2px;
+    background-color: $grey300;
+  }
+
+  .irs-bar {
+    top: 7px;
+    height: 2px;
+    background-color: $dark-grey;
+  }
+
+  .irs-handle {
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: $dark-grey;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+
+    i:nth-child(n) {
+      display: none;
+    }
+
+    &:hover,
+    &.hovered {
+      cursor: pointer;
+      transform: translateY(-50%) scale(1.5);
+    }
+
+    &.hovered {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/pointer.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .irs-single {
+    @include font(14px, 22px);
+    padding: 4px 8px;
+    top: auto;
+    bottom: calc(100% + 23px);
+    background-color: $dark-grey;
+    border-radius: 4px;
+
+    &::before {
+      width: 14px;
+      height: 9px;
+      margin: 0;
+      border: none;
+      background-image: url("../img/tiptail-black.svg");
+      bottom: -9px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.single-slider {
+  .irs-handle {
+    &.focused {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+      }
+
+      &::after {
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-color: $blue;
+      }
+    }
+  }
+}

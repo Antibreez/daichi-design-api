@@ -12,6 +12,24 @@
     background-color: #fff;
   }
 
+  &.hovered .accordion__btn {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 15px;
+      left: 60%;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/pointer.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .accordion__title {
+      color: $blue;
+    }
+  }
+
   &__btn {
     position: relative;
     width: 100%;
@@ -27,7 +45,8 @@
       }
     }
 
-    &:focus > .accordion__btn-content {
+    &:focus > .accordion__btn-content,
+    &.focused > .accordion__btn-content {
       position: relative;
 
       &::before {
@@ -48,6 +67,16 @@
         transform: rotate(0);
       }
     }
+
+    &:disabled {
+      .accordion__title {
+        color: $grey400;
+      }
+
+      .accordion__icon {
+        opacity: 0.4;
+      }
+    }
   }
 
   &__btn-content {
@@ -64,7 +93,7 @@
 
   &__icon {
     position: absolute;
-    top: 44px;
+    top: 48px;
     right: 16px;
     display: inline-block;
     width: 24px;
@@ -105,5 +134,25 @@
 
   .accordion__text {
     @include font(14px, 22px);
+  }
+}
+
+.accordion__status-item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  .accordion {
+    width: 290px;
+
+    &:first-child {
+      margin: 0 auto 0 0;
+    }
+
+    &:last-child {
+      width: 180px;
+      margin: 0;
+    }
   }
 }

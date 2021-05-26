@@ -8602,6 +8602,22 @@ html *::-webkit-scrollbar-thumb {
   border-bottom: 1px solid #D1D8E1;
 }
 
+.accordion.hovered .accordion__btn::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 60%;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/pointer.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.accordion.hovered .accordion__btn .accordion__title {
+  color: #2858FF;
+}
+
 .accordion__btn {
   position: relative;
   width: 100%;
@@ -8618,11 +8634,13 @@ html *::-webkit-scrollbar-thumb {
   color: #2858FF;
 }
 
-.accordion__btn:focus > .accordion__btn-content {
+.accordion__btn:focus > .accordion__btn-content,
+.accordion__btn.focused > .accordion__btn-content {
   position: relative;
 }
 
-.accordion__btn:focus > .accordion__btn-content::before {
+.accordion__btn:focus > .accordion__btn-content::before,
+.accordion__btn.focused > .accordion__btn-content::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -8637,6 +8655,14 @@ html *::-webkit-scrollbar-thumb {
 .accordion__btn.opened .accordion__icon {
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+.accordion__btn:disabled .accordion__title {
+  color: #94A0B1;
+}
+
+.accordion__btn:disabled .accordion__icon {
+  opacity: 0.4;
 }
 
 .accordion__btn-content {
@@ -8656,7 +8682,7 @@ html *::-webkit-scrollbar-thumb {
 
 .accordion__icon {
   position: absolute;
-  top: 44px;
+  top: 48px;
   right: 16px;
   display: inline-block;
   width: 24px;
@@ -8705,6 +8731,62 @@ html *::-webkit-scrollbar-thumb {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
+}
+
+.accordion__status-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.accordion__status-item .accordion {
+  width: 290px;
+}
+
+.accordion__status-item .accordion:first-child {
+  margin: 0 auto 0 0;
+}
+
+.accordion__status-item .accordion:last-child {
+  width: 180px;
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+  max-width: 480px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table col {
+  width: calc(100% / 3);
+}
+
+.table th, .table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #D1D8E1;
+}
+
+.table th {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #94A0B1;
+}
+
+.table td {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #151515;
 }
 
 .side-line {
@@ -10132,6 +10214,34 @@ html *::-webkit-scrollbar-thumb {
 
 .forms__block--accordion .forms__item-desc {
   margin-top: 0;
+}
+
+.forms__block--accordion-states .forms__item .forms__item-action {
+  background-color: #F4F4F8;
+}
+
+.forms__block--accordion-states .forms__item:first-child .forms__item-action {
+  padding-top: 48px;
+}
+
+.forms__block--accordion-states .forms__item:first-child .forms__item-desc {
+  margin-top: 120px;
+}
+
+.forms__block--accordion-states .forms__item:not(:last-child) .forms__item-action {
+  padding-bottom: 32px;
+}
+
+.forms__block--accordion-states .forms__item:last-child .forms__item-action {
+  padding-bottom: 48px;
+}
+
+.forms__block--accordion-states .forms__item:last-child .forms__item-desc {
+  margin-top: 50px;
+}
+
+.forms__block--accordion-states .forms__item-desc {
+  margin-top: 72px;
 }
 
 .forms__item {

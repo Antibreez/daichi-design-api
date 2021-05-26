@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  max-width: 480px;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  col {
+    width: calc(100% / 3);
+  }
+
+  th,td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid $grey300;
+  }
+
+  th {
+    @include font(14px, 22px);
+    color: $grey400;
+  }
+
+  td {
+    @include font(15px, 24px);
+    color: $dark-grey;
+  }
+}

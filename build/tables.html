@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Аккордеон</title>
+  <title>Таблицы</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -136,7 +136,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Аккордеон
+        Таблицы
       </h1>
     </div>
   </header>
@@ -181,10 +181,10 @@
               <a href="#" class="main-nav__link">Слайдеры</a>
             </li>
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Аккордеон</a>
+              <a href="#" class="main-nav__link">Аккордеон</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Таблицы</a>
+              <a class="main-nav__link  main-nav__link--active">Таблицы</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Пагинация</a>
@@ -235,282 +235,47 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Аккордеон</h2>
+          <h2 class="info-block__title">Таблицы</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Список элементов, где каждый элемент может быть или раскрыт, чтобы показать содержание, связанное с этим элементом. Размеры заголовков и отступы могут быть разные и зависят от контента.
+            Дизайн таблиц строится из отдельных блоков-ячеек и&nbsp;заголовков, которые могут включать в&nbsp;себя текст, иконки и&nbsp;другие компоненты. Каждая ячейка-компонент может быть настроена и&nbsp;это даёт максимальную гибкость в&nbsp;стилизации таблицы.
           </p>
 
           <div class="forms__block  forms__block--accordion">
             <div class="forms__item">
               <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion">
-                    <ul class="accordion__list">
-                      <li class="accordion__item">
-                        <button class="accordion__btn">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text">
-                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                      <li class="accordion__item">
-                        <button class="accordion__btn  opened">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text  opened">
-                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                      <li class="accordion__item">
-                        <button class="accordion__btn">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text">
-                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <table class="table">
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                    <th>Заголовок 3</th>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                  </tr>
+                </table>
               </div>
-              <p class="forms__item-desc">Аккордеон большой</p>
-            </div>
-          </div>
-
-          <div class="forms__block  forms__block--accordion">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion  accordion--small">
-                    <ul class="accordion__list">
-                      <li class="accordion__item">
-                        <button class="accordion__btn">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text">
-                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                      <li class="accordion__item">
-                        <button class="accordion__btn  opened">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text  opened">
-                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                      <li class="accordion__item">
-                        <button class="accordion__btn">
-                          <span class="accordion__btn-content" tabindex="-1">
-                            <span class="accordion__title">Заголовок 1</span>
-                            <span class="accordion__icon"></span>
-                          </span>
-                        </button>
-                        <p class="accordion__text">
-                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">Аккордеон маленький</p>
-            </div>
-          </div>
-
-          <div class="forms__block  forms__block--accordion-states">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion__status-block">
-                    <div class="accordion__status-item">
-                      <div class="accordion">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 1</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="accordion  accordion--small">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 1</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">По умолчанию</p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion__status-block">
-                    <div class="accordion__status-item">
-                      <div class="accordion  hovered">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 2</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="accordion  accordion--small  hovered">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 2</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">При наведении</p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion__status-block">
-                    <div class="accordion__status-item">
-                      <div class="accordion">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn  opened">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 3</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="accordion  accordion--small">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn  opened">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 3</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">Активно</p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion__status-block">
-                    <div class="accordion__status-item">
-                      <div class="accordion">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn  opened" disabled="">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 4</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="accordion  accordion--small">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn" disabled="">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 4</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">Неактивно</p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__accordion-item">
-                  <div class="accordion__status-block">
-                    <div class="accordion__status-item">
-                      <div class="accordion">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn  focused">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 5</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="accordion  accordion--small">
-                        <ul class="accordion__list">
-                          <li class="accordion__item">
-                            <button class="accordion__btn  focused">
-                              <span class="accordion__btn-content" tabindex="-1">
-                                <span class="accordion__title">Заголовок 5</span>
-                                <span class="accordion__icon"></span>
-                              </span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Фокус. Клавишей Tab переключаются элементы в&nbsp;фокусе и&nbsp;появляется синяя рамка. Если нажать клавишу Enter&nbsp;— произойдет выбор.
-              </p>
             </div>
           </div>
         </div>

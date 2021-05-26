@@ -457,6 +457,20 @@
     }
   }
 
+  &__block--accordion {
+    padding: 40px 0;
+
+    .forms__item-desc {
+      margin-top: 0;
+    }
+  }
+
+
+
+
+
+
+
 
 
 
@@ -740,6 +754,15 @@
 
     .tags-big__item {
       margin-right: 44px;
+    }
+  }
+
+  &__accordion-item {
+    padding: 0 40px;
+
+    .accordion--small {
+      max-width: 328px;
+      margin: 0 auto;
     }
   }
 }

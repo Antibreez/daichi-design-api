@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Типографика</title>
+  <title>Аккордеон</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -128,7 +128,7 @@
 
 </symbol></svg>
   </div>
-  <a href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
+  <a data-scroll="" href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
       <a href="index.html" class="header__logo">
@@ -136,11 +136,13 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Типографика
+        Аккордеон
       </h1>
     </div>
   </header>
+
   <main class="main wrapper" id="main">
+
     <nav class="main__main-nav  main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -150,7 +152,7 @@
               <a href="#" class="main-nav__link">Цвета</a>
             </li>
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Типографика</a>
+              <a href="#" class="main-nav__link">Типографика</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Сетка</a>
@@ -179,7 +181,7 @@
               <a href="#" class="main-nav__link">Слайдеры</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Аккордеон</a>
+              <a class="main-nav__link  main-nav__link--active">Аккордеон</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Таблицы</a>
@@ -231,290 +233,105 @@
     </nav>
 
     <div class="main__content">
-      <section class="typography">
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Гарнитура</h2>
-          <p class="info-block__desc">
-            В качестве основного шрифта мы используем Suisse Intl в различных вариациях.
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Аккордеон</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Список элементов, где каждый элемент может быть или раскрыт, чтобы показать содержание, связанное с этим элементом. Размеры заголовков и отступы могут быть разные и зависят от контента.
           </p>
-          <div class="typography__content">
-            <p class="typography__font-name">Suisse Intl</p>
-            <ul class="typography__font-weight-list">
-              <li class="typography__font-weight-item">Regular</li>
-              <li class="typography__font-weight-item">Medium</li>
-              <li class="typography__font-weight-item">SemiBold</li>
-            </ul>
-            <a href="#" class="typography__font-download  download-link" download="">
-              <svg class="download-link__icon" role="img" width="24" height="24">
-                <use xlink:href="#icon-download"></use>
-              </svg>
-              Скачать
-            </a>
-          </div>
-        </div>
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Цвета</h2>
-          <div class="typography__content">
-            <ul class="typography__colors-list">
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #151515;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Основной цвет текста</p>
-                  <p class="colors__code">#151515</p>
+
+          <div class="forms__block  forms__block--accordion">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__accordion-item">
+                  <div class="accordion">
+                    <ul class="accordion__list">
+                      <li class="accordion__item">
+                        <button class="accordion__btn">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text">
+                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <button class="accordion__btn  opened">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text  opened">
+                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <button class="accordion__btn">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text">
+                          Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #94A0B1;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет дополнительного текста</p>
-                  <p class="colors__code">#94A0B1</p>
-                </div>
-              </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block  typography__colors-block--white" style="background-color: #FFFFFF;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет текста на темном фоне</p>
-                  <p class="colors__code">#FFFFFF</p>
-                </div>
-              </li>
-              <li class="typography__colors-item">
-                <div class="typography__colors-block" style="background-color: #2858FF;"></div>
-                <div class="typography__colors-chars">
-                  <p class="colors__name">Цвет ссылок при наведении</p>
-                  <p class="colors__code">#2858FF</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Заголовки</h2>
-          <p class="info-block__desc">
-            Все заголовки разделяются на десктоп и мобильную версии.
-          </p>
-          <div class="typography__content">
-            <ul class="typography__titles-list">
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h1-plus-desktop">
-                  Изящество и легкость
-                </p>
-                <p class="typography__title-type">H1+. Desktop</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 64px<br>
-                  line-height: 72px (112%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h1-plus-mobile">Изящество и легкость</p>
-                <p class="typography__title-type">H1+. Mobile</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 40px<br>
-                  line-height: 46px (115%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h1-desktop">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H1. Desktop</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 40px<br>
-                  line-height: 48px (120%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h1-mobile">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H1. Mobile</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 28px<br>
-                  line-height: 34px (121%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h2-desktop">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H2. Desktop</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 32px<br>
-                  line-height: 40px (125%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h2-mobile">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H2. Mobile</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 24px<br>
-                  line-height: 30px (125%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h3-desktop">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H3. Desktop</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 24px<br>
-                  line-height: 32px (132%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h3-mobile">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H3. Mobile</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 20px<br>
-                  line-height: 26px (130%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h4-desktop">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H4. Desktop</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 18px<br>
-                  line-height: 24px (133%)<br>
-                </p>
-              </li>
-              <li class="typography__titles-item">
-                <p class="typography__title-view  typography__title-view--h4-mobile">Комфортный<br> климат в доме</p>
-                <p class="typography__title-type">H4. Mobile</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 18px<br>
-                  line-height: 24px (133%)<br>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Текст</h2>
-          <p class="info-block__desc">
-            Размеры для текстовых стилей одинаковы для десктоп и мобильной версии.
-          </p>
-          <div class="typography__content">
-            <ul class="typography__text-list">
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t15">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду.<br> Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T15</p>
-                <p class="typography__title-chars">
-                  Regular<br>
-                  font-weight: 400<br>
-                  font-size: 15px<br>
-                  line-height: 24px (160%)<br>
-                </p>
-              </li>
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t14">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду.<br> Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон,<br> который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T14</p>
-                <p class="typography__title-chars">
-                  Regular<br>
-                  font-weight: 400<br>
-                  font-size: 14px<br>
-                  line-height: 22px (157%)<br>
-                </p>
-              </li>
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t12">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду. Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T12</p>
-                <p class="typography__title-chars">
-                  Regular<br>
-                  font-weight: 400<br>
-                  font-size: 12px<br>
-                  line-height: 18px (150%)<br>
-                </p>
-              </li>
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t15-bold">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду. Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T15 — Bold</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 15px<br>
-                  line-height: 24px (160%)<br>
-                </p>
-              </li>
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t14-bold">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду.<br> Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T14 — Bold</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 14px<br>
-                  line-height: 22px (157%)<br>
-                </p>
-              </li>
-              <li class="typography__text-item">
-                <p class="typography__text-view  typography__text-view--t12-bold">
-                  Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду. Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
-                </p>
-                <p class="typography__title-type">T12 — Bold</p>
-                <p class="typography__title-chars">
-                  Medium<br>
-                  font-weight: 500<br>
-                  font-size: 12px<br>
-                  line-height: 18px (150%)<br>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Списки</h2>
-          <div class="typography__content">
-            <div class="typography__lists-block">
-              <div class="typography__lists-item">
-                <h3 class="typography__list-title">Маркированный список</h3>
-                <ul class="typography__list-list">
-                  <li class="typography__list-item">Незаметный и комфортный климат в доме</li>
-                  <li class="typography__list-item">Гармония и уют</li>
-                  <li class="typography__list-item">Комфортный звуковой фон, который не мешает во время сна или отдыха</li>
-                  <li class="typography__list-item">Тропическое настроение в любую погоду</li>
-                </ul>
               </div>
-              <div class="typography__lists-item">
-                <h3 class="typography__list-title">Нумерованный список</h3>
-                <ol class="typography__list-list">
-                  <li class="typography__list-item">Незаметный и комфортный климат в доме</li>
-                  <li class="typography__list-item">Гармония и уют</li>
-                  <li class="typography__list-item">Комфортный звуковой фон, который не мешает во время сна или отдыха</li>
-                  <li class="typography__list-item">Тропическое настроение в любую погоду</li>
-                </ol>
-              </div>
+              <p class="forms__item-desc">Аккордеон большой</p>
             </div>
           </div>
-        </div>
-        <div class="typography__block  info-block">
-          <h2 class="info-block__title">Выделенный текст</h2>
-          <p class="info-block__desc">
-            Текст выделяется цветом #2858FF.
-          </p>
-          <div class="typography__selection">
-            Незаметный и комфортный климат в доме — гармония и уют.
-            Тропическое <span>настроение в любую погоду.</span> Изящество и легкость в вашем пространстве.
-            Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.
+
+          <div class="forms__block  forms__block--accordion">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="forms__accordion-item">
+                  <div class="accordion  accordion--small">
+                    <ul class="accordion__list">
+                      <li class="accordion__item">
+                        <button class="accordion__btn">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text">
+                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <button class="accordion__btn  opened">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text  opened">
+                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                      <li class="accordion__item">
+                        <button class="accordion__btn">
+                          <span class="accordion__btn-content" tabindex="-1">
+                            <span class="accordion__title">Заголовок 1</span>
+                            <span class="accordion__icon"></span>
+                          </span>
+                        </button>
+                        <p class="accordion__text">
+                          Если действия важны и часто используются, не&nbsp;убирайте их в меню. Пользователь не&nbsp;сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="forms__item-desc">Аккордеон маленький</p>
+            </div>
           </div>
         </div>
       </section>

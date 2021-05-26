@@ -1,6 +1,13 @@
 "use strict";
 
 (function () {
+  $('.accordion__btn').click(function () {
+    $(this).siblings('.accordion__text').slideToggle(200);
+    $(this).toggleClass('opened');
+  });
+})();
+
+(function () {
   var $btn = $('.forms__button-item--example .forms__btn');
   $btn.on('click', function () {
     var $btn = $(this);

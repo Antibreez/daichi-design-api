@@ -1,0 +1,109 @@
+.accordion {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey300;
+    }
+
+    background-color: #fff;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    color: $dark-grey;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+
+      .accordion__title {
+        color: $blue;
+      }
+    }
+
+    &:focus > .accordion__btn-content {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border: 2px solid $blue;
+        border-radius: 3px;
+        pointer-events: none;
+      }
+    }
+
+    &.opened {
+      .accordion__icon {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__btn-content {
+    display: inline-block;
+    width: 100%;
+    padding: 44px 0;
+  }
+
+  &__title {
+    @include font(24px, 32px, 500);
+    padding-right: 50px;
+    transition: color 0.2s;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 44px;
+    right: 16px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon-close_small.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+  }
+
+  &__text {
+    @include font(15px, 24px);
+    color: $dark-grey;
+    margin: 0;
+    padding-bottom: 36px;
+    padding-top: 8px;
+    display: none;
+
+    &.opened {
+      display: block;
+    }
+  }
+}
+
+.accordion--small {
+  .accordion__btn-content {
+    padding: 24px 0;
+  }
+
+  .accordion__title {
+    @include font(15px, 24px);
+  }
+
+  .accordion__icon {
+    top: 24px;
+  }
+
+  .accordion__text {
+    @include font(14px, 22px);
+  }
+}

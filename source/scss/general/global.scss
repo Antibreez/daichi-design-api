@@ -123,3 +123,10 @@ a {
   outline: none;
 }
 
+[type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner, button::-moz-focus-inner {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: none;
+}

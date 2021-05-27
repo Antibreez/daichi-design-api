@@ -35,6 +35,12 @@
     }
   }
 
+  &__box {
+    max-width: 75%;
+    margin-top: 40px;
+    background-color: $grey200;
+  }
+
   &__block {
     position: relative;
     margin-top: 40px;
@@ -467,9 +473,6 @@
 
   &__block--accordion-states {
 
-    .forms__item-action {
-    }
-
     .forms__item {
       .forms__item-action {
         background-color: $grey200;
@@ -504,6 +507,18 @@
 
     .forms__item-desc {
       margin-top: 72px;
+    }
+  }
+
+  &__block--table {
+    padding: 56px 0 64px;
+  }
+
+  &__block--table-titles {
+    padding: 64px 0;
+
+    .forms__item-desc {
+      margin-top: -62px;
     }
   }
 

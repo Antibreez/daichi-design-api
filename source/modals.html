@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Модальные окна</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
+  <header class="header  header--black">
+    <div class="header__container  wrapper">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+      </a>
+      <h1 class="header__title">
+        Модальные окна
+      </h1>
+    </div>
+  </header>
+
+  <main class="main wrapper" id="main">
+
+    <nav class="main__main-nav  main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          Стили
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Цвета</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Типографика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Сетка</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Компоненты
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Логотип</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Формы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Кнопки и ссылки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Чекбоксы, радиокнопки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Табы, переключатели</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Слайдеры</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Аккордеон</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Таблицы</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Пагинация</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Теги</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Подсказки</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Лоадер</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a class="main-nav__link  main-nav__link--active">Модальные окна</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки интерфейса</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Иконки продуктов</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main-nav__item">
+          Контент
+          <ul class="main-nav__sublist">
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Общие правила</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Редполитика</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Оборудование</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Программы Даичи</a>
+            </li>
+            <li class="main-nav__subitem">
+              <a href="#" class="main-nav__link">Рекламные материалы</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main__content">
+      <section class="forms">
+        <div class="forms__section">
+          <h2 class="info-block__title">Лайтбоксы</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Лайтбокс появляется поверх страницы, затемняя ее. Это помогает сфокусировать внимание пользователя на конкретных действиях, не теряя при этом общий контекст. На мобильных устройствах лайтбоксы занимают весь экран.
+          </p>
+
+          <div class="forms__box">
+            <div class="modals__lightbox">
+              <div class="modals__modal modal">
+                <form class="modal__form">
+                  <div class="modal__content">
+                    <p class="modal__title">Написать нам</p>
+                    <p class="modal__desc">
+                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
+                    </p>
+                    <div class="modal__fields">
+                      <div class="modal__input  modal__input--half  input-block">
+                        <label for="name" class="input-block__label">Ваше имя</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="name" name="name" value="Евгений">
+                        </div>
+                      </div>
+                      <div class="modal__input  modal__input--half  input-block">
+                        <label for="surname" class="input-block__label">Фамилия</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="surname" name="surname" value="Лукашин">
+                        </div>
+                      </div>
+                      <div class="modal__input  input-block">
+                        <label for="email" class="input-block__label">Email</label>
+                        <div class="input-wrapper">
+                          <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
+                        </div>
+                      </div>
+                      <div class="modal__input  input-block">
+                        <label for="phone" class="input-block__label">Телефон</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="phone" name="phone" placeholder="+7">
+                        </div>
+                      </div>
+                    </div>
+                    <label class="modal__checkbox  checkbox">
+                      <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text">
+                        Разрешаю обработку <a href="#">персональных данных</a>
+                      </span>
+                    </label>
+                    <div class="modal__btn-block">
+                      <button type="submit" class="modal__submit  btn  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отправить</span>
+                        </span>
+                      </button>
+                    </div>
+
+                    <button class="modal__close-btn-icon">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="modals__modal modal">
+                <form class="modal__form">
+                  <div class="modal__content">
+                    <p class="modal__title">Заголовок</p>
+                    <p class="modal__desc">
+                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
+                    </p>
+                    <div class="modal__btn-block">
+                      <button type="submit" class="modal__cancel  btn  btn-secondary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отменить</span>
+                        </span>
+                      </button>
+                      <button type="submit" class="modal__submit  btn  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отправить</span>
+                        </span>
+                      </button>
+                    </div>
+
+                    <button class="modal__close-btn-icon">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.modals {
+  &__lightbox {
+    padding: 80px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .modal {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+}

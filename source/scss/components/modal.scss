@@ -1,0 +1,82 @@
+.modal {
+  max-width: 456px;
+  background-color: #fff;
+
+  &__content {
+    padding: 48px 40px;
+    position: relative;
+  }
+
+  &__title {
+    @include font(24px, 32px, 500);
+    color: $dark-grey;
+    margin: 0 0 16px;
+  }
+
+  &__desc {
+    @include font(15px, 24px);
+    color: $dark-grey;
+    margin: 0 0 29px;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__input--half {
+    width: 47%;
+  }
+
+  &__checkbox {
+    margin-bottom: 32px;
+
+    a {
+      color: $dark-grey;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+    }
+  }
+
+  &__btn-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__submit {
+    margin-left: auto;
+  }
+
+  &__close-btn-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $dark-grey;
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        color: $blue;
+      }
+    }
+  }
+}

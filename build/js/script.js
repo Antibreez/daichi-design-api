@@ -1085,3 +1085,11 @@
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });
 })();
+
+(function () {
+  var $checkbox = $('.table--payment .checkbox__input');
+  $checkbox.change(function () {
+    var $row = $(this).parents('tr');
+    $row.toggleClass('checked');
+  });
+})();

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Лоадер</title>
+  <title>Модальные окна</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -136,7 +136,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Лоадер
+        Модальные окна
       </h1>
     </div>
   </header>
@@ -196,10 +196,10 @@
               <a href="#" class="main-nav__link">Подсказки</a>
             </li>
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Лоадер</a>
+              <a href="#" class="main-nav__link">Лоадер</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Модальные окна</a>
+              <a class="main-nav__link  main-nav__link--active">Модальные окна</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Иконки интерфейса</a>
@@ -235,121 +235,105 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Маленький лоадер</h2>
+          <h2 class="info-block__title">Лайтбоксы</h2>
           <p class="info-block__desc  grid__columns-desc">
-            Используется для отображения процесса подгрузки данных и&nbsp;индикации выполнения операции. Применяется в&nbsp;компонентах: кнопки, ссылки и&nbsp;т.д.
+            Лайтбокс появляется поверх страницы, затемняя ее. Это помогает сфокусировать внимание пользователя на конкретных действиях, не теряя при этом общий контекст. На мобильных устройствах лайтбоксы занимают весь экран.
           </p>
 
-          <div class="forms__block  forms__block--loaders-types">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__download">
-                    <a href="https://drive.google.com/drive/folders/1nx3CQEWX_qCwXBuIZYxmvwIZJYPhYGBZ?usp=sharing" class="loader__download-link  link" type="download">
-                      <span class="link__content" tabindex="-1">
-                        <svg class="link__icon">
-                          <use xlink:href="#icon-download"></use>
-                        </svg>
-                        <span class="link__text">Ссылка</span>
-                        <span class="link__success-text">
-                          <img src="img/check-green-big.svg" alt="">
-                          <span>Выполнено</span>
+          <div class="forms__box">
+            <div class="modals__lightbox">
+              <div class="modals__modal modal">
+                <form class="modal__form">
+                  <div class="modal__content">
+                    <p class="modal__title">Написать нам</p>
+                    <p class="modal__desc">
+                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
+                    </p>
+                    <div class="modal__fields">
+                      <div class="modal__input  modal__input--half  input-block">
+                        <label for="name" class="input-block__label">Ваше имя</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="name" name="name" value="Евгений">
+                        </div>
+                      </div>
+                      <div class="modal__input  modal__input--half  input-block">
+                        <label for="surname" class="input-block__label">Фамилия</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="surname" name="surname" value="Лукашин">
+                        </div>
+                      </div>
+                      <div class="modal__input  input-block">
+                        <label for="email" class="input-block__label">Email</label>
+                        <div class="input-wrapper">
+                          <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
+                        </div>
+                      </div>
+                      <div class="modal__input  input-block">
+                        <label for="phone" class="input-block__label">Телефон</label>
+                        <div class="input-wrapper">
+                          <input type="text" class="input" id="phone" name="phone" placeholder="+7">
+                        </div>
+                      </div>
+                    </div>
+                    <label class="modal__checkbox  checkbox">
+                      <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                      <span class="checkbox__area">
+                        <span class="checkbox__outline" tabindex="-1"></span>
+                      </span>
+                      <span class="checkbox__text">
+                        Разрешаю обработку <a href="#">персональных данных</a>
+                      </span>
+                    </label>
+                    <div class="modal__btn-block">
+                      <button type="submit" class="modal__submit  btn  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отправить</span>
                         </span>
-                      </span>
-                    </a>
-                  </div>
-                  <div class="loader__types">
-                    <a href="#" class="link  loading">
-                      <span class="link__content" tabindex="-1">
-                        <svg class="link__icon">
-                          <use xlink:href="#icon-bookmark"></use>
-                        </svg>
-                        <span class="link__text">Ссылка</span>
-                      </span>
-                    </a>
-                    <button class="btn  btn-secondary  loading" disabled="">
-                      <span class="btn__content" tabindex="-1">
-                        <span>Кнопка 1</span>
-                      </span>
+                      </button>
+                    </div>
+
+                    <button class="modal__close-btn-icon">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
                     </button>
                   </div>
-                </div>
+                </form>
               </div>
-            </div>
-          </div>
 
-          <div class="forms__block  forms__block--loaders-colors">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__colors">
-                    <div class="loader__colors-item  loader__colors-item--blue">
-                      <span></span>
-                    </div>
-                    <div class="loader__colors-item  loader__colors-item--white">
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="forms__section">
-          <h2 class="info-block__title">Стандартный лоадер</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Используется для отображения загрузки данных на страницах и&nbsp;крупных блоках.
-          </p>
-
-          <div class="forms__block  forms__block--loaders-types">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__download">
-                    <a href="https://drive.google.com/drive/folders/1-K8zGjF8BChtci0ez7P5wScIaHAUhKtS?usp=sharing" class="loader__download-link  link" type="download">
-                      <span class="link__content" tabindex="-1">
-                        <svg class="link__icon">
-                          <use xlink:href="#icon-download"></use>
-                        </svg>
-                        <span class="link__text">Ссылка</span>
-                        <span class="link__success-text">
-                          <img src="img/check-green-big.svg" alt="">
-                          <span>Выполнено</span>
+              <div class="modals__modal modal">
+                <form class="modal__form">
+                  <div class="modal__content">
+                    <p class="modal__title">Заголовок</p>
+                    <p class="modal__desc">
+                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
+                    </p>
+                    <div class="modal__btn-block">
+                      <button type="submit" class="modal__cancel  btn  btn-secondary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отменить</span>
                         </span>
-                      </span>
-                    </a>
-                  </div>
-                  <div class="loader__types">
-                    <div class="loader__big  loader__big--blue">
-                      <span></span>
+                      </button>
+                      <button type="submit" class="modal__submit  btn  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отправить</span>
+                        </span>
+                      </button>
                     </div>
+
+                    <button class="modal__close-btn-icon">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
 
-          <div class="forms__block  forms__block--loaders-colors">
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="forms__loader-item  loader">
-                  <div class="loader__big-colors">
-                    <div class="loader__big  loader__big--black">
-                      <span></span>
-                    </div>
-                    <div class="loader__big  loader__big--blue">
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-
       </section>
-
     </div>
   </main>
 

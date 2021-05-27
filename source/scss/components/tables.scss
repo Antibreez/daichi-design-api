@@ -24,3 +24,168 @@
     color: $dark-grey;
   }
 }
+
+.table--payment {
+  max-width: 550px;
+
+  col {
+    &:first-child {
+      width: 14%;
+    }
+
+    &:nth-child(2) {
+      width: 23%;
+    }
+
+    &:nth-child(3) {
+      width: 23%;
+    }
+
+    &:nth-child(4) {
+      width: 23%;
+    }
+
+    &:nth-child(5) {
+      width: 17%;
+    }
+  }
+
+  tr.checked {
+    td {
+      background-color: $grey200;
+    }
+  }
+
+  .table__sort-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+    vertical-align: middle;
+    background-image: url("../img/sort-triangle.svg");
+  }
+
+  .table__checkbox {
+    display: block;
+  }
+
+  .table__status {
+    .btn__content {
+      @include font(12px, 18px);
+      padding: 4px 12px;
+    }
+
+    .btn__content {
+      cursor: default;
+    }
+
+    &--new {
+      .btn__content {
+        background-color: $success;
+      }
+    }
+
+    &--canceled {
+      .btn__content {
+        background-color: $fail;
+      }
+    }
+
+    &--completed {
+      .btn__content {
+        background-color: $grey300;
+        color: $dark-grey;
+      }
+    }
+  }
+
+  .table__delete {
+    display: block;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background-image: url("../img/close_small.svg");
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.table-part {
+  padding: 0 64px;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    @include font(14px, 22px);
+    max-width: 328px;
+    color: $grey400;
+    padding: 16px;
+    border-bottom: 1px solid $grey300;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-left: 6px;
+
+    &--tip {
+      background-image: url("../img/icon-tip.svg");
+      opacity: 0.4;
+    }
+
+    &--sort {
+      background-image: url("../img/sort-triangle.svg");
+    }
+  }
+
+  &__cell {
+    @include font(15px, 24px);
+    max-width: 328px;
+    display: flex;
+    align-items: center;
+    color: $dark-grey;
+    border-bottom: 1px solid $grey300;
+
+    .checkbox {
+      margin-right: 16px;
+    }
+
+    &.sm {
+      padding: 8px 16px;
+    }
+
+    &.md {
+      padding: 16px;
+    }
+
+    &.bg {
+      padding: 24px 16px;
+    }
+
+    &.checked {
+      background-color: $grey200;
+    }
+  }
+
+  &__btn-delete {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background-image: url("../img/delete.svg");
+  }
+}

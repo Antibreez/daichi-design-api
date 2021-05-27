@@ -3,6 +3,10 @@
   font-size: 0;
   line-height: 0;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &__area {
     position: relative;
     display: inline-block;

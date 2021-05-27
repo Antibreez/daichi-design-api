@@ -58,7 +58,7 @@
 </symbol><symbol id="icon-categories" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3.5C2 4.32843 2.67157 5 3.5 5C4.32843 5 5 4.32843 5 3.5C5 2.67157 4.32843 2 3.5 2C2.67157 2 2 2.67157 2 3.5ZM11.5 5C10.6716 5 10 4.32843 10 3.5C10 2.67157 10.6716 2 11.5 2C12.3284 2 13 2.67157 13 3.5C13 4.32843 12.3284 5 11.5 5ZM19.5 5C18.6716 5 18 4.32843 18 3.5C18 2.67157 18.6716 2 19.5 2C20.3284 2 21 2.67157 21 3.5C21 4.32843 20.3284 5 19.5 5ZM11.5 13C10.6716 13 10 12.3284 10 11.5C10 10.6716 10.6716 10 11.5 10C12.3284 10 13 10.6716 13 11.5C13 12.3284 12.3284 13 11.5 13ZM18 11.5C18 12.3284 18.6716 13 19.5 13C20.3284 13 21 12.3284 21 11.5C21 10.6716 20.3284 10 19.5 10C18.6716 10 18 10.6716 18 11.5ZM3.5 13C2.67157 13 2 12.3284 2 11.5C2 10.6716 2.67157 10 3.5 10C4.32843 10 5 10.6716 5 11.5C5 12.3284 4.32843 13 3.5 13ZM10 19.5C10 20.3284 10.6716 21 11.5 21C12.3284 21 13 20.3284 13 19.5C13 18.6716 12.3284 18 11.5 18C10.6716 18 10 18.6716 10 19.5ZM19.5 21C18.6716 21 18 20.3284 18 19.5C18 18.6716 18.6716 18 19.5 18C20.3284 18 21 18.6716 21 19.5C21 20.3284 20.3284 21 19.5 21ZM2 19.5C2 20.3284 2.67157 21 3.5 21C4.32843 21 5 20.3284 5 19.5C5 18.6716 4.32843 18 3.5 18C2.67157 18 2 18.6716 2 19.5Z" fill="#151515"></path>
 </symbol><symbol id="icon-close" viewBox="0 0 24 24">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.70711 3.29289L4 2.58579L2.58579 4L3.29289 4.70711L10.5858 12L3.29289 19.2929L2.58579 20L4 21.4142L4.70711 20.7071L12 13.4142L19.2929 20.7071L20 21.4142L21.4142 20L20.7071 19.2929L13.4142 12L20.7071 4.70711L21.4142 4L20 2.58579L19.2929 3.29289L12 10.5858L4.70711 3.29289Z" fill="#151515"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.70711 3.29289L4 2.58579L2.58579 4L3.29289 4.70711L10.5858 12L3.29289 19.2929L2.58579 20L4 21.4142L4.70711 20.7071L12 13.4142L19.2929 20.7071L20 21.4142L21.4142 20L20.7071 19.2929L13.4142 12L20.7071 4.70711L21.4142 4L20 2.58579L19.2929 3.29289L12 10.5858L4.70711 3.29289Z" fill="currentColor"></path>
 </symbol><symbol id="icon-close_small" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.70711 5.29289L6 4.58579L4.58579 6L5.29289 6.70711L10.5858 12L5.29289 17.2929L4.58579 18L6 19.4142L6.70711 18.7071L12 13.4142L17.2929 18.7071L18 19.4142L19.4142 18L18.7071 17.2929L13.4142 12L18.7071 6.70711L19.4142 6L18 4.58579L17.2929 5.29289L12 10.5858L6.70711 5.29289Z" fill="#151515"></path>
 </symbol><symbol id="icon-delete" viewBox="0 0 24 24">
@@ -240,7 +240,7 @@
             Дизайн таблиц строится из отдельных блоков-ячеек и&nbsp;заголовков, которые могут включать в&nbsp;себя текст, иконки и&nbsp;другие компоненты. Каждая ячейка-компонент может быть настроена и&nbsp;это даёт максимальную гибкость в&nbsp;стилизации таблицы.
           </p>
 
-          <div class="forms__block  forms__block--accordion">
+          <div class="forms__block  forms__block--table">
             <div class="forms__item">
               <div class="forms__item-action">
                 <table class="table">
@@ -278,6 +278,248 @@
               </div>
             </div>
           </div>
+
+          <div class="forms__block  forms__block--table">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <table class="table  table--payment">
+                  <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tr>
+                    <th></th>
+                    <th>№ заказа <span class="table__sort-icon"></span></th>
+                    <th>Сумма, ₽ <span class="table__sort-icon"></span></th>
+                    <th>Статус <span class="table__sort-icon"></span></th>
+                    <th></th>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <label class="table__checkbox  checkbox">
+                        <input type="checkbox" class="checkbox__input visually-hidden">
+                        <span class="checkbox__area">
+                          <span class="checkbox__outline" tabindex="-1"></span>
+                        </span>
+                      </label>
+                    </td>
+                    <td>284897</td>
+                    <td>64 200</td>
+                    <td>
+                      <div class="table__status  table__status--new  btn  btn--s  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Новый</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="table__delete" aria-label="Удалить"></button>
+                    </td>
+                  </tr>
+
+
+                  <tr class="checked">
+                    <td>
+                      <label class="table__checkbox  checkbox">
+                        <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                        <span class="checkbox__area">
+                          <span class="checkbox__outline" tabindex="-1"></span>
+                        </span>
+                      </label>
+                    </td>
+                    <td>254896</td>
+                    <td>68 400</td>
+                    <td>
+                      <div class="table__status  table__status--canceled  btn  btn--s  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отменен</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="table__delete" aria-label="Удалить"></button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <label class="table__checkbox  checkbox">
+                        <input type="checkbox" class="checkbox__input visually-hidden">
+                        <span class="checkbox__area">
+                          <span class="checkbox__outline" tabindex="-1"></span>
+                        </span>
+                      </label>
+                    </td>
+                    <td>264895</td>
+                    <td>89 600</td>
+                    <td>
+                      <div class="table__status  table__status--completed  btn  btn--s  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Завершен</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="table__delete" aria-label="Удалить"></button>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>
+                      <label class="table__checkbox  checkbox">
+                        <input type="checkbox" class="checkbox__input visually-hidden">
+                        <span class="checkbox__area">
+                          <span class="checkbox__outline" tabindex="-1"></span>
+                        </span>
+                      </label>
+                    </td>
+                    <td>234894</td>
+                    <td>75 480</td>
+                    <td>
+                      <div class="table__status  table__status--completed  btn  btn--s  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Завершен</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <button class="table__delete" aria-label="Удалить"></button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="forms__block  forms__block--table-titles">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="table-part">
+                  <ul class="table-part__list">
+                    <li class="table-part__item">
+                      <div class="table-part__title">
+                        Заголовок
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__title">
+                        Заголовок
+                        <span class="table-part__icon table-part__icon--tip"></span>
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__title">
+                        Заголовок
+                        <span class="table-part__icon table-part__icon--sort"></span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="forms__item-desc">Заголовки</p>
+            </div>
+          </div>
+
+          <div class="forms__block  forms__block--table-titles">
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="table-part">
+                  <ul class="table-part__list">
+                    <li class="table-part__item">
+                      <div class="table-part__cell  sm  checked">
+                        Ячейка S
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  md  checked">
+                        Ячейка M
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  bg  checked">
+                        Ячейка L
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  sm">
+                        Ячейка S
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  md">
+                        Ячейка M
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  bg">
+                        Ячейка L
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  sm">
+                        <label class="checkbox">
+                          <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                          <span class="checkbox__area">
+                            <span class="checkbox__outline" tabindex="-1"></span>
+                          </span>
+                        </label>
+                        Ячейка S
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  md">
+                        <label class="checkbox">
+                          <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                          <span class="checkbox__area">
+                            <span class="checkbox__outline" tabindex="-1"></span>
+                          </span>
+                        </label>
+                        Ячейка M
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  bg">
+                        <label class="checkbox">
+                          <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                          <span class="checkbox__area">
+                            <span class="checkbox__outline" tabindex="-1"></span>
+                          </span>
+                        </label>
+                        Ячейка L
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  sm">
+                        Ячейка S
+                        <button class="table-part__btn-delete" aria-label="Удалить"></button>
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  md">
+                        Ячейка M
+                        <button class="table-part__btn-delete" aria-label="Удалить"></button>
+                      </div>
+                    </li>
+                    <li class="table-part__item">
+                      <div class="table-part__cell  bg">
+                        Ячейка L
+                        <button class="table-part__btn-delete" aria-label="Удалить"></button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="forms__item-desc">Ячейки</p>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>

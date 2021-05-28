@@ -51,10 +51,18 @@
   &__btn-block {
     display: flex;
     flex-wrap: wrap;
-  }
 
-  &__submit {
-    margin-left: auto;
+    button:last-child {
+      margin-left: auto;
+    }
+
+    button:first-child {
+      margin: 0;
+    }
+
+    button.modal__submit {
+      margin-left: auto;
+    }
   }
 
   &__close-btn-icon {
@@ -63,6 +71,8 @@
     right: 24px;
     width: 24px;
     height: 24px;
+    padding: 0;
+    z-index: 100;
 
     svg {
       width: 24px;

@@ -9022,7 +9022,15 @@ html *::-webkit-scrollbar-thumb {
       flex-wrap: wrap;
 }
 
-.modal__submit {
+.modal__btn-block button:last-child {
+  margin-left: auto;
+}
+
+.modal__btn-block button:first-child {
+  margin: 0;
+}
+
+.modal__btn-block button.modal__submit {
   margin-left: auto;
 }
 
@@ -9032,6 +9040,8 @@ html *::-webkit-scrollbar-thumb {
   right: 24px;
   width: 24px;
   height: 24px;
+  padding: 0;
+  z-index: 100;
 }
 
 .modal__close-btn-icon svg {
@@ -11154,4 +11164,211 @@ html *::-webkit-scrollbar-thumb {
 
 .modals__lightbox .modal:not(:last-child) {
   margin-bottom: 80px;
+}
+
+.modals__shadow {
+  padding: 102px 0 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modals__shadow-box {
+  position: relative;
+  width: 136px;
+  height: 136px;
+  margin-right: 25px;
+}
+
+.modals__shadow-item {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+}
+
+.modals__shadow-item:first-child {
+  left: 0;
+  bottom: 0;
+  background-color: #D1D8E1;
+}
+
+.modals__shadow-item:last-child {
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modals__shadow-text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #151515;
+}
+
+.modals__shadow-text span {
+  display: block;
+}
+
+.modals__shadow-text span:first-child {
+  margin-bottom: 4px;
+}
+
+.modals__gaps {
+  padding: 40px 48px 115px;
+}
+
+.modals__gaps-title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 0 69px;
+}
+
+.modals__gaps-modal {
+  max-width: 344px;
+  margin: 0 auto;
+}
+
+.modals__gaps-item {
+  position: absolute;
+  background-color: rgba(40, 88, 255, 0.2);
+}
+
+.modals__gaps-item span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #2858FF;
+  position: absolute;
+}
+
+.modals__gaps-item--left {
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+}
+
+.modals__gaps-item--left span:first-child {
+  left: 50%;
+  bottom: calc(100% + 16px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.modals__gaps-item--left span:last-child {
+  left: 50%;
+  top: calc(100% + 16px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.modals__gaps-item--right {
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: calc(100% - 72px);
+}
+
+.modals__gaps-item--right span:first-child {
+  left: 50%;
+  top: calc(100% + 16px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.modals__gaps-item--bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+}
+
+.modals__gaps-item--bottom span:first-child {
+  right: calc(100% + 16px);
+  bottom: 13px;
+}
+
+.modals__gaps-item--bottom span:last-child {
+  left: calc(100% + 16px);
+  bottom: 13px;
+}
+
+.modals__gaps-item--top {
+  left: 0;
+  top: 0;
+  width: calc(100% - 72px);
+  height: 48px;
+}
+
+.modals__gaps-item--top span:first-child {
+  right: calc(100% + 16px);
+  bottom: 13px;
+}
+
+.modals__gaps-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 72px;
+  height: 72px;
+  background-color: rgba(40, 88, 255, 0.2);
+}
+
+.modals__gaps-close div {
+  position: absolute;
+  background-color: rgba(40, 88, 255, 0.2);
+}
+
+.modals__gaps-close div:first-child {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+}
+
+.modals__gaps-close div:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 100%;
+}
+
+.modals__gaps-close div:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+}
+
+.modals__gaps-close div:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 100%;
+}
+
+.modals__gaps-close span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #2858FF;
+  position: absolute;
+}
+
+.modals__gaps-close span:first-of-type {
+  bottom: calc(100% + 16px);
+  right: 0;
+}
+
+.modals__gaps-close span:last-of-type {
+  left: calc(100% + 16px);
+  top: 0;
 }

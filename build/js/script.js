@@ -1078,10 +1078,15 @@
     $('.select-dropdown--not-found-multi input').val('фывапа');
     $('.select-dropdown--not-found-multi input')[0] && $('.select-dropdown--not-found-multi input')[0].dispatchEvent(event);
   });
-  setTimeout(function () {
-    window.scrollTo(0, 0);
-    $('.preloader').hide();
-  }, 500); // $('#your-select-id').one('select2:open', function(e) {
+
+  if ($('.header__title').text() == 'Формы') {
+    setTimeout(function () {
+      window.scrollTo(0, 0);
+      $('.preloader').hide();
+    }, 500);
+  }
+
+  $('.preloader').hide(); // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });
 })();

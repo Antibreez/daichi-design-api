@@ -18,6 +18,7 @@ button {
 .btn__content {
   @include font(18px, 24px, 500);
   padding: 20px 40px;
+  width: 100%;
   cursor: pointer;
   display: inline-block;
   border-radius: 32px;

@@ -238,6 +238,7 @@
             </div>
           </div>
         </div>
+
         <div class="forms__section">
           <h2 class="info-block__title">Отступы</h2>
           <p class="info-block__desc  grid__columns-desc">
@@ -252,7 +253,7 @@
                   <div class="modal__content">
                     <p class="modal__title">Заголовок</p>
                     <p class="modal__desc">
-                      Заголовок должен быть кратким (1-3&nbsp;слова) и&nbsp;являться названием процесса или объекта.
+                      Заголовок должен быть кратким (1&#8209;3&nbsp;слова) и&nbsp;являться названием процесса или объекта.
                     </p>
                     <div class="modal__btn-block">
                       <button type="submit" class="btn  btn-primary">
@@ -279,7 +280,7 @@
                       <span>48px</span>
                     </div>
                     <div class="modals__gaps-item  modals__gaps-item--right">
-                      <span>48px</span>
+                      <span>40px</span>
                     </div>
                     <div class="modals__gaps-close">
                       <div></div>
@@ -292,6 +293,249 @@
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+
+          <div class="forms__box">
+            <div class="modals__gaps">
+              <p class="modals__gaps-title">Мобильные</p>
+              <div class="modals__gaps-modal  modals__gaps-modal--mobile  modal">
+                <form class="modal__form">
+                  <div class="modal__content">
+                    <p class="modal__title">Заголовок</p>
+                    <p class="modal__desc">
+                      Заголовок должен быть кратким (1&#8209;3&nbsp;слова) и&nbsp;являться названием процесса или объекта.
+                    </p>
+                    <div class="modal__btn-block">
+                      <button type="submit" class="btn  btn-primary">
+                        <span class="btn__content" tabindex="-1">
+                          <span>Отправить заявку</span>
+                        </span>
+                      </button>
+                    </div>
+                    <button class="modal__close-btn-icon">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </button>
+
+                    <div class="modals__gaps-item  modals__gaps-item--left">
+                      <span>24px</span>
+                      <span>24px</span>
+                    </div>
+                    <div class="modals__gaps-item  modals__gaps-item--bottom">
+                      <span>48px</span>
+                      <span>48px</span>
+                    </div>
+                    <div class="modals__gaps-item  modals__gaps-item--top">
+                      <span>48px</span>
+                    </div>
+                    <div class="modals__gaps-item  modals__gaps-item--right">
+                      <span>24px</span>
+                    </div>
+                    <div class="modals__gaps-close">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <span>24px</span>
+                      <span>24px</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="forms__section">
+          <h2 class="info-block__title">Компоненты</h2>
+          <p class="info-block__desc  grid__columns-desc">
+            Используем три типа компонентов для создания модальных окон: шапка с крестиком, блок с контентом и подвал с кнопками. Обязательным компонентом является только шапка с крестиком.
+          </p>
+
+          <div class="forms__block  forms__block--modal-content">
+            <div class="forms__item">
+              <div class="forms__item-action">
+
+                <div class="modals__modal  modal">
+                  <form class="modal__form">
+                    <div class="modal__content">
+                      <button class="modal__close-btn-icon">
+                        <svg>
+                          <use xlink:href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Шапка с крестиком. Является обязательным компонентом лайтбокса и не изменяется.
+              </p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="modals__modal modal">
+                  <form class="modal__form">
+                    <div class="modal__content">
+                      <p class="modal__title">Заголовок</p>
+                      <p class="modal__desc">
+                        Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
+                      </p>
+                      <div class="modal__fields">
+                        <div class="modal__input  modal__input--half  input-block">
+                          <label for="name" class="input-block__label">Ваше имя</label>
+                          <div class="input-wrapper">
+                            <input type="text" class="input" id="name" name="name" value="Евгений">
+                          </div>
+                        </div>
+                        <div class="modal__input  modal__input--half  input-block">
+                          <label for="surname" class="input-block__label">Фамилия</label>
+                          <div class="input-wrapper">
+                            <input type="text" class="input" id="surname" name="surname" value="Лукашин">
+                          </div>
+                        </div>
+                        <div class="modal__input  input-block">
+                          <label for="email" class="input-block__label">Email</label>
+                          <div class="input-wrapper">
+                            <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Блоки с контентом: заголовок и текст, поля ввода или группа полей. Это базовый набор и компоненты могут быть заменены любые другие. Валидация и фокус работают также как и для стандартных полей.
+              </p>
+            </div>
+            <div class="forms__item">
+              <div class="forms__item-action">
+                <div class="modals__modal modal">
+                  <form class="modal__form">
+                    <div class="modal__content">
+                      <div class="modal__btn-block">
+                        <button type="submit" class="modal__submit  btn  btn-primary">
+                          <span class="btn__content" tabindex="-1">
+                            <span>Отправить</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="modal__content">
+                      <div class="modal__btn-block">
+                        <button type="submit" class="modal__submit  btn  btn-secondary">
+                          <span class="btn__content" tabindex="-1">
+                            <span>Отменить</span>
+                          </span>
+                        </button>
+                        <button type="submit" class="modal__submit  btn  btn-primary">
+                          <span class="btn__content" tabindex="-1">
+                            <span>Принять</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <p class="forms__item-desc">
+                Подвал. Используется для размещения кнопок основных действий.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="forms__box  forms__box--border">
+          <div class="modals__examples">
+            <div class="modals__modal modal">
+              <form class="modal__form">
+                <div class="modal__content">
+                  <p class="modal__title">Заголовок</p>
+                  <p class="modal__desc">
+                    Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
+                  </p>
+                  <div class="modal__fields">
+                    <div class="modal__input  modal__input--half  input-block">
+                      <label for="name" class="input-block__label">Ваше имя</label>
+                      <div class="input-wrapper">
+                        <input type="text" class="input" id="name" name="name" value="Евгений">
+                      </div>
+                    </div>
+                    <div class="modal__input  modal__input--half  input-block">
+                      <label for="surname" class="input-block__label">Фамилия</label>
+                      <div class="input-wrapper">
+                        <input type="text" class="input" id="surname" name="surname" value="Лукашин">
+                      </div>
+                    </div>
+                    <div class="modal__input  input-block">
+                      <label for="email" class="input-block__label">Email</label>
+                      <div class="input-wrapper">
+                        <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
+                      </div>
+                    </div>
+                    <div class="modal__input  input-block">
+                      <label for="phone" class="input-block__label">Телефон</label>
+                      <div class="input-wrapper">
+                        <input type="text" class="input" id="phone" name="phone" placeholder="+7">
+                      </div>
+                    </div>
+                  </div>
+                  <label class="modal__checkbox  checkbox">
+                    <input type="checkbox" class="checkbox__input visually-hidden" checked="">
+                    <span class="checkbox__area">
+                      <span class="checkbox__outline" tabindex="-1"></span>
+                    </span>
+                    <span class="checkbox__text">
+                      Разрешаю обработку <a href="#">персональных данных</a>
+                    </span>
+                  </label>
+                  <div class="modal__btn-block">
+                    <button type="submit" class="modal__submit  btn  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Отправить</span>
+                      </span>
+                    </button>
+                  </div>
+
+                  <button class="modal__close-btn-icon">
+                    <svg>
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="modals__modal modal">
+              <form class="modal__form">
+                <div class="modal__content">
+                  <p class="modal__title">Заголовок</p>
+                  <p class="modal__desc">
+                    Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
+                  </p>
+                  <div class="modal__btn-block">
+                    <button type="submit" class="modal__submit  btn  btn-secondary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Отменить</span>
+                      </span>
+                    </button>
+                    <button type="submit" class="modal__submit  btn  btn-primary">
+                      <span class="btn__content" tabindex="-1">
+                        <span>Принять</span>
+                      </span>
+                    </button>
+                  </div>
+
+                  <button class="modal__close-btn-icon">
+                    <svg>
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

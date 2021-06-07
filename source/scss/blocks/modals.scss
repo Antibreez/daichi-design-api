@@ -12,6 +12,10 @@
     }
   }
 
+  &__modal {
+    margin: 0 auto;
+  }
+
   &__shadow {
     padding: 102px 0 82px;
     display: flex;
@@ -152,6 +156,34 @@
     }
   }
 
+  &__gaps-modal--mobile {
+    max-width: 376px;
+
+    .modal__content {
+      height: 624px;
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal__btn-block {
+      margin-top: auto;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .modals__gaps-item {
+      &--left,
+      &--right {
+        width: 24px;
+      }
+    }
+  }
+
   &__gaps-close {
     position: absolute;
     top: 0;
@@ -206,6 +238,16 @@
       &:last-of-type {
         left: calc(100% + 16px);
         top: 0;
+      }
+    }
+  }
+
+  &__examples {
+    padding: 80px 20px;
+
+    .modal {
+      &:not(:last-child) {
+        margin-bottom: 80px;
       }
     }
   }

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Модальные окна</title>
+  <title>Редполитика</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="x-rim-auto-match" content="none">
@@ -136,7 +136,7 @@
         <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
       </a>
       <h1 class="header__title">
-        Модальные окна
+        Редполитика
       </h1>
     </div>
   </header>
@@ -199,7 +199,7 @@
               <a href="#" class="main-nav__link">Лоадер</a>
             </li>
             <li class="main-nav__subitem">
-              <a class="main-nav__link  main-nav__link--active">Модальные окна</a>
+              <a href="#" class="main-nav__link">Модальные окна</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Иконки интерфейса</a>
@@ -216,7 +216,7 @@
               <a href="#" class="main-nav__link">Общие правила</a>
             </li>
             <li class="main-nav__subitem">
-              <a href="#" class="main-nav__link">Редполитика</a>
+              <a class="main-nav__link  main-nav__link--active">Редполитика</a>
             </li>
             <li class="main-nav__subitem">
               <a href="#" class="main-nav__link">Оборудование</a>
@@ -235,421 +235,49 @@
     <div class="main__content">
       <section class="forms">
         <div class="forms__section">
-          <h2 class="info-block__title">Лайтбоксы</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Лайтбокс появляется поверх страницы, затемняя ее. Это помогает сфокусировать внимание пользователя на конкретных действиях, не теряя при этом общий контекст. На мобильных устройствах лайтбоксы занимают весь экран.
-          </p>
-
-          <div class="forms__box">
-            <div class="modals__lightbox">
-              <div class="modals__modal modal">
-                <form class="modal__form">
-                  <div class="modal__content">
-                    <p class="modal__title">Написать нам</p>
-                    <p class="modal__desc">
-                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
-                    </p>
-                    <div class="modal__fields">
-                      <div class="modal__input  modal__input--half  input-block">
-                        <label for="name" class="input-block__label">Ваше имя</label>
-                        <div class="input-wrapper">
-                          <input type="text" class="input" id="name" name="name" value="Евгений">
-                        </div>
-                      </div>
-                      <div class="modal__input  modal__input--half  input-block">
-                        <label for="surname" class="input-block__label">Фамилия</label>
-                        <div class="input-wrapper">
-                          <input type="text" class="input" id="surname" name="surname" value="Лукашин">
-                        </div>
-                      </div>
-                      <div class="modal__input  input-block">
-                        <label for="email" class="input-block__label">Email</label>
-                        <div class="input-wrapper">
-                          <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
-                        </div>
-                      </div>
-                      <div class="modal__input  input-block">
-                        <label for="phone" class="input-block__label">Телефон</label>
-                        <div class="input-wrapper">
-                          <input type="text" class="input" id="phone" name="phone" placeholder="+7">
-                        </div>
-                      </div>
-                    </div>
-                    <label class="modal__checkbox  checkbox">
-                      <input type="checkbox" class="checkbox__input visually-hidden" checked="">
-                      <span class="checkbox__area">
-                        <span class="checkbox__outline" tabindex="-1"></span>
-                      </span>
-                      <span class="checkbox__text">
-                        Разрешаю обработку <a href="#">персональных данных</a>
-                      </span>
-                    </label>
-                    <div class="modal__btn-block">
-                      <button type="submit" class="modal__submit  btn  btn-primary">
-                        <span class="btn__content" tabindex="-1">
-                          <span>Отправить</span>
-                        </span>
-                      </button>
-                    </div>
-
-                    <button class="modal__close-btn-icon">
-                      <svg>
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </form>
+          <h2 class="info-block__main-title">О дистрибьюторе, компании «Даичи»</h2>
+          <h3 class="info-block__title">Написание названия компании</h3>
+          <div class="comparison">
+            <div class="comparison__blocks">
+              <div class="comparison__block  comparison__block--good">
+                На протяжении многих лет Даичи участвует в выставке «Мир климата».<br><br>
+                На протяжении многих лет компания «Даичи» участвует в выставке «Мир климата».
               </div>
-
-              <div class="modals__modal modal">
-                <form class="modal__form">
-                  <div class="modal__content">
-                    <p class="modal__title">Заголовок</p>
-                    <p class="modal__desc">
-                      Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в&nbsp;ответ на действия пользователя.
-                    </p>
-                    <div class="modal__btn-block">
-                      <button type="submit" class="modal__cancel  btn  btn-secondary">
-                        <span class="btn__content" tabindex="-1">
-                          <span>Отменить</span>
-                        </span>
-                      </button>
-                      <button type="submit" class="modal__submit  btn  btn-primary">
-                        <span class="btn__content" tabindex="-1">
-                          <span>Отправить</span>
-                        </span>
-                      </button>
-                    </div>
-
-                    <button class="modal__close-btn-icon">
-                      <svg>
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </form>
+              <div class="comparison__block  comparison__block--bad">
+                На протяжении многих лет ДАИЧИ участвует в выставке «Мир климата»
               </div>
             </div>
-          </div>
-
-        </div>
-        <div class="forms__section">
-          <h2 class="info-block__title">Затемнение</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Контент под лайтбоксом затемняется цветом #000000 с прозрачностью 40%.
-          </p>
-
-          <div class="forms__box">
-            <div class="modals__shadow">
-              <div class="modals__shadow-box">
-                <span class="modals__shadow-item"></span>
-                <span class="modals__shadow-item"></span>
-              </div>
-              <p class="modals__shadow-text">
-                <span>#000000</span>
-                <span>40%</span>
+            <div class="comparison__desc-block">
+              <p class="comparison__desc">
+                Название компании пишется кириллицей с заглавной буквы: Даичи
+                <br><br>
+                После обозначения организационно-правовой формы или организации обязательно употребление кавычек: компания «Даичи», ООО «Даичи», дистрибьютор «Даичи»
+              </p>
+              <p class="comparison__desc">
+                Недопустимо написание заглавными буквами: ДАИЧИ
               </p>
             </div>
           </div>
         </div>
 
         <div class="forms__section">
-          <h2 class="info-block__title">Отступы</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Используем два типа отступов: для десктоп и&nbsp;мобильных. Область нажатия крестика не&nbsp;менее&nbsp;48px.
-          </p>
-
-          <div class="forms__box">
-            <div class="modals__gaps">
-              <p class="modals__gaps-title">Десктоп</p>
-              <div class="modals__gaps-modal  modal">
-                <form class="modal__form">
-                  <div class="modal__content">
-                    <p class="modal__title">Заголовок</p>
-                    <p class="modal__desc">
-                      Заголовок должен быть кратким (1&#8209;3&nbsp;слова) и&nbsp;являться названием процесса или объекта.
-                    </p>
-                    <div class="modal__btn-block">
-                      <button type="submit" class="btn  btn-primary">
-                        <span class="btn__content" tabindex="-1">
-                          <span>Отправить заявку</span>
-                        </span>
-                      </button>
-                    </div>
-                    <button class="modal__close-btn-icon">
-                      <svg>
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </button>
-
-                    <div class="modals__gaps-item  modals__gaps-item--left">
-                      <span>40px</span>
-                      <span>40px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--bottom">
-                      <span>48px</span>
-                      <span>48px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--top">
-                      <span>48px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--right">
-                      <span>40px</span>
-                    </div>
-                    <div class="modals__gaps-close">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <span>24px</span>
-                      <span>24px</span>
-                    </div>
-                  </div>
-                </form>
+          <h3 class="info-block__title">Написание латиницей</h3>
+          <div class="comparison">
+            <div class="comparison__blocks">
+              <div class="comparison__block  comparison__block--good">
+                Daichi — distributor of HVAC equipment from leading manufacturers.
+              </div>
+              <div class="comparison__block  comparison__block--bad">
+                Daichi — дистрибьютор климатической техники ведущих мировых производителей.
               </div>
             </div>
-          </div>
-
-          <div class="forms__box">
-            <div class="modals__gaps">
-              <p class="modals__gaps-title">Мобильные</p>
-              <div class="modals__gaps-modal  modals__gaps-modal--mobile  modal">
-                <form class="modal__form">
-                  <div class="modal__content">
-                    <p class="modal__title">Заголовок</p>
-                    <p class="modal__desc">
-                      Заголовок должен быть кратким (1&#8209;3&nbsp;слова) и&nbsp;являться названием процесса или объекта.
-                    </p>
-                    <div class="modal__btn-block">
-                      <button type="submit" class="btn  btn-primary">
-                        <span class="btn__content" tabindex="-1">
-                          <span>Отправить заявку</span>
-                        </span>
-                      </button>
-                    </div>
-                    <button class="modal__close-btn-icon">
-                      <svg>
-                        <use xlink:href="#icon-close"></use>
-                      </svg>
-                    </button>
-
-                    <div class="modals__gaps-item  modals__gaps-item--left">
-                      <span>24px</span>
-                      <span>24px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--bottom">
-                      <span>48px</span>
-                      <span>48px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--top">
-                      <span>48px</span>
-                    </div>
-                    <div class="modals__gaps-item  modals__gaps-item--right">
-                      <span>24px</span>
-                    </div>
-                    <div class="modals__gaps-close">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <span>24px</span>
-                      <span>24px</span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="forms__section">
-          <h2 class="info-block__title">Компоненты</h2>
-          <p class="info-block__desc  grid__columns-desc">
-            Используем три типа компонентов для создания модальных окон: шапка с крестиком, блок с контентом и подвал с кнопками. Обязательным компонентом является только шапка с крестиком.
-          </p>
-
-          <div class="forms__block  forms__block--modal-content">
-            <div class="forms__item">
-              <div class="forms__item-action">
-
-                <div class="modals__modal  modal">
-                  <form class="modal__form">
-                    <div class="modal__content">
-                      <button class="modal__close-btn-icon">
-                        <svg>
-                          <use xlink:href="#icon-close"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Шапка с крестиком. Является обязательным компонентом лайтбокса и не изменяется.
+            <div class="comparison__desc-block">
+              <p class="comparison__desc">
+                Написание латиницей используется только в текстах на иностранном языке. Всегда без кавычек. Например: Daichi, LLC Daichi.
               </p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="modals__modal modal">
-                  <form class="modal__form">
-                    <div class="modal__content">
-                      <p class="modal__title">Заголовок</p>
-                      <p class="modal__desc">
-                        Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
-                      </p>
-                      <div class="modal__fields">
-                        <div class="modal__input  modal__input--half  input-block">
-                          <label for="name" class="input-block__label">Ваше имя</label>
-                          <div class="input-wrapper">
-                            <input type="text" class="input" id="name" name="name" value="Евгений">
-                          </div>
-                        </div>
-                        <div class="modal__input  modal__input--half  input-block">
-                          <label for="surname" class="input-block__label">Фамилия</label>
-                          <div class="input-wrapper">
-                            <input type="text" class="input" id="surname" name="surname" value="Лукашин">
-                          </div>
-                        </div>
-                        <div class="modal__input  input-block">
-                          <label for="email" class="input-block__label">Email</label>
-                          <div class="input-wrapper">
-                            <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Блоки с контентом: заголовок и текст, поля ввода или группа полей. Это базовый набор и компоненты могут быть заменены любые другие. Валидация и фокус работают также как и для стандартных полей.
+              <p class="comparison__desc">
+                Недопустимо написание латиницей в текстах на русском языке.
               </p>
-            </div>
-            <div class="forms__item">
-              <div class="forms__item-action">
-                <div class="modals__modal modal">
-                  <form class="modal__form">
-                    <div class="modal__content">
-                      <div class="modal__btn-block">
-                        <button type="submit" class="modal__submit  btn  btn-primary">
-                          <span class="btn__content" tabindex="-1">
-                            <span>Отправить</span>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="modal__content">
-                      <div class="modal__btn-block">
-                        <button type="submit" class="modal__submit  btn  btn-secondary">
-                          <span class="btn__content" tabindex="-1">
-                            <span>Отменить</span>
-                          </span>
-                        </button>
-                        <button type="submit" class="modal__submit  btn  btn-primary">
-                          <span class="btn__content" tabindex="-1">
-                            <span>Принять</span>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <p class="forms__item-desc">
-                Подвал. Используется для размещения кнопок основных действий.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="forms__box  forms__box--border">
-          <div class="modals__examples">
-            <div class="modals__modal modal">
-              <form class="modal__form">
-                <div class="modal__content">
-                  <p class="modal__title">Заголовок</p>
-                  <p class="modal__desc">
-                    Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
-                  </p>
-                  <div class="modal__fields">
-                    <div class="modal__input  modal__input--half  input-block">
-                      <label for="name" class="input-block__label">Ваше имя</label>
-                      <div class="input-wrapper">
-                        <input type="text" class="input" id="name" name="name" value="Евгений">
-                      </div>
-                    </div>
-                    <div class="modal__input  modal__input--half  input-block">
-                      <label for="surname" class="input-block__label">Фамилия</label>
-                      <div class="input-wrapper">
-                        <input type="text" class="input" id="surname" name="surname" value="Лукашин">
-                      </div>
-                    </div>
-                    <div class="modal__input  input-block">
-                      <label for="email" class="input-block__label">Email</label>
-                      <div class="input-wrapper">
-                        <input type="email" class="input" id="email" name="email" value="evgen74@gmail.com">
-                      </div>
-                    </div>
-                    <div class="modal__input  input-block">
-                      <label for="phone" class="input-block__label">Телефон</label>
-                      <div class="input-wrapper">
-                        <input type="text" class="input" id="phone" name="phone" placeholder="+7">
-                      </div>
-                    </div>
-                  </div>
-                  <label class="modal__checkbox  checkbox">
-                    <input type="checkbox" class="checkbox__input visually-hidden" checked="">
-                    <span class="checkbox__area">
-                      <span class="checkbox__outline" tabindex="-1"></span>
-                    </span>
-                    <span class="checkbox__text">
-                      Разрешаю обработку <a href="#">персональных данных</a>
-                    </span>
-                  </label>
-                  <div class="modal__btn-block">
-                    <button type="submit" class="modal__submit  btn  btn-primary">
-                      <span class="btn__content" tabindex="-1">
-                        <span>Отправить</span>
-                      </span>
-                    </button>
-                  </div>
-
-                  <button class="modal__close-btn-icon">
-                    <svg>
-                      <use xlink:href="#icon-close"></use>
-                    </svg>
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="modals__modal modal">
-              <form class="modal__form">
-                <div class="modal__content">
-                  <p class="modal__title">Заголовок</p>
-                  <p class="modal__desc">
-                    Эмуляция модального диалогового окна, появляющегося поверх основного содержимого страницы в ответ на действия пользователя.
-                  </p>
-                  <div class="modal__btn-block">
-                    <button type="submit" class="modal__submit  btn  btn-secondary">
-                      <span class="btn__content" tabindex="-1">
-                        <span>Отменить</span>
-                      </span>
-                    </button>
-                    <button type="submit" class="modal__submit  btn  btn-primary">
-                      <span class="btn__content" tabindex="-1">
-                        <span>Принять</span>
-                      </span>
-                    </button>
-                  </div>
-
-                  <button class="modal__close-btn-icon">
-                    <svg>
-                      <use xlink:href="#icon-close"></use>
-                    </svg>
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
         </div>

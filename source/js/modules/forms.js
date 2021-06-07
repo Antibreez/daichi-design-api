@@ -339,12 +339,15 @@
 
 
 
+  if ($('.header__title').text() == 'Формы') {
+    setTimeout(function() {
+      window.scrollTo(0,0);
+      $('.preloader').hide();
+    }, 500)
+  }
 
+  $('.preloader').hide();
 
-  setTimeout(function() {
-    window.scrollTo(0,0);
-    $('.preloader').hide();
-  }, 500)
   // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });

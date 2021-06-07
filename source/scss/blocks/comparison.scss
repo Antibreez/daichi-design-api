@@ -1,0 +1,54 @@
+.comparison {
+  padding-top: 32px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid #D1D8E1;
+
+  &__blocks,
+  &__desc-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__block,
+  &__desc {
+    width: calc((100% - 24px) / 2);
+  }
+
+  &__block {
+    position: relative;
+    @include font(15px, 24px, 400);
+    color: $dark-grey;
+    padding: 104px 63px 60px;
+    background-color: #F4F4F8;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      width: 48px;
+      height: 48px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--good::after {
+      background-image: url("../img/good.svg");
+    }
+
+    &--bad::after {
+      background-image: url("../img/bad.svg");
+    }
+  }
+
+  &__desc {
+    @include font(14px, 22px, 400);
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  &__desc-block {
+    padding-top: 24px;
+  }
+}

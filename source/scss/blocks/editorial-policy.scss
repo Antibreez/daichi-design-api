@@ -1,0 +1,26 @@
+.editorial-policy {
+  &__example {
+    max-width: none;
+    width: auto;
+  }
+
+  &__title-short {
+    max-width: 600px;
+  }
+
+  &__desc-short {
+    max-width: 610px;
+  }
+
+  &__slogan-block {
+    @include font(20px, 26px, 500);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px;
+    margin-top: 32px;
+    min-height: 320px;
+    background-color: #000;
+  }
+}

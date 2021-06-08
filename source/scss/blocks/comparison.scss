@@ -20,6 +20,8 @@
     @include font(15px, 24px, 400);
     color: $dark-grey;
     padding: 104px 63px 60px;
+    display: flex;
+    justify-content: center;
     background-color: #F4F4F8;
 
     &::after {

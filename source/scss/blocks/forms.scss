@@ -35,6 +35,25 @@
     }
   }
 
+  &__alert-block {
+    @include font(14px, 22px, 400);
+    color: $dark-grey;
+    background-color: #F4F4F8;
+    padding: 32px;
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__alert-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/warning.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    margin-right: 19px;
+  }
+
   &__box {
     width: 75%;
     margin-top: 40px;

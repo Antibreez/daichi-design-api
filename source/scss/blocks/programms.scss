@@ -4,9 +4,16 @@
     border: 1px solid #D1D8E1;
     padding: 40px;
     margin-top: 32px;
+
+    &--grey {
+      background-color: $grey200;
+      border: none;
+    }
   }
 
   &__link-block {
+    @include font(15px, 24px, 400);
+    color: $dark-grey;
     display: flex;
 
     .link {
@@ -57,6 +64,49 @@
         background-size: cover;
       }
     }
+
+    &--app {
+      padding: 36px 0 60px;
+    }
+
+    &--app-pages {
+      padding: 75px 0 50px;
+    }
+
+    &--app-devices {
+      padding: 61px 0 43px;
+
+      .programs__content-item {
+        max-width: 220px;
+
+        &:nth-child(2) {
+          .programs__content-desc {
+            max-width: 150px;
+          }
+        }
+      }
+
+      .programs__content-img-block {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__content-title {
+    @include font(15px, 24px, 400);
+    color: $dark-grey;
+    margin: 0 0 8px;
+    text-align: center;
+  }
+
+  &__content-desc {
+    @include font(12px, 18px, 400);
+    color: $grey400;
+    margin: 0 auto;
+    text-align: center;
   }
 
   &__content-side {
@@ -140,6 +190,54 @@
       background-repeat: no-repeat;
       background-size: cover;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &__app {
+    .comparison {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__equipment {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      width: calc((100% - 24px) / 2);
+      background-color: $grey200;
+      padding: 40px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-title {
+      @include font(15px, 24px, 500);
+      color: $dark-grey;
+      margin: 0 0 auto;
+    }
+
+    &-content {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 8px;
+    }
+
+    &-desc {
+      @include font(15px, 24px, 400);
+      color: $dark-grey;
+      margin: 0;
+      padding-right: 20px;
+    }
+
+    &-lang {
+      @include font(15px, 24px, 400);
+      color: $grey400;
+      margin: 0 0 0 auto;
+      flex-shrink: 0;
     }
   }
 }

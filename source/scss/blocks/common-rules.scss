@@ -1,0 +1,38 @@
+.common-rules {
+  &__list {
+    @include list-reset;
+    counter-reset: common-list;
+    padding-top: 64px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__item-title {
+    @include font(24px, 32px, 500);
+    color: $dark-grey;
+    margin: 0 0 32px;
+    padding-top: 3px;
+    position: relative;
+    padding-left: 64px;
+    counter-increment: common-list;
+
+    &::before {
+      content: counter(common-list);
+      @include font(15px, 24px, 500);
+      color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      padding: 8px 0;
+      background-color: $dark-grey;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+}

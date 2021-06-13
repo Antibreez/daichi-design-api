@@ -18,9 +18,13 @@
   .link__icon {
     width: 24px;
     height: 24px;
-    margin-right: 6px;
+    //margin-right: 6px;
     color: $dark-grey;
     transition: color 0.2s;
+  }
+
+  .link__icon + .link__text {
+    margin-left: 6px;
   }
 
   .link__success-text {

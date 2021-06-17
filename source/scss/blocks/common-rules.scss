@@ -1,4 +1,16 @@
 .common-rules {
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+
+    &:nth-child(2) {
+      .info-block__main-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__list {
     @include list-reset;
     counter-reset: common-list;
@@ -20,6 +32,10 @@
     padding-left: 64px;
     counter-increment: common-list;
 
+    &--short {
+      max-width: 550px;
+    }
+
     &::before {
       content: counter(common-list);
       @include font(15px, 24px, 500);
@@ -33,6 +49,158 @@
       background-color: $dark-grey;
       border-radius: 50%;
       text-align: center;
+    }
+  }
+
+  &__text-block {
+    margin-bottom: 40px;
+  }
+
+  &__item-company {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__company-bar {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+  }
+
+  &__your-logo {
+    @include font(12px, 18px);
+    color: $blue;
+    padding: 9px 15px;
+    background-color: rgba(40, 88, 255, 0.2);
+    border-radius: 18px;
+    margin-left: 32px;
+  }
+
+  &__company-desc {
+    @include font(12px, 18px);
+    color: $dark-grey;
+    padding-left: 12px;
+    max-width: 123px;
+    border-left: 1px solid $grey300;
+    margin-left: 12px;
+  }
+
+  &__company-cart {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    color: $grey400;
+  }
+
+  &__item-certificate {
+    padding-top: 74px;
+    padding-bottom: 70px;
+  }
+
+  &__certificate {
+    width: 210px;
+    height: 288px;
+    background-color: $grey300;
+    color: $grey400;
+    text-align: center;
+    padding: 92px 50px;
+    margin: 0 auto;
+  }
+
+  &__item-alert {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 75px;
+
+    .info-common__text {
+      max-width: 585px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/warning.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__item-attention {
+    padding-top: 51px;
+    padding-bottom: 52px;
+    flex-direction: column;
+  }
+
+  &__attention-title {
+    @include font(15px, 24px, 500);
+    color: $dark-grey;
+    margin: 0 0 24px;
+
+    & > * {
+      vertical-align: middle;
+    }
+  }
+
+  &__attention-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    background-image: url("../img/warning_alt.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__item-other-brands {
+    padding-left: 64px;
+  }
+
+  &__item-domain {
+    padding-bottom: 82px;
+    padding-left: 64px;
+  }
+
+  &__domain {
+    position: relative;
+    display: inline-block;
+    padding: 17px 40px 15px 21px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 54px;
+
+    span {
+      vertical-align: middle;
+
+      &:first-child {
+        display: inline-block;
+        width: 12px;
+        height: 17px;
+        margin-right: 15px;
+        background-image: url("../img/union.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 109px;
+      height: 109px;
+      background-image: url("../img/red-cross.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: translate(-50%,-50%);
     }
   }
 }

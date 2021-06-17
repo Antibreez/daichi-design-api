@@ -1079,7 +1079,7 @@
     $('.select-dropdown--not-found-multi input')[0] && $('.select-dropdown--not-found-multi input')[0].dispatchEvent(event);
   });
 
-  if ($('.header__title').text() == 'Формы') {
+  if ($('.main-nav__link--active').text() == 'Формы') {
     setTimeout(function () {
       window.scrollTo(0, 0);
       $('.preloader').hide();

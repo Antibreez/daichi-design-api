@@ -339,7 +339,7 @@
 
 
 
-  if ($('.header__title').text() == 'Формы') {
+  if ($('.main-nav__link--active').text() == 'Формы') {
     setTimeout(function() {
       window.scrollTo(0,0);
       $('.preloader').hide();

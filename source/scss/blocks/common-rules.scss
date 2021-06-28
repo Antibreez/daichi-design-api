@@ -203,4 +203,45 @@
       transform: translate(-50%,-50%);
     }
   }
+
+  &__page-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__page-link-item {
+    @include font(15px, 24px, 400);
+    color: $dark-grey;
+    width: calc((100% - 24px) / 2);
+    padding: 64px 72px 72px 104px;
+    background-color: $grey200;
+    background-image: url("../img/good.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: top 64px left 64px;
+
+    span {
+      display: block;
+      max-width: 277px;
+    }
+
+    &--wide {
+      width: 100%;
+      display: flex;
+      margin-top: 24px;
+      justify-content: space-between;
+      padding: 56px 106px 56px 104px;
+      background-position: top 56px left 64px;
+    }
+  }
+
+  &__page-link-certificate {
+    width: 210px;
+    height: 288px;
+    padding: 92px 50px 50px;
+    background-color: $grey300;
+    text-align: center;
+    color: $grey400;
+  }
 }

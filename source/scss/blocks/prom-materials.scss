@@ -1,0 +1,117 @@
+.prom-materials {
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 40px 56px;
+    background-color: $grey200;
+    margin: 0 0 24px;
+
+    &--half {
+      width: calc((100% - 24px) / 2);
+    }
+
+    &--outdoor {
+      padding-bottom: 0;
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__item-title {
+    @include font(15px, 24px, 400);
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+  }
+
+  &__item-img-block {
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__social-cover {
+    max-width: 373px;
+  }
+
+  &__social-post {
+    max-width: 187px;
+  }
+
+  &__vk-article {
+    max-width: 211px;
+  }
+
+  &__vk-icons {
+    max-width: 367px;
+  }
+
+  &__catalog-item {
+    max-width: 200px;
+  }
+
+  &__item-flyer {
+    width: 200px;
+    height: 288px;
+    background-color: #D1D8E1;
+  }
+
+  &__post-rsya-1 {
+    max-width: 187px;
+  }
+
+  &__post-rsya-2 {
+    max-width: 234px;
+  }
+
+  &__post-kms-1 {
+    max-width: 182px;
+  }
+
+  &__post-kms-2 {
+    max-width: 255px;
+  }
+
+  &__post-my-target {
+    max-width: 184px;
+  }
+
+  &__item-tech-commercial {
+    width: 400px;
+    height: 270px;
+    background-color: #D1D8E1;
+  }
+
+  &__post-outdoor {
+    max-width: 510px;
+  }
+
+  &__post-car {
+    max-width: 374px;
+  }
+
+  &__post-uniform {
+    max-width: 200px;
+  }
+}

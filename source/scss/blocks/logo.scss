@@ -34,3 +34,27 @@
     }
   }
 }
+
+@include mobile {
+  .logo {
+    &__manual {
+      padding: 28px 24px;
+    }
+
+    &__block {
+      margin-top: 48px;
+    }
+
+    &__logos-wrapper {
+      flex-direction: column;
+    }
+
+    &__logo {
+      max-width: 500px;
+
+      &:not(:last-child) {
+        margin: 0 0 16px;
+      }
+    }
+  }
+}

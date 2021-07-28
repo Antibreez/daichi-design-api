@@ -68,3 +68,42 @@
     }
   }
 }
+
+@include mobile {
+  .general-principles {
+    &__title {
+      @include font(24px, 30px, 500);
+      margin: 0 0 32px;
+    }
+
+    &__list {
+      flex-direction: column;
+      max-width: none;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      width: auto;
+      max-width: 500px;
+    }
+
+    &__item-counter {
+      @include font(20px, 26px, 500);
+    }
+
+    &__item-desc {
+      @include font(15px, 24px, 400);
+    }
+
+    &__blocks-list {
+      max-width: none;
+    }
+
+    &__blocks-link {
+      @include font(20px, 26px, 500);
+      padding: 35px 75px 40px 0;
+      background-size: 64px 64px;
+      background-position: right 8px center;
+    }
+  }
+}

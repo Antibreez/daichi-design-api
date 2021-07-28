@@ -23,3 +23,9 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 }
+
+@include mobile {
+  .scroll-to-top {
+    background-image: url("../img/arrow-button-grey.svg");
+  }
+}

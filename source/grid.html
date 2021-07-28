@@ -14,16 +14,23 @@
   <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Сетка
       </h1>
     </div>
   </header>
-  <main class="main wrapper" id="main">
+  <main class="main wrapper main--grid" id="main">
     <nav class="main__main-nav  main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -150,7 +157,7 @@
               <p class="grid__breakpoints-name">Десктоп</p>
               <p class="grid__breakpoints-width">1440px</p>
             </div>
-            <div class="grid__breakpoints-gaps">
+            <div class="grid__breakpoints-gaps  grid__breakpoints-gaps--desktop">
               <div class="grid__breakpoints-gap">
                 <p class="grid__breakpoints-gap-width">48px</p>
                 <img src="img/bp-gap-m.svg" alt="Отступ" class="grid__breakpoints-gap-pic" width="23" height="9">
@@ -164,7 +171,7 @@
                 <img src="img/bp-gap-m.svg" alt="Отступ" class="grid__breakpoints-gap-pic" width="23" height="9">
               </div>
             </div>
-            <div class="grid__breakpoints-columns">
+            <div class="grid__breakpoints-columns  grid__breakpoints-columns--desktop">
               <div class="grid__breakpoints-column"></div>
               <div class="grid__breakpoints-column"></div>
               <div class="grid__breakpoints-column"></div>
@@ -179,7 +186,7 @@
               <div class="grid__breakpoints-column"></div>
             </div>
             <div class="grid__breakpoints-total">
-              <img src="img/bp-gap.svg" alt="Отступ">
+              <img class="grid__breakpoints-total-img-desktop" src="img/bp-gap.svg" alt="Отступ">
               <p class="grid__breakpoints-total-columns">12 колонок</p>
               <p class="grid__breakpoints-total-width">1248px</p>
             </div>
@@ -270,6 +277,131 @@
               </tr>
             </table>
           </div>
+
+          <div class="grid__breakpoints-table-mobile">
+            <ul class="grid__breakpoints-table-mobile-list">
+              <li class="grid__breakpoints-table-mobile-item">
+                <div class="grid__breakpoints-table-mobile-info">
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Брейкпоинт</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 1440px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Контентная область</p>
+                    <p class="grid__breakpoints-table-mobile-value">1248px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Колонки</p>
+                    <p class="grid__breakpoints-table-mobile-value">12</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Межколонники</p>
+                    <p class="grid__breakpoints-table-mobile-value">24px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Отступы от края</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 96px</p>
+                  </div>
+                </div>
+              </li>
+              <li class="grid__breakpoints-table-mobile-item">
+                <div class="grid__breakpoints-table-mobile-info">
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Брейкпоинт</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 1200px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Контентная область</p>
+                    <p class="grid__breakpoints-table-mobile-value">1072px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Колонки</p>
+                    <p class="grid__breakpoints-table-mobile-value">12</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Межколонники</p>
+                    <p class="grid__breakpoints-table-mobile-value">24px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Отступы от края</p>
+                    <p class="grid__breakpoints-table-mobile-value">64px</p>
+                  </div>
+                </div>
+              </li>
+              <li class="grid__breakpoints-table-mobile-item">
+                <div class="grid__breakpoints-table-mobile-info">
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Брейкпоинт</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 1024px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Контентная область</p>
+                    <p class="grid__breakpoints-table-mobile-value">928px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Колонки</p>
+                    <p class="grid__breakpoints-table-mobile-value">12</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Межколонники</p>
+                    <p class="grid__breakpoints-table-mobile-value">24px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Отступы от края</p>
+                    <p class="grid__breakpoints-table-mobile-value">48px</p>
+                  </div>
+                </div>
+              </li>
+              <li class="grid__breakpoints-table-mobile-item">
+                <div class="grid__breakpoints-table-mobile-info">
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Брейкпоинт</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 768px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Контентная область</p>
+                    <p class="grid__breakpoints-table-mobile-value">704px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Колонки</p>
+                    <p class="grid__breakpoints-table-mobile-value">12</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Межколонники</p>
+                    <p class="grid__breakpoints-table-mobile-value">24px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Отступы от края</p>
+                    <p class="grid__breakpoints-table-mobile-value">32px</p>
+                  </div>
+                </div>
+              </li>
+              <li class="grid__breakpoints-table-mobile-item">
+                <div class="grid__breakpoints-table-mobile-info">
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Брейкпоинт</p>
+                    <p class="grid__breakpoints-table-mobile-value">≤ 375px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Контентная область</p>
+                    <p class="grid__breakpoints-table-mobile-value">328px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Колонки</p>
+                    <p class="grid__breakpoints-table-mobile-value">4</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Межколонники</p>
+                    <p class="grid__breakpoints-table-mobile-value">16px</p>
+                  </div>
+                  <div class="grid__breakpoints-table-mobile-info-line">
+                    <p class="grid__breakpoints-table-mobile-name">Отступы от края</p>
+                    <p class="grid__breakpoints-table-mobile-value">24px</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="grid__block">
@@ -346,6 +478,8 @@
         </div>
       </section>
     </div>
+
+    <div class="blackout"></div>
   </main>
 
   <script src="js/vendor.min.js"></script>

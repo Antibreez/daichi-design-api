@@ -272,4 +272,10 @@ html * {
   scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
 }
 
+@include mobile {
+  .select--focus + .select2 {
+    margin-bottom: 220px;
+  }
+}
+
 

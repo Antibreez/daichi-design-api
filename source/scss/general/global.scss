@@ -98,10 +98,10 @@ a {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1348px;
   margin: 0 auto;
-  padding-left: 96px;
-  padding-right: 96px;
+  padding-left: 50px;
+  padding-right: 50px;
 
   // @include desktop {
   //   padding-left: 30px;
@@ -113,7 +113,7 @@ a {
   //   padding-right: 15px;
   // }
 
-  @include mobile {
+  @media(max-width: 1399px) {
     padding-left: 24px;
     padding-right: 24px;
   }

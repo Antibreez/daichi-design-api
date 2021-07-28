@@ -49,3 +49,29 @@
     margin: 0;
   }
 }
+
+@include mobile {
+}
+
+@media(max-width: 480px) {
+  .colors {
+    &__blocks-item {
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+    }
+
+    &__list {
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: calc((100% - 16px) / 2);
+      margin-top: 24px;
+
+      &:nth-child(n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

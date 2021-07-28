@@ -27,3 +27,11 @@
     }
   }
 }
+
+@include mobile {
+  .info-block {
+    &__title {
+      @include font(20px, 26px, 500);
+    }
+  }
+}

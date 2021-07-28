@@ -1,15 +1,15 @@
 //РАЗРЕШЕНИЯ
 
-// Меньше 1440
+// Меньше 1400
 @mixin tablet {
-  @media (max-width: $width-desktop - 1px) {
+  @media (max-width: 1399px) {
     @content;
   }
 }
 
-// Меньше 1000
+// Меньше 1200
 @mixin mobile {
-  @media (max-width: $width-tablet - 1px) {
+  @media (max-width: 1199px) {
     @content;
   }
 }

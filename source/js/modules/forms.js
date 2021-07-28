@@ -343,10 +343,11 @@
     setTimeout(function() {
       window.scrollTo(0,0);
       $('.preloader').hide();
-    }, 500)
+    }, 1000)
+  } else {
+    $('.preloader').hide();
   }
 
-  $('.preloader').hide();
 
   // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');

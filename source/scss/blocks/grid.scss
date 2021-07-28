@@ -176,6 +176,10 @@
     }
   }
 
+  &__breakpoints-table-mobile {
+    display: none;
+  }
+
   &__gaps {
     display: flex;
     padding: 120px 104px;
@@ -321,5 +325,172 @@
     @include font(14px, 22px);
     color: $dark-grey;
     margin: 0;
+  }
+}
+
+@include mobile {
+  .grid {
+    &__block {
+      &:not(:last-child) {
+        margin-bottom: 48px;
+      }
+
+      & > *:not(.grid__columns):not(.grid__breakpoints):not(.grid__gaps):not(.grid__text):not(.grid__filets) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+
+    &__columns {
+      margin-top: 24px;
+      padding: 40px 24px 32px;
+    }
+
+    &__column {
+      height: 30px;
+      margin-bottom: 8px;
+
+      &--100 {
+        width: 100%;
+      }
+
+      &--50 {
+        width: calc((100% - 8px) / 2);
+      }
+
+      &--33 {
+        width: calc((100% - 16px) / 3);
+      }
+
+      &--25 {
+        width: calc((100% - 24px) / 4);
+      }
+
+      &--17 {
+        width: calc((100% - 40px) / 6);
+      }
+    }
+
+    &__breakpoints {
+      margin-top: 24px;
+      padding: 40px 24px;
+    }
+
+    .grid__breakpoints-columns--desktop
+    .grid__breakpoints-column {
+      width: 15px;
+      height: 128px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+
+    &__breakpoints-total {
+      img.grid__breakpoints-total-img-desktop {
+        width: 240px;
+      }
+    }
+
+    .grid__breakpoints-gaps--desktop
+    .grid__breakpoints-gap {
+      &:not(:last-child) {
+        margin-right: 97px;
+      }
+    }
+
+    &__breakpoints-table {
+      display: none;
+    }
+
+    &__breakpoints-table-mobile {
+      display: block;
+
+      &-list {
+        margin: 0;
+        padding: 0;
+        padding-top: 32px;
+        max-width: 700px;
+      }
+
+      &-item {
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey300;
+        }
+      }
+
+      &-info {
+        padding: 24px 0;
+      }
+
+      &-info-line {
+        display: flex;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      &-name,
+      &-value {
+        @include font(15px, 24px, 400);
+        color: $dark-grey;
+        margin: 0;
+      }
+
+      &-name {
+        font-weight: 500;
+        padding-right: 24px;
+        width: 60%;
+      }
+
+      &-value {
+        width: 40%;
+      }
+    }
+
+    &__gaps {
+      margin-top: 24px;
+      padding: 62px 24px;
+      flex-direction: column;
+      align-items: center;
+
+      &-grid {
+        margin: 0 0 40px;
+      }
+
+      &-gap {
+        padding: 0;
+
+        &:not(:last-child) {
+          margin: 0 0 24px;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 24px;
+      padding: 80px 24px;
+      justify-content: center;
+
+      &-p {
+        @include font(14px, 22px, 500);
+        max-width: 242px;
+        padding: 8px 6px;
+      }
+    }
+
+    &__filets {
+      flex-direction: column;
+      padding: 60px 10px;
+
+      &-item {
+        min-width: 280px;
+
+        &:not(:last-child) {
+          margin: 0 0 32px;
+        }
+      }
+    }
   }
 }

@@ -109,9 +109,9 @@
 </symbol><symbol id="icon-mail" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00015 3C2.3433 3 1.00015 4.34315 1.00015 6L1.00015 6.98166C0.999949 6.99327 0.99995 7.00486 1.00015 7.01645L1.00015 18C1.00015 19.6569 2.3433 21 4.00015 21H20.0002C21.657 21 23.0002 19.6569 23.0002 18L23.0002 7.01642C23.0004 7.00485 23.0004 6.99327 23.0002 6.98168V6C23.0002 4.34315 21.657 3 20.0002 3L4.00015 3ZM21.0002 6.43381V6C21.0002 5.44772 20.5524 5 20.0002 5L4.00015 5C3.44787 5 3.00015 5.44772 3.00015 6V6.43381L12.0002 11.8338L21.0002 6.43381ZM3.00015 8.76619L3.00015 18C3.00015 18.5523 3.44787 19 4.00015 19H20.0002C20.5524 19 21.0002 18.5523 21.0002 18L21.0002 8.76619L12.5146 13.8575C12.198 14.0475 11.8023 14.0475 11.4857 13.8575L3.00015 8.76619Z" fill="currentColor"></path>
 </symbol><symbol id="icon-menu-big" viewBox="0 0 40 40">
-<path d="M3 14H37" stroke="#151515" stroke-width="2" stroke-linecap="square"></path>
-<path d="M3 20H37" stroke="#151515" stroke-width="2" stroke-linecap="square"></path>
-<path d="M3 26H37" stroke="#151515" stroke-width="2" stroke-linecap="square"></path>
+<path d="M3 14H37" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+<path d="M3 20H37" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+<path d="M3 26H37" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
 </symbol><symbol id="icon-more" viewBox="0 0 24 24">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 14C6.32843 14 7 13.3284 7 12.5C7 11.6716 6.32843 11 5.5 11C4.67157 11 4 11.6716 4 12.5C4 13.3284 4.67157 14 5.5 14ZM14 12.5C14 13.3284 13.3284 14 12.5 14C11.6716 14 11 13.3284 11 12.5C11 11.6716 11.6716 11 12.5 11C13.3284 11 14 11.6716 14 12.5ZM21 12.5C21 13.3284 20.3284 14 19.5 14C18.6716 14 18 13.3284 18 12.5C18 11.6716 18.6716 11 19.5 11C20.3284 11 21 11.6716 21 12.5Z" fill="#151515"></path>
 </symbol><symbol id="icon-more_vertical" viewBox="0 0 24 24">
@@ -149,10 +149,17 @@
   <a data-scroll="" href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Формы
       </h1>
@@ -471,7 +478,7 @@
                   <p class="input-block__message">Укажите дату в формате дд.мм.гггг</p>
                 </div>
               </div>
-              <p class="forms__item-desc">Заполнено</p>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
             </div>
 
             <div class="forms__item">
@@ -488,15 +495,15 @@
                   </div>
                 </div>
               </div>
-              <p class="forms__item-desc">Заполнено</p>
+              <p class="forms__item-desc">Неактивно</p>
             </div>
           </div>
         </div>
 
         <div class="forms__section">
-          <h2 class="info-block__title">Поле ввода с датой</h2>
+          <h2 class="info-block__title">Календарь</h2>
           <p class="info-block__desc  grid__columns-desc">
-            В заголовке показываем название текущего месяца и года. При этом значения в календаре соответствуют значениям в поле. Например, поменяли месяц с клавиатуры — изменился месяц и в календаре.
+            В&nbsp;заголовке показываем название текущего месяца и&nbsp;года. При этом значения в&nbsp;календаре соответствуют значениям в&nbsp;поле. Например, поменяли месяц с&nbsp;клавиатуры&nbsp;&mdash; изменился месяц и&nbsp;в&nbsp;календаре.
           </p>
           <div class="forms__block  forms__block--date-states">
             <div class="forms__item">
@@ -1951,6 +1958,8 @@
         </div>
       </section>
     </div>
+
+    <div class="blackout"></div>
   </main>
 
   <script src="js/vendor.min.js"></script>

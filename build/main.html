@@ -14,10 +14,17 @@
   <div data-scroll="" class="side-line"></div>
   <header class="header  header--white">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Дизайн-система Daichi
       </h1>
@@ -156,6 +163,8 @@
         </ul>
       </section>
     </div>
+
+    <div class="blackout"></div>
   </main>
 
   <script src="js/vendor.min.js"></script>

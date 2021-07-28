@@ -17,10 +17,17 @@
   <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Формы
       </h1>
@@ -339,7 +346,7 @@
                   <p class="input-block__message">Укажите дату в формате дд.мм.гггг</p>
                 </div>
               </div>
-              <p class="forms__item-desc">Заполнено</p>
+              <p class="forms__item-desc">Сообщение об ошибке</p>
             </div>
 
             <div class="forms__item">
@@ -356,15 +363,15 @@
                   </div>
                 </div>
               </div>
-              <p class="forms__item-desc">Заполнено</p>
+              <p class="forms__item-desc">Неактивно</p>
             </div>
           </div>
         </div>
 
         <div class="forms__section">
-          <h2 class="info-block__title">Поле ввода с датой</h2>
+          <h2 class="info-block__title">Календарь</h2>
           <p class="info-block__desc  grid__columns-desc">
-            В заголовке показываем название текущего месяца и года. При этом значения в календаре соответствуют значениям в поле. Например, поменяли месяц с клавиатуры — изменился месяц и в календаре.
+            В&nbsp;заголовке показываем название текущего месяца и&nbsp;года. При этом значения в&nbsp;календаре соответствуют значениям в&nbsp;поле. Например, поменяли месяц с&nbsp;клавиатуры&nbsp;&mdash; изменился месяц и&nbsp;в&nbsp;календаре.
           </p>
           <div class="forms__block  forms__block--date-states">
             <div class="forms__item">
@@ -1819,6 +1826,8 @@
         </div>
       </section>
     </div>
+
+    <div class="blackout"></div>
   </main>
 
   <script src="js/vendor.min.js"></script>

@@ -330,6 +330,32 @@
 })();
 
 (function () {
+  var $btn = $('.header__menu-btn');
+  var $nav = $('.main-nav');
+  var $blackout = $('.blackout');
+  $btn.on('click', function () {
+    $nav.toggleClass('js-opened');
+    $blackout.toggleClass('js-show');
+
+    if ($(document).width() <= 1199) {
+      $nav.hasClass('js-opened') ? $('body').addClass('js__body-no-scroll') : $('body').removeClass('js__body-no-scroll');
+    }
+  });
+  $blackout.on('click', function () {
+    $nav.removeClass('js-opened');
+    $blackout.removeClass('js-show');
+    $('body').removeClass('js__body-no-scroll');
+  });
+  $(window).on('resize', function () {
+    if ($(document).width() > 1199) {
+      $nav.removeClass('js-opened');
+      $blackout.removeClass('js-show');
+      $('body').removeClass('js__body-no-scroll');
+    }
+  });
+})();
+
+(function () {
   // const inputs = document.querySelectorAll('.input-phone');
   // if (!inputs[0]) {
   //   return;
@@ -1083,12 +1109,13 @@
     setTimeout(function () {
       window.scrollTo(0, 0);
       $('.preloader').hide();
-    }, 500);
-  }
-
-  $('.preloader').hide(); // $('#your-select-id').one('select2:open', function(e) {
+    }, 1000);
+  } else {
+    $('.preloader').hide();
+  } // $('#your-select-id').one('select2:open', function(e) {
   //   $('input.select2-search__field').prop('placeholder', 'enter username or city');
   // });
+
 })();
 
 (function () {

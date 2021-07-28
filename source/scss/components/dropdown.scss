@@ -138,3 +138,9 @@
     }
   }
 }
+
+@include mobile {
+  .dropdown + .select2 .select2-selection .select2-selection__rendered {
+    text-align: left;
+  }
+}

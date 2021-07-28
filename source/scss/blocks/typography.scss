@@ -151,7 +151,7 @@
   }
 
   &__text-item {
-    width: 400px;
+    max-width: 400px;
     margin-top: 40px;
     padding-bottom: 32px;
     border-bottom: 1px solid $grey300;
@@ -197,7 +197,7 @@
   }
 
   &__lists-item {
-    width: 400px;
+    max-width: 400px;
 
     &:nth-child(2n + 1) {
       margin-right: auto;
@@ -267,13 +267,46 @@
   &__selection {
     @include font(15px, 24px);
     color: $dark-grey;
-    width: 400px;
+    max-width: 400px;
     margin-top: 40px;
 
     span {
       color: $white;
       background-color: $blue;
       display: inline-block;
+    }
+  }
+}
+
+@include mobile {
+  .typography {
+    &__font-name {
+      @include font(48px, 72px, 500);
+      margin: 16px 0 0;
+    }
+
+    &__font-weight-list {
+      margin: 0 0 40px;
+    }
+
+    &__title-view {
+      margin: 0 0 34px;
+      color: $dark-grey;
+
+      &--h1-plus-desktop {
+        @include font(56px, 63px, 500);
+      }
+    }
+
+    &__lists-block {
+      flex-direction: column;
+      margin-top: 24px;
+    }
+
+    &__lists-item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
   }
 }

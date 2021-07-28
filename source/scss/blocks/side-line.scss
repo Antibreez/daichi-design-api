@@ -6,3 +6,9 @@
   height: 1184px;
   @include gradient-main(0);
 }
+
+@include mobile {
+  .side-line {
+    display: none;
+  }
+}

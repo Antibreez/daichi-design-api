@@ -17,16 +17,23 @@
   <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Иконки продуктов
       </h1>
     </div>
   </header>
-  <main class="main wrapper" id="main">
+  <main class="main wrapper  main--icons" id="main">
     <nav class="main__main-nav  main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -145,7 +152,7 @@
         </div>
         <div class="icons__block">
           <h2 class="info-block__title">Размеры</h2>
-          <p class="info-block__desc  icons__dimensions-desc">
+          <p class="info-block__desc  icons__dimensions-desc no-padding">
             В интерфейсах используются 2 размера иконок: 80px (толщина 2px) и 32px (толщина&nbsp;1px).
           </p>
           <div class="icons__dimensions-wrapper">
@@ -723,6 +730,7 @@
           </div>
         </div>
 
+        <div class="blackout"></div>
 
       </section>
     </div>

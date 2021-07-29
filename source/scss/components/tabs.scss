@@ -11,6 +11,10 @@
     }
   }
 
+  &__content {
+    white-space: nowrap;
+  }
+
   &__button {
     @include font(15px, 24px);
     color: $grey400;

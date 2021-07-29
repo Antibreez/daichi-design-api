@@ -17,16 +17,23 @@
   <a data-scroll href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Иконки интерфейса
       </h1>
     </div>
   </header>
-  <main class="main wrapper" id="main">
+  <main class="main wrapper  main--icons" id="main">
     <nav class="main__main-nav  main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -139,7 +146,7 @@
           <div class="icons__dimensions-wrapper">
             <div class="icons__dimensions-part  icons__dimensions-part--size  w-100">
               <p class="info-block__desc  icons__dimensions-desc">
-                Чтобы поддерживать визуальное единство, используем один размер иконок — 24px. Толщина линий — 2px.
+                Чтобы поддерживать визуальное единство, используем один размер иконок&nbsp;&mdash; 24px. Толщина линий&nbsp;&mdash; 2px.
               </p>
               <div class="icons__dimensions-item-block">
                 <div class="icons__dimensions-item">
@@ -799,6 +806,8 @@
           </div>
         </div>
 
+
+        <div class="blackout"></div>
 
       </section>
     </div>

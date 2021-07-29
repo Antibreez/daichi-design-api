@@ -97,3 +97,9 @@
     }
   }
 }
+
+.select2-container--open
+.select-dropdown-multi.select-dropdown--opened.select2-dropdown--above {
+  transform: none;
+  top: -8px;
+}

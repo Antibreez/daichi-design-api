@@ -148,3 +148,10 @@
     }
   }
 }
+
+@include mobile {
+  .range {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -189,3 +189,14 @@
     background-image: url("../img/delete.svg");
   }
 }
+
+@include mobile {
+  .main--tables {
+    .forms__section {
+      & > *:not(.forms__block--table) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+  }
+}

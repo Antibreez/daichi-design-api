@@ -160,3 +160,35 @@
   left: 0 !important;
   transform: none !important;
 }
+
+@include mobile {
+  .tooltip-positions {
+    padding-left: 80px;
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+
+    .tooltip-positions__tip {
+      &:not(:last-child) {
+        margin: 0 0 40px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 50px;
+      }
+
+      &:last-child {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .tooltip-types {
+    padding: 0;
+  }
+
+  .tooltip-positions__tooltip {
+    max-width: 180px;
+  }
+}

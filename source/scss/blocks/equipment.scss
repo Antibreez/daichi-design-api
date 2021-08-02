@@ -45,3 +45,20 @@
     }
   }
 }
+
+@include mobile {
+  .equipment {
+    &__block {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: auto;
+      max-width: 360px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

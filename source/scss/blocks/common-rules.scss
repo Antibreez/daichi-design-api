@@ -245,3 +245,89 @@
     color: $grey400;
   }
 }
+
+@include mobile {
+  .common-rules {
+    &__block {
+      & > *:not(.common-rules__list) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+
+    &__item {
+      & > *:not(.info-common):not(.common-rules__item-other-brands):not(.common-rules__item-domain) {
+        margin-right: 24px;
+        margin-left: 24px;
+      }
+    }
+
+    &__item-title {
+      @include font(18px, 24px, 500);
+      padding-left: 46px;
+
+      &::before {
+        @include font(15px, 24px, 500);
+        width: 32px;
+        height: 32px;
+        padding: 4px 0;
+      }
+    }
+  }
+
+  .common-rules__item-company {
+    flex-direction: row;
+  }
+
+  .common-rules__item-other-brands,
+  .common-rules__item-domain {
+    padding: 40px 24px;
+  }
+
+  .common-rules__item-domain {
+    padding-bottom: 60px;
+  }
+
+  .common-rules__page-link {
+    flex-direction: column;
+
+    .common-rules__page-link-item {
+      width: 100%;
+      padding: 40px 24px 40px 68px;
+      background-position: left 24px top 40px;
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .common-rules__page-link-item--wide {
+    flex-direction: column;
+
+    .common-rules__page-link-certificate {
+      margin-top: 24px;
+      width: 180px;
+      height: 247px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .common-rules__company-desc {
+    display: none;
+  }
+
+  .common-rules__your-logo {
+    margin-left: 16px;
+  }
+
+  .common-rules__company-bar {
+    padding: 16px;
+
+    img {
+      width: 80px;
+      height: auto;
+    }
+  }
+}

@@ -149,10 +149,17 @@
   <a data-scroll="" href="#main" class="scroll-to-top" aria-label="Наверх страницы"></a>
   <header class="header  header--black">
     <div class="header__container  wrapper">
-      <a href="index.html" class="header__logo">
-        <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
-        <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
-      </a>
+      <div class="header__bar">
+        <button class="header__menu-btn" aria-label="Кнопка навигации">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-menu-big"></use>
+          </svg>
+        </button>
+        <a href="index.html" class="header__logo">
+          <img class="header__logo-img header__logo-img--black" src="img/daichi-logo-black.svg" alt="Daichi" width="96" height="32">
+          <img class="header__logo-img header__logo-img--white" src="img/daichi-logo-white.svg" alt="Daichi" width="96" height="32">
+        </a>
+      </div>
       <h1 class="header__title">
         Программы Даичи
       </h1>
@@ -322,32 +329,34 @@
 
           <div class="programs__block">
             <div class="programs__content-block  programs__content-block--size">
-              <div class="programs__size-title-block">
-                <p>Минимальный размер</p>
-                <p>Максимальный размер</p>
-              </div>
-              <div class="programs__content-side">
+              <div class="programs__content-column">
+                <div class="programs__size-title-block">
+                  <p>Минимальный размер</p>
+                </div>
                 <div class="programs__size-item  programs__size-item--small">
-                    <span>32px</span>
-                    <img src="img/bp-gap-32-v.svg" alt="">
-                    <img class="programs__size-my-comfort" src="img/my-comfort.svg" alt="Мой комфорт">
+                  <span>32px</span>
+                  <img src="img/bp-gap-32-v.svg" alt="">
+                  <img class="programs__size-my-comfort" src="img/my-comfort.svg" alt="Мой комфорт">
+                </div>
+                <div class="programs__size-item  programs__size-item--small">
+                  <span>48px</span>
+                  <img src="img/bp-gap-48-v.svg" alt="">
+                  <img class="programs__size-cloud" src="img/cloud-logo-rus.svg" alt="Мой комфорт">
+                </div>
+              </div>
+              <div class="programs__content-column">
+                <div class="programs__size-title-block">
+                  <p>Минимальный размер</p>
                 </div>
                 <div class="programs__size-item  programs__size-item--big">
-                    <span>72px</span>
-                    <img src="img/bp-gap-72-v.svg" alt="">
-                    <img class="programs__size-my-comfort" src="img/my-comfort.svg" alt="Мой комфорт">
-                </div>
-              </div>
-              <div class="programs__content-side">
-                <div class="programs__size-item  programs__size-item--small">
-                    <span>48px</span>
-                    <img src="img/bp-gap-48-v.svg" alt="">
-                    <img class="programs__size-cloud" src="img/cloud-logo-rus.svg" alt="Мой комфорт">
+                  <span>72px</span>
+                  <img src="img/bp-gap-72-v.svg" alt="">
+                  <img class="programs__size-my-comfort" src="img/my-comfort.svg" alt="Мой комфорт">
                 </div>
                 <div class="programs__size-item  programs__size-item--big">
-                    <span>128px</span>
-                    <img src="img/bp-gap-b-v.svg" alt="">
-                    <img class="programs__size-cloud" src="img/cloud-logo-rus.svg" alt="Мой комфорт">
+                  <span>128px</span>
+                  <img src="img/bp-gap-b-v.svg" alt="">
+                  <img class="programs__size-cloud" src="img/cloud-logo-rus.svg" alt="Мой комфорт">
                 </div>
               </div>
             </div>
@@ -439,7 +448,7 @@
             <div class="forms__alert-block">
               <span class="forms__alert-icon"></span>
               <span>
-                Написание названия бренда кириллицей допустимо только в&nbsp;определенных документах, где по требованиям закона необходимо приводить транслитерацию. При этом, как правило, указывается также и&nbsp;написание латиницей. Мобильное приложение «Даичи Комфорт»
+                Написание названия бренда кириллицей допустимо только в&nbsp;определенных документах, где по&nbsp;требованиям закона необходимо приводить транслитерацию. При этом, как правило, указывается также и&nbsp;написание латиницей. Мобильное приложение &laquo;Даичи Комфорт&raquo;
               </span>
             </div>
           </div>
@@ -546,6 +555,8 @@
         </div>
       </section>
     </div>
+
+    <div class="blackout"></div>
   </main>
 
   <script src="js/vendor.min.js"></script>

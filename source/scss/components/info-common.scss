@@ -25,3 +25,18 @@
     }
   }
 }
+
+@include mobile {
+  .info-common {
+    padding: 40px 24px;
+    flex-direction: column-reverse;
+
+    &__links {
+      margin: 0 0 24px;
+    }
+
+    &__text {
+      padding-right: 0;
+    }
+  }
+}

@@ -41,8 +41,25 @@
 
     &--size {
       max-width: 730px;
-      flex-direction: column;
       padding: 27px 0 60px;
+
+      .programs__content-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .programs__size-item {
+        align-self: flex-start;
+
+        &:nth-of-type(2) {
+          margin-bottom: 90px;
+        }
+
+        &:nth-of-type(3) {
+          margin-top: auto;
+        }
+      }
     }
 
     &--wrong-logo {
@@ -125,11 +142,6 @@
     color: $grey400;
     display: flex;
     margin-bottom: 55px;
-
-    p {
-      width: 50%;
-      padding-left: 45px;
-    }
   }
 
   &__size-item {
@@ -239,5 +251,121 @@
       margin: 0 0 0 auto;
       flex-shrink: 0;
     }
+  }
+}
+
+@include mobile {
+  .programs {
+    &__block {
+      padding: 24px 16px;;
+    }
+
+    &__link-block {
+      .link {
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .link__text {
+        padding-right: 0;
+      }
+
+      .link_content {
+        padding-right: 0;
+      }
+
+      & > span {
+        padding-right: 24px;
+      }
+
+      span + .link {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &__content-block {
+      flex-direction: column;
+      align-items: center;
+      max-width: none;
+      padding: 40px 0 60px;
+
+      & > *:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &--size {
+        flex-direction: column;
+
+        .programs__size-item {
+          &:nth-of-type(2) {
+            margin-bottom: 40px;
+          }
+        }
+
+        .programs__content-column {
+          &:not(:last-child) {
+            margin-bottom: 40px;
+          }
+        }
+
+        .programs__size-my-comfort {
+          width: 200px;
+          height: auto;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .programs__size-title-block {
+    margin-bottom: 24px;
+  }
+
+  .programs__size-item--big {
+    min-width: auto;
+  }
+
+  .programs__content-block--wrong-logo {
+    padding-top: 100px;
+
+    .programs__wrong-logo-item {
+      &:not(:last-child) {
+        margin-bottom: 100px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .programs__content-block--app-devices .programs__content-img-block {
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .programs__content-block--app-devices .programs__content-item {
+    &:nth-child(2) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .programs__equipment {
+    flex-direction: column;
+  }
+
+  .programs__equipment-item {
+    width: 100%;
+    min-height: 200px;
+    padding: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .programs__equipment-content {
+    align-items: center;
   }
 }

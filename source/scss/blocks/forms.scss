@@ -1355,4 +1355,25 @@
   .forms__box {
     width: 100%;
   }
+
+  .main--modals {
+    .forms__section {
+      & > *:not(.forms__box) {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+  }
+
+  .forms__box--border {
+    border: none;
+    border-radius: 0;
+  }
+
+  .forms__block--modal-content {
+    .modal__close-btn-icon {
+      right: auto;
+      left: 24px;
+    }
+  }
 }

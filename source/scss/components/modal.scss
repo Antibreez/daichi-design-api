@@ -40,6 +40,7 @@
 
   &__checkbox {
     margin-bottom: 32px;
+    display: flex;
 
     a {
       color: $dark-grey;
@@ -87,6 +88,41 @@
       svg {
         color: $blue;
       }
+    }
+  }
+}
+
+@include mobile {
+  .modal {
+    &__content {
+      padding-left: 24px;
+      padding-right: 24px;
+      min-width: 200px;
+    }
+
+    &__btn-block {
+      flex-direction: column;
+
+      button {
+        width: 100%;
+
+        .btn__content {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__input--half {
+      width: 100%;
     }
   }
 }

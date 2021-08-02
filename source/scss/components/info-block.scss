@@ -33,5 +33,10 @@
     &__title {
       @include font(20px, 26px, 500);
     }
+
+    &__main-title {
+      @include font(24px, 30px, 500);
+      margin: 0 0 24px;
+    }
   }
 }
